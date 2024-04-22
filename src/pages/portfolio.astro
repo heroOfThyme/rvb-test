@@ -11,6 +11,8 @@ import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 import Image from 'astro/components/Image.astro';
+import { positionAt } from 'node_modules/astro/dist/core/errors';
+
 
 const metadata = {
     title: 'Our Portfolio',
@@ -36,28 +38,30 @@ const metadata = {
         {
             title: 'Description:',
             description:
-            'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+            'Legacy Exterior Inc. is a Windsor-based construction company specializing in excavation and landscaping services. The company needed a brand identity that reflected its commitment to quality and innovation.',
+            icon: 'tabler:clipboard-text',
         },
         {
-            title: 'Role:',
+            title: 'Action:',
             description:
-            'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
+            'We developed a modern and professional website for Legacy Exteriors Inc. that showcased the company\'s services and projects. The site features a clean and user-friendly design, high-quality images, and clear calls-to-action to drive conversions.',
+            icon: 'tabler:code',            
         },
         ]}
         image={{
-            src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-            alt: 'Tech Design Image',
+            src: '~/assets/images/legacy-exteriors-portfolio-bg.webp',
+            alt: 'Legacy Exteriors Inc',
             }}
         callToAction={{
             target: '_blank',
-            text: 'Go to the project',
+            text: 'Visit the site',
             icon: 'tabler:chevron-right',
-            href: '#',
+            href: 'https://www.legacyexteriorsinc.com/',
         }}
         >
     <Fragment slot="content">
         <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-            Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
+            Legacy Exteriors Inc <br /><span class="text-2xl">Windsors Best Excavating Contractor</span>
         </h3>
     </Fragment>
 
@@ -75,16 +79,18 @@ const metadata = {
         {
             title: 'Description:',
             description:
-            'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
+            'S&V Memorials is a family-owned business specializing in custom headstones and memorials. The company needed a website that showcased its products and services while providing a seamless user experience.',
+            icon: 'tabler:clipboard-text',
         },
         {
-            title: 'Role:',
-            description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
+            title: 'Action:',
+            description: 'We designed and developed a visually appealing and user-friendly website for S&V Memorials. The site features high-quality images of the company\'s products, clear calls-to-action, and an easy-to-navigate layout to drive conversions.',
+            icon: 'tabler:code',
         },
-        ]}
+        ]},
         image={{
-            src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-            alt: 'Art and Music Poster Image',
+            src: '~/assets/images/sv-memorials-portfolio-bg.webp',
+            alt: 'S&V Memorials Website',
         }}
     callToAction={{
         target: '_blank',
@@ -95,7 +101,7 @@ const metadata = {
     >
         <Fragment slot="content">
             <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-                Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+                S&V Memorials <br /><span class="text-2xl">Windsors Best Memorial Installer</span>
             </h3>
         </Fragment>
 

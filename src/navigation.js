@@ -79,6 +79,13 @@ export const footerData = {
       ],
     },
     {
+      title: 'Company',
+      links: [
+        { text: 'About', href: '#' },
+        { text: 'Blog', href: '#' },
+      ],
+    },
+    {
       title: 'Support',
       links: [
         // { text: 'Docs', href: '#' },
@@ -86,13 +93,6 @@ export const footerData = {
         { text: 'Professional Services', href: '#' },
         { text: 'Skills', href: '#' },
         { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
       ],
     },
   ],
