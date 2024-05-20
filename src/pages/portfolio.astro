@@ -12,6 +12,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 import Image from 'astro/components/Image.astro';
 import { positionAt } from 'node_modules/astro/dist/core/errors';
+import Pagination from '~/components/blog/Pagination.astro';
 
 
 const metadata = {
@@ -54,7 +55,7 @@ const metadata = {
             }}
         callToAction={{
             target: '_blank',
-            text: 'Visit the site',
+            text: 'Visit the Website',
             icon: 'tabler:chevron-right',
             href: 'https://www.legacyexteriorsinc.com/',
         }}
@@ -94,7 +95,7 @@ const metadata = {
         }}
     callToAction={{
         target: '_blank',
-        text: 'Go to the project',
+        text: 'Visit the Website',
         icon: 'tabler:chevron-right',
         href: '#',
     }}
@@ -118,27 +119,27 @@ const metadata = {
     items={[
         {
         title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+        description: `Seniors Helper is a dedicated service committed to providing compassionate and personalized home cleaning for the elderly. As a one-woman operation, the business prides itself on its ability to bring warmth, care, and cleanliness into the homes of seniors.`,
         },
         {
         title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+        description: `We designed and developed a vibrant, visually engaging, and easy-to-navigate one-page website for Seniors Helper. The site is a reflection of the owner’s favourite colours, creating a warm and inviting digital space. It effectively highlights the compassionate services offered, with clear calls-to-action and contact forms for easy communication. The design is not only user-friendly but also visually independent, making it a true representation of the unique and personalized care that Seniors Helper provides.`,
         },
     ]}
     image={{
-        src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-        alt: 'Fashion e-commerce Image',
+        src: '~/assets/images/seniorshelper-main-portfolio.webp',
+        alt: 'Seniors Helper Website',
     }}
     callToAction={{
         target: '_blank',
-        text: 'Go to the project',
+        text: 'Visit the Website',
         icon: 'tabler:chevron-right',
-        href: '#',
+        href: 'https://seniorshelper.ca/',
     }}
     >
         <Fragment slot="content">
             <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-                Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+                Seniors Helper<br /><span class="text-2xl">Compassionate Care for Your Loved Ones’ Homes</span>
             </h3>
         </Fragment>
 
@@ -146,6 +147,9 @@ const metadata = {
             <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
         </Fragment>
     </Content>
+    <Pagination
+        nextUrl='Next'
+    />
     <CallToAction />
     <Features3 />
     <Testimonials />

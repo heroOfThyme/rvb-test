@@ -1,0 +1,35 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+
+const metadata = {
+    title: 'Google Business Management',
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero
+        tagline="Services"
+        actions={[{ variant:"primary", target: '_blank', text: 'Start exploring', href: '/' }]}
+        image={{
+            src: '~/assets/images/web-development-main.webp',
+            alt: 'RVB Web Development Solutions Image',
+        }}
+        >
+        <Fragment slot="title">
+            Google Business Management
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            We help you manage your Google Business account to ensure that 
+            your business is visible to your customers.
+        </Fragment>
+    </Hero>
+
+
+</Layout>

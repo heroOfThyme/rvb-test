@@ -3,44 +3,27 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Home',
-      href: getPermalink('/'),
-    },
-    {
       text: 'About Us',
       href: getPermalink('/about'),
     },
     {
       text: 'Services',
-      href: getPermalink('/services'),
       links: [
         {
           text: 'Web Development',
-          href: getPermalink('/services/web-development'),
+          href: getPermalink('/web-development'),
         },
         {
           text: 'Web Hosting',
-          href: getPermalink('/services/web-hosting'),
+          href: getPermalink('/web-hosting'),
         },
         {
           text: 'Business Process Automation',
-          href: getPermalink('/services/business-process-automation'),
-        },
-        {
-          text: 'Application Integration',
-          href: getPermalink('/services/application-integration'),
-        },
-        {
-          text: 'Data Science Solutions',
-          href: getPermalink('/services/data-science-solutions'),
+          href: getPermalink('/business-process-automation'),
         },
         {
           text: 'Google Business Management',
-          href: getPermalink('/services/google-business-management'),
-        },
-        {
-          text: 'Infrastructure Solutions',
-          href: getPermalink('/services/infrastructure-solutions'),
+          href: getPermalink('/google-business-management'),
         },
       ],
     },

@@ -1,37 +1,52 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import { Image } from 'astro:assets';
 
 const metadata = {
   title: 'Contact',
 };
+
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
+  <!-- Hero Widget ******************* -->
+  <Hero
+    id="hero"
+    title="We are here to help!"
+    subtitle="Our support team is here to help you with any questions or concerns you may have. We are here to help you with any questions or concerns you may have."
+    image={{
+      src: '~/assets/images/contact-us-hero-background.png',
+      alt: 'Contact us hero background',
+      width: 2040,
+    }}
+    />
+    
   <ContactUs
     id="form"
-    title="Drop us a message today!"
+    title="Send us a Message"
     subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
     inputs={[
       {
         type: 'text',
         name: 'name',
         label: 'Name',
+        required: true,
       },
       {
         type: 'email',
         name: 'email',
         label: 'Email',
+        required: true,
       },
     ]}
     textarea={{
       label: 'Message',
+      name: 'message',
+      required: true,
     }}
     disclaimer={{
       label:
@@ -44,6 +59,7 @@ const metadata = {
 
   <Features2
     title="We are here to help!"
+    columns={2}
     items={[
       {
         title: 'General support',
@@ -75,5 +91,6 @@ const metadata = {
         icon: 'tabler:map-pin',
       },
     ]}
+    columns={2}
   />
 </Layout>
