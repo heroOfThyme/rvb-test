@@ -29,17 +29,15 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Lets Get to Work',
-        href: '#',
+        href: 'https://www.rvbcorp.com/contact',
         target: '_blank',
-        icon: 'tabler:external-link',
         class: 'border-primary hover:bg-primary',
       },
       {
         variant: 'secondary',
         text: 'See Our Work',
-        href: '#',
+        href: 'https://www.rvbcorp.com/portfolio/',
         target: '_blank',
-        icon: 'tabler:external-link',
         class: 'border-primary hover:bg-primary',
       }
     ]}
@@ -78,7 +76,6 @@ const metadata = {
         callToAction: {
           text: 'See Full Service',
           href: '#',
-          icon: 'tabler:external-link',
           type: 'button',
           class: 'text-default flex flex-row items-center',
         },
@@ -91,7 +88,6 @@ const metadata = {
         callToAction: {
           text: 'See Full Service',
           href: '#',
-          icon: 'tabler:external-link',
           class: 'text-default flex flex-row items-center',
         },
       },
@@ -103,7 +99,6 @@ const metadata = {
         callToAction: {
           text: 'See Full Service',
           href: '#',
-          icon: 'tabler:external-link',
           class: 'text-default flex flex-row items-center',
         },
       },
@@ -112,10 +107,10 @@ const metadata = {
         description:
           "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
         icon: 'tabler:brand-google-filled',
+        // Add Button to Call to Action
         callToAction: {
           text: 'See Full Service',
           href: '#',
-          icon: 'tabler:external-link',
           class: 'text-default flex flex-row items-center',
         },
       },
@@ -142,12 +137,16 @@ const metadata = {
         alt: 'Digital Ocean Partnership Logo',
       },
     ]},
-    classes={{"text-primary": "text-primary"}}
+  
+
+  classes={{ container: 'my-8' }}  
+  
   />
 
   <!-- Steps Widget ****************** -->
 
   <Steps
+    id='Why Choose Us?'
     title='Our Process is Easy. So you can focus on your business.',
     items={[
       {

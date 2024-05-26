@@ -17,18 +17,23 @@
     "lint:eslint": "eslint ."
   },
   "dependencies": {
+    "@astrojs/node": "^8.2.5",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.2",
     "@astrolib/analytics": "^0.5.0",
     "@astrolib/seo": "^1.0.0-beta.5",
     "@fontsource-variable/inter": "^5.0.17",
     "@fontsource-variable/montserrat": "^5.0.19",
+    "@fontsource/poppins": "^5.0.14",
+    "@fontsource/source-sans-pro": "^5.0.8",
     "@fontsource/ubuntu": "^5.0.13",
     "astro": "^4.6.1",
     "astro-embed": "^0.7.1",
     "astro-icon": "^1.1.0",
+    "express": "^4.19.2",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "nodemailer": "^6.9.13",
     "unpic": "^3.18.0"
   },
   "devDependencies": {
@@ -42,6 +47,7 @@
     "@tailwindcss/typography": "^0.5.12",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash.merge": "^4.6.9",
+    "@types/nodemailer": "^6.4.15",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
     "astro-eslint-parser": "^0.17.0",

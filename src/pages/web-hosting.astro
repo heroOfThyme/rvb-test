@@ -1,7 +1,7 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -16,9 +16,9 @@ const metadata = {
 <Layout metadata={metadata}>
     <Hero
         tagline="Services"
-        actions={[{ variant:"primary", target: '_blank', text: 'Start exploring', href: '/' }]}
+        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '/web-hosting#Prices' }]}
         image={{
-            src: '~/assets/images/web-development-main.webp',
+            src: '~/assets/images/web-hosting-service-image.png',
             alt: 'RVB Web Development Solutions Image',
         }}
         >
@@ -35,215 +35,83 @@ const metadata = {
         </Fragment>
     </Hero>
 
-    <!-- Web Design Section -->
-    <Content
-        tagline="Making it Look Pretty"
-        title='Web Design Solutions'
-        subtitle='Our web design solutions are tailored to your business needs. We offer a range of services from website design to SEO optimization. Our team of experts will work with you to create a website that is both visually appealing and functional.',
-        image={{
-            src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-            alt: 'AstroWind Content Image',
-        }}
-        columns={1}
-        items={[
-            {
-                title: 'Custom and Responsive Design',
-                description: 'All of our websites are created visually appealing and are mobile-friendly, ensuring a seamless user experience across all devices.',
-            },
-            {
-                title: 'Wireframing and Prototyping',
-                description: 'We develop wireframes and interactive prototypes to help our clients visualize their website’s layout and functionality before moving to the development stage.',
-            },
-            {
-                title: 'Brand Integration',
-                description: `We integrate your brand’s colors, fonts, and logos into your website to create a cohesive and professional look that aligns with your brand identity.`,
-            },
-            {
-                title: 'Content Strategy',
-                description: 'We help our clients in organizing and structuring their website content to effectively convey their message and enhance search engine optimization (SEO).',
-            },
-        ]},
-    />
-
-
-    <!-- Ecommerce  -->
-    <Content
-            tagline='Selling Online'
-            title='Ecommerce Solutions'
-            subtitle='Our ecommerce solutions are designed to help businesses sell their products and services online. We offer a range of services from online store design to payment gateway integration. Our team of experts will work with you to create an online store that is both visually appealing and functional.',
-            image={{
-                src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-                alt: 'AstroWind Content Image',
-            }}
-            items={[
-                {
-                    title: 'Online Store Design',
-                    description: 'We design and develop online stores that are visually appealing and user-friendly, ensuring a seamless shopping experience for your customers.',
-                },
-                {
-                    title: 'Payment Gateway Integration',
-                    description: 'We integrate secure payment gateways into your online store, allowing you to accept payments from customers using a variety of payment methods.',
-                },
-                {
-                    title: 'Product Management',
-                    description: 'We help you manage your online store’s product catalog, including adding new products, updating existing products, and removing outdated products.',
-                },
-                {
-                    title: 'Order Management',
-                    description: 'We help you manage your online store’s orders, including processing new orders, updating order statuses, and generating order reports.',
-                },
-                {
-                    title: 'Customer Management',
-                    description: 'We help you manage your online store’s customer database, including adding new customers, updating existing customer information, and removing outdated customer information.',
-                }
-            ]}
-            isReversed={true}
-    />
-
-    <!-- SEO Section -->
-    <Content
-        tagline="Getting Found"
-        title='SEO Solutions'
-        subtitle='Our SEO solutions are designed to help businesses improve their search engine rankings and drive more organic traffic to their websites. We offer a range of services from keyword research to on-page optimization. Our team of experts will work with you to create an SEO strategy that is tailored to your business needs.',
-        image={{
-            src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-            alt: 'AstroWind Content Image',
-        }}
-        items={[
-            {
-                title: 'Keyword Research',
-                description: 'We conduct in-depth keyword research to identify the most relevant and high-traffic keywords for your business, helping you rank higher in search engine results pages (SERPs).',
-            },
-            {
-                title: 'On-Page Optimization',
-                description: 'We optimize your website’s on-page elements, including meta tags, headings, and content, to improve your search engine rankings and drive more organic traffic to your site.',
-            },
-            {
-                title: 'Off-Page Optimization',
-                description: 'We build high-quality backlinks to your website from authoritative websites, helping you improve your search engine rankings and drive more organic traffic to your site.',
-            },
-            {
-                title: 'Local SEO',
-                description: 'We optimize your website for local search, helping you attract more customers from your local area and improve your search engine rankings for location-based searches.',
-            },
-            {
-                title: 'SEO Reporting',
-                description: 'We provide detailed SEO reports that track your website’s search engine rankings, organic traffic, and keyword performance, helping you measure the success of your SEO efforts.',
-            }
-        ]}
-        classes={{ icon: 'bg-primary'}}
-    />
-
-    <!-- Web Hosting Solutions -->
-    <Content
-        tagline="Keeping it Running"
-        title='Web Hosting Solutions'
-        subtitle='Our web hosting solutions are designed to keep your website up and running smoothly. We offer a range of services from website migration to server maintenance. Our team of experts will work with you to ensure that your website is secure, fast, and reliable.',
-        image={{
-            src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-            alt: 'AstroWind Content Image',
-        }}
-        items={[
-            {
-                title: 'Website Migration',
-                description: 'We help you migrate your website from your current hosting provider to our hosting platform, ensuring a seamless transition with minimal downtime.',
-            },
-            {
-                title: 'Server Maintenance',
-                description: 'We monitor and maintain your website’s server to ensure that it is secure, fast, and reliable, helping you avoid downtime and keep your website running smoothly.',
-            },
-            {
-                title: 'SSL Certificate Installation',
-                description: 'We install SSL certificates on your website to encrypt data transmitted between your website and your visitors, ensuring that sensitive information is secure and protected.',
-            },
-            {
-                title: 'Backup and Recovery',
-                description: 'We regularly back up your website’s data and files to ensure that you can quickly recover your website in the event of data loss or server failure.',
-            },
-            {
-                title: '24/7 Support',
-                description: 'We provide 24/7 technical support to help you resolve any issues with your website, ensuring that your website is up and running smoothly at all times.',
-            }
-        ]}
-        isReversed={true}
-    />
-
-    <!-- Pricing Section -->
+<!-- Pricing Section -->
     <Prices
-        title="Our prices"
-        subtitle="Only pay for what you need"
-        prices={[
-            {
-                title: 'basic',
-                subtitle: 'Optimal choice for personal use',
-                price: 62.5,
-                period: 'monthly',
-                items: [
-                    {
-                        description: '3 Page Website',
-                    },
-                    {
-                        description: 'Brand Integration',
-                    },
-                    {
-                        description: 'Fully Hosted Website',
-                    },
-                    {
-                        description: 'Unlimited Revisions*',
-                    },
-                    {
-                        description: 'Monthly Maintenance*',
-                        icon: '',
-                    }
-                ],
-                callToAction: {
-                    target: '_blank',
-                    text: 'Get started',
-                    href: '#',
+    id='Prices'
+    title="Our prices"
+    subtitle="Only pay for what you need"
+    prices={[
+        {
+            title: 'basic',
+            subtitle: 'Optimal choice for personal use',
+            price: 62.5,
+            period: 'monthly',
+            items: [
+                {
+                    description: '3 Page Website',
                 },
-            },
-            {
-                title: 'Business',
-                subtitle: 'Optimal choice for small teams',
-                price: 595,
-                period: 'Per Month',
-                items: [
-                    {
-                        description: 'Unlimited Pages',
-                    },
-                    {
-                        description: 'Brand Integration',
-                    },
-                    {
-                        description: 'Fully Hosted Website',
-                    },
-                    {
-                        description: 'Unlimited Revisions*',
-                    },
-                    {
-                        description: 'Monthly Maintenance*',
-                    },
-                    {
-                        description: 'Including',
-                    },
-                    {
-                        description: 'SEO Optimization',
-                    }
-                ],
-                callToAction: {
-                    target: '_blank',
-                    text: 'Get started',
-                    href: '#',
+                {
+                    description: 'Brand Integration',
                 },
-                hasRibbon: true,
-                ribbonTitle: 'popular',
+                {
+                    description: 'Fully Hosted Website',
+                },
+                {
+                    description: 'Unlimited Revisions*',
+                },
+                {
+                    description: 'Monthly Maintenance*',
+                    icon: '',
+                }
+            ],
+            callToAction: {
+                target: '_blank',
+                text: 'Get started',
+                href: '#',
             },
-            {
-                title: 'premium',
-                subtitle: 'Optimal choice for companies',
-                price: 199,
-                period: 'Per Month',
-                items: [
+        },
+        {
+            title: 'Business',
+            subtitle: 'Optimal choice for small teams',
+            price: 595,
+            period: 'Per Month',
+            items: [
+                {
+                    description: 'Unlimited Pages',
+                },
+                {
+                    description: 'Brand Integration',
+                },
+                {
+                    description: 'Fully Hosted Website',
+                },
+                {
+                    description: 'Unlimited Revisions*',
+                },
+                {
+                    description: 'Monthly Maintenance*',
+                },
+                {
+                    description: 'Including',
+                },
+                {
+                    description: 'SEO Optimization',
+                }
+            ],
+            callToAction: {
+                target: '_blank',
+                text: 'Get started',
+                href: '#',
+            },
+            hasRibbon: true,
+            ribbonTitle: 'popular',
+        },
+        {
+            title: 'premium',
+            subtitle: 'Optimal choice for companies',
+            price: 199,
+            period: 'Per Month',
+            items: [
                 {
                     description: 'Curabitur suscipit risus',
                 },
@@ -256,12 +124,83 @@ const metadata = {
                 {
                     description: 'Suspendisse auctor blandit dui',
                 },
-                ],
-                callToAction: {
+            ],
+            callToAction: {
                 target: '_blank',
                 text: 'Get started',
                 href: '#',
-                },
+            },
+        },
+    ]},
+    />
+
+
+    <!-- Features Section -->
+
+    <Features
+        id="Features"
+        title="Our Features"
+        subtitle="We offer a range of features to help you create a professional and functional website."
+        items={[
+            {
+                title: '99.9% Uptime Guarantee',
+                description: 'We guarantee that your website will be up and running 99.9% of the time, ensuring that your customers can access your website whenever they need to.',
+                icon: 'tabler:clock',
+            },
+            {
+                title: 'Scalable Hosting Plans',
+                description: 'We offer scalable hosting plans that can grow with your business, allowing you to easily upgrade your hosting plan as your website traffic and storage needs increase.',
+                icon: 'tabler:arrow-up-right-circle',
+
+            },
+            {
+                title: '24/7 Technical Support',
+                description: 'We provide 24/7 technical support to help you resolve any issues with your website, ensuring that your website is up and running smoothly at all times.',
+                icon: 'tabler:headset',
+            },
+            {
+                title: 'Secure Data Centers',
+                description: 'We host your website on secure data centers that are protected by advanced security measures, ensuring that your website data is safe and protected from cyber threats.',
+                icon: 'tabler:shield-check',
+            },
+            {
+                title: 'Automatic Backups',
+                description: 'We automatically back up your website data and files on a regular basis, ensuring that you can quickly recover your website in the event of data loss or server failure.',
+                icon: 'tabler:device-floppy',
+            },
+            {
+                title: 'SSL Certificate Included',
+                description: 'We include an SSL certificate with all of our hosting plans, encrypting data transmitted between your website and your visitors to ensure that sensitive information is secure and protected.',
+                icon: 'tabler:lock',
+            },
+        ]},
+    />
+
+    <!-- Web Design Section -->
+    <Content
+        tagline="Keeping Your Website Secure"
+        title='Secure Web Hosting Solutions'
+        subtitle='Our secure web hosting solutions are designed to keep your website safe from cyber threats and data breaches. We offer a range of security features from SSL certificates to automatic backups. Our team of experts will work with you to ensure that your website data is safe and protected.',
+        image={{
+            src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+            alt: 'AstroWind Content Image',
+        }}
+        items={[
+            {
+                title: 'SSL Certificates',
+                description: 'We include an SSL certificate with all of our hosting plans, encrypting data transmitted between your website and your visitors to ensure that sensitive information is secure and protected.',
+            },
+            {
+                title: 'DDoS Protection',
+                description: 'We provide DDoS protection to help protect your website from distributed denial-of-service (DDoS) attacks, ensuring that your website remains online and accessible to your customers.',
+            },
+            {
+                title: 'Firewalls',
+                description: 'We install firewalls on our servers to help protect your website from cyber threats and data breaches, ensuring that your website data is safe and secure.',
+            },
+            {
+                title: 'Malware Scanning and Removal',
+                description: 'We regularly scan your website for malware and remove any malicious code that we find, ensuring that your website is free from malware and other security threats.',
             },
         ]},
     />
@@ -270,34 +209,48 @@ const metadata = {
     <Testimonials
     title="What our users say?"
     testimonials={[
-      {
+        {
         testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
         name: 'Cary Kennedy',
         job: 'Film director',
         image: {
-          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
+            src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            alt: 'Cary Kennedy Image',
         },
-      },
-      {
+        },
+        {
         testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
         name: 'Josh Wilkinson',
         job: 'Product Manager',
         image: {
-          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
+            src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            alt: 'Josh Wilkinson Image',
         },
-      },
-      {
+        },
+        {
         testimonial:
-          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+            'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
         name: 'Sidney Hansen',
         job: 'Decorator',
         image: {
-          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
+            src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            alt: 'Sidney Hansen Image',
         },
-      },
+        },
     ]}
-  />
+    />
+
+    <!-- Call to Action -->
+    <CallToAction
+        title="Ready to get started?"
+        subtitle="Sign up now and start exploring our range of web hosting solutions."
+        actions={[
+            {
+                variant: 'primary',
+                target: '_blank',
+                text: 'Sign up now',
+                href: '/',
+            },
+        ]}
+    />
 </Layout>

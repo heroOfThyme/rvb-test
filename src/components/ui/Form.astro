@@ -13,33 +13,10 @@ const topics = [
   {value: 'other', label: 'Other'},
 ];
 
-const errors = { username: "", email: "", password: "" };
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-    const name = data.get("username");
-    const email = data.get("email");
-    const password = data.get("password");
-    if (typeof name !== "string" || name.length < 1) {
-      errors.username += "Please enter a username. ";
-    }
-    if (typeof email !== "string") {
-      errors.email += "Email is not valid. ";
-    } 
-    if (typeof password !== "string" || password.length < 6) {
-      errors.password += "Password must be at least 6 characters. ";
-    }
-    // Do something with the data
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
-  }
-}
 
 ---
 
-<form method="POST">
+<form action="/api/sendEmail" method="POST">
   {
     inputs &&
       inputs.map(
@@ -48,7 +25,7 @@ if (Astro.request.method === "POST") {
             <div class="mb-6">
               {label && (
                 <label for={name} class="block text-sm font-medium">
-                  {label}{required ? ' *' : ''}{errors.username && errors.username} {errors.email && errors.email} {errors.password && errors.password} 
+                  {label}{required ? ' *' : ''}
                 </label>
               )}
               <input

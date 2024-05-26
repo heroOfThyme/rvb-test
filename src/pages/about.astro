@@ -9,6 +9,8 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 const metadata = {
   title: 'About us',
 };
+
+const { bg = '' } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
@@ -42,9 +44,10 @@ const metadata = {
     items={[
     ]}
     classes={{
-      container: 'my-12 mx-auto max-w-7xl text-white', 
-
+      container: 'my-12 mx-auto max-w-7xl text-white',
     }}
+
+    bg="linear-gradient(to right, #ff9966, #ff5e62)"
   />
 
 

@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import { Image } from 'astro:assets';
 
@@ -16,7 +16,7 @@ const metadata = {
   <!-- Hero Widget ******************* -->
   <Hero
     id="hero"
-    title="We are here to help!"
+    title="Contact Us"
     subtitle="Our support team is here to help you with any questions or concerns you may have. We are here to help you with any questions or concerns you may have."
     image={{
       src: '~/assets/images/contact-us-hero-background.png',
@@ -57,9 +57,8 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <Features
     title="We are here to help!"
-    columns={2}
     items={[
       {
         title: 'General support',
@@ -91,6 +90,6 @@ const metadata = {
         icon: 'tabler:map-pin',
       },
     ]}
-    columns={2}
+    columns={3}
   />
 </Layout>

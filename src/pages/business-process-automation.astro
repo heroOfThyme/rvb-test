@@ -5,6 +5,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Prices from '~/components/widgets/Pricing.astro';
 
 
 const metadata = {
@@ -30,5 +31,144 @@ const metadata = {
             efficiency and reduce costs.
         </Fragment>
     </Hero>
+
+    <!-- Pricing Section       #TODO - Discuss pricing for website if applicable          --> 
+    <Prices
+    id='Prices'
+    title="Our prices"
+    subtitle="Only pay for what you need"
+    prices={[
+        {
+            title: 'basic',
+            subtitle: 'Optimal choice for personal use',
+            price: 62.5,
+            period: 'monthly',
+            items: [
+                {
+                    description: '3 Page Website',
+                },
+                {
+                    description: 'Brand Integration',
+                },
+                {
+                    description: 'Fully Hosted Website',
+                },
+                {
+                    description: 'Unlimited Revisions*',
+                },
+                {
+                    description: 'Monthly Maintenance*',
+                    icon: '',
+                }
+            ],
+            callToAction: {
+                target: '_blank',
+                text: 'Get started',
+                href: '#',
+            },
+        },
+        {
+            title: 'Business',
+            subtitle: 'Optimal choice for small teams',
+            price: 595,
+            period: 'Per Month',
+            items: [
+                {
+                    description: 'Unlimited Pages',
+                },
+                {
+                    description: 'Brand Integration',
+                },
+                {
+                    description: 'Fully Hosted Website',
+                },
+                {
+                    description: 'Unlimited Revisions*',
+                },
+                {
+                    description: 'Monthly Maintenance*',
+                },
+                {
+                    description: 'Including',
+                },
+                {
+                    description: 'SEO Optimization',
+                }
+            ],
+            callToAction: {
+                target: '_blank',
+                text: 'Get started',
+                href: '#',
+            },
+            hasRibbon: true,
+            ribbonTitle: 'popular',
+        },
+        {
+            title: 'premium',
+            subtitle: 'Optimal choice for companies',
+            price: 199,
+            period: 'Per Month',
+            items: [
+                {
+                    description: 'Curabitur suscipit risus',
+                },
+                {
+                    description: 'Aliquam habitasse malesuada',
+                },
+                {
+                    description: 'Suspendisse sit amet blandit',
+                },
+                {
+                    description: 'Suspendisse auctor blandit dui',
+                },
+            ],
+            callToAction: {
+                target: '_blank',
+                text: 'Get started',
+                href: '#',
+            },
+        },
+    ]},
+    />
+
+    <!-- Features Section -->
+    <Features2
+        id='Features'
+        title="Our Features"
+        subtitle="We offer a wide range of features"
+        items={[
+            {
+                title: 'Feature 1',
+                description: 'Curabitur suscipit risus nec lacus gravida, sit amet tristique turpis tincidunt. Aliquam habitasse malesuada, vestibulum ante sit amet, ultricies sapien. Suspendisse sit amet blandit nulla. Suspendisse auctor blandit dui, nec tincidunt nunc.',
+                icon: 'tabler:arrow-right-circle',
+            },
+            {
+                title: 'Feature 2',
+                description: 'Curabitur suscipit risus nec lacus gravida, sit amet tristique turpis tincidunt. Aliquam habitasse malesuada, vestibulum ante sit amet, ultricies sapien. Suspendisse sit amet blandit nulla. Suspendisse auctor blandit dui, nec tincidunt nunc.',
+                icon: 'tabler:arrow-right-circle',
+            },
+            {
+                title: 'Feature 3',
+                description: 'Curabitur suscipit risus nec lacus gravida, sit amet tristique turpis tincidunt. Aliquam habitasse malesuada, vestibulum ante sit amet, ultricies sapien. Suspendisse sit amet blandit nulla. Suspendisse auctor blandit dui, nec tincidunt nunc.',
+                icon: 'tabler:arrow-right-circle',
+            },
+            {
+                title: 'Feature 4',
+                description: 'Curabitur suscipit risus nec lacus gravida, sit amet tristique turpis tincidunt. Aliquam habitasse malesuada, vestibulum ante sit amet, ultricies sapien. Suspendisse sit amet blandit nulla. Suspendisse auctor blandit dui, nec tincidunt nunc.',
+                icon: 'tabler:arrow-right-circle',
+            },
+            {
+                title: 'Feature 5',
+                description: 'Curabitur suscipit risus nec lacus gravida, sit amet tristique turpis tincidunt. Aliquam habitasse malesuada, vestibulum ante sit amet, ultricies sapien. Suspendisse sit amet blandit nulla. Suspendisse auctor blandit dui, nec tincidunt nunc.',
+                icon: 'tabler:arrow-right-circle',
+            },
+            {
+                title: 'Feature 6 ',
+                description: 'Curabitur suscipit risus nec lacus gravida, sit amet tristique turpis tincidunt. Aliquam habitasse malesuada, vestibulum ante sit amet, ultricies sapien. Suspendisse sit amet blandit nulla. Suspendisse auctor blandit dui, nec tincidunt nunc.',
+                icon: 'tabler:arrow-right-circle',
+            },
+        ]},
+    />
+
 
 </Layout>

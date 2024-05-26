@@ -28,8 +28,8 @@ const {
         images.map(
           (image) =>
             image.src && (
-              <div class="flex justify-evenly my-2 lg:my-4 py-1 px-3 rounded-md">
-                <Image src={image.src} alt={image.alt || ''} class="max-h-12" layout="responsive" />
+              <div class="flex justify-evenly my-2 lg:my-4 py-2 px-3 rounded-md">
+                <Image src={image.src} alt={image.alt || ''} class="max-h-12" layout="fullWidth" />
               </div>
             )
         )
