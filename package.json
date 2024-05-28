@@ -33,7 +33,6 @@
     "express": "^4.19.2",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
-    "nodemailer": "^6.9.13",
     "unpic": "^3.18.0"
   },
   "devDependencies": {
