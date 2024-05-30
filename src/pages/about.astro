@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'About us',
@@ -42,12 +43,11 @@ const { bg = '' } = Astro.props;
     subtitle="Our mission is to provide innovative, custom-built solutions that enable small businesses to reach their full potential in today’s digital landscape."
     isBeforeContent={true}
     items={[
-    ]}
-    classes={{
-      container: 'my-12 mx-auto max-w-7xl text-white',
-    }}
+    ]},
 
-    bg="linear-gradient(to right, #ff9966, #ff5e62)"
+    classes={{
+      container: "py-10",
+    }}
   />
 
 
@@ -106,26 +106,19 @@ const { bg = '' } = Astro.props;
     ]}
   />
 
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={1}
-    items={[
+  <CallToAction
+    title="Ready to get started?"
+    subtitle="Contact us today to learn more about how we can help you achieve your business goals."
+    actions={[
       {
-        title: 'Send Us an Email',
-        description:
-          'Head over to our contact page to send us an email. We also have a FAQ section with information on common inquiries. We’ll get back to you as soon as possible.',  
-        icon: 'tabler:mail-forward',
-        callToAction: {
-          text: 'Our Help Center',
-          href: '/contact',
-          variant: 'primary',
-          type: 'button',
-        },
-      },
+      variant: 'primary',
+      text: 'Lets Get to Work',
+      href: 'https://www.rvbcorp.com/contact',
+      target: '_blank',
+      class: 'text-white bg-primary hover:bg-secondary',
+    },
     ]}
+    
   />
+
 </Layout>
