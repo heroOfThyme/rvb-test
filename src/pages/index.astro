@@ -12,18 +12,17 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
-import Image from '~/components/common/Image.astro';
-import { getImage } from 'astro/assets';
 
 const metadata = {
   title: 'RVB Corp - Burlingtons Number One Web Design Company',
   ignoreTitleTemplate: true,
 };
+
+
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
   <Hero2
     actions={[
       {

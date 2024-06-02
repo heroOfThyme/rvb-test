@@ -1,0 +1,284 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import type ItemGrid2 from '~/components/ui/ItemGrid2.astro';
+
+
+const metadata = {
+    title: 'Search Engine Optimization',
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero
+        tagline="Services"
+        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '/search-engine-optimization' }]}
+        image={{
+            src: '~/assets/images/web-development-main.webp',
+            alt: 'RVB Web Development Solutions Image',
+        }}
+        >
+        <Fragment slot="title">
+            Search Engine Optimization
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            Improve your website’s visibility and drive more organic traffic with our search engine optimization services. Our team of experts will help you optimize your website for search engines, ensuring that your website ranks higher in search results and attracts more visitors.
+        </Fragment>
+        
+    </Hero>
+
+    <!-- SEO Features -->
+    <Features2
+        id='Our SEO Services'
+        tagline='Making Your Website Seen and Heard'
+        title='Our SEO Services'
+        subtitle='We offer a range of search engine optimization services to help you improve your website’s visibility and drive more organic traffic. Our team of experts will work with you to develop a customized SEO strategy that meets your unique needs and goals.'
+        items={[
+            {
+                title: 'Keyword Research',
+                description: 'We conduct in-depth keyword research to identify the most relevant keywords for your website, helping you attract more organic traffic and improve your search engine rankings.',
+                icon: 'tabler:table-options',
+                classes:{ panel: 'card' },
+            },
+            {
+                title: 'On-Page Optimization',
+                description: 'We optimize your website’s on-page elements, including meta tags, headings, and content, to improve your search engine rankings and attract more organic traffic.',
+                icon: 'tabler:brush',
+                classes:{ panel: 'card' },
+            },
+            {
+                title:'Content Creation',
+                description: 'We create high-quality, SEO-friendly content for your website, including blog posts, articles, and landing pages, to attract more organic traffic and engage your audience.',
+                icon: 'tabler:file-text',
+                classes:{ panel: 'card' },
+            },
+            {
+                title: 'Link Building',
+                description: 'We build high-quality backlinks to your website from authoritative websites, helping you improve your search engine rankings and attract more organic traffic.',
+                icon: 'tabler:search',
+                classes:{ panel: 'card' },
+
+            },
+            {
+                title: 'Local SEO',
+                description: 'We optimize your website for local search, helping you attract more local customers and improve your search engine rankings in your target market.',
+                icon: 'tabler:server',
+                classes:{ panel: 'card' },
+            },
+            {
+                title: 'Technical SEO',
+                description: 'We optimize your website’s technical elements, including site speed, mobile-friendliness, and schema markup, to improve your search engine rankings and attract more organic traffic.',
+                icon: 'tabler:shopping-bag',
+                classes:{ panel: 'card' },
+            },
+        ]},
+
+    />
+
+    <!-- Our Process -->
+
+    <Steps
+        id='Why Choose Us?'
+        title='Our Process is Easy. So you can focus on your business.',
+        items={[
+            {
+            title: 'Step 1: <span class="font-medium">Consultation & Agreement</span>',
+            description:
+                "We start by understanding your unique needs and goals. Our team will then craft a detailed proposal outlining the scope of work, timelines, and cost.",
+            icon: 'tabler:presentation',  
+            },
+
+            {
+            title: 'Step 2: <span class="font-medium">Planning & Design</em>',
+            description:
+                "Our team will gather all necessary information and create a project plan. We then move on to the design phase where we create the designs for your website.",
+            icon: 'tabler:file-time',
+            },
+            {
+            title: 'Step 3: <span class="font-medium">Development & Testing</span>',
+            description:
+                'This is where our developers bring the designs to life. We adhere to best coding practices and build a website that is not only visually appealing but also functional and user-friendly.',
+            icon: 'tabler:source-code',
+            },
+            {
+            title: 'Step 4: <span class="font-medium">Deployment</span>',
+            description:
+                'Once everything is tested and approved by you, we deploy the website and make it live for the world to see.',
+            icon: 'tabler:shareplay',
+            },
+            {
+            title: 'Step 5: <span class="font-medium">Post Launch Support</span>',
+            description:
+                'Our relationship doesn’t end at deployment. We offer post-launch support to fix any issues and ensure smooth operation.',
+            icon: 'tabler:heart-filled',
+            },
+        ]}
+        image={{ src: '~/assets/images/steps-module-main.png',
+        alt: 'Main Services Image',
+
+        }}
+    />
+
+    <!-- Pricing Section -->
+    <Prices
+        title="Our SEO Packages"
+        subtitle="Choose the package that best fits your needs and budget. We offer a range of seo packages to help you get started with your online presence."
+        prices={[
+            {
+                title: 'basic',
+                subtitle: 'Optimal choice for personal use',
+                price: 350,
+                period: 'One-time',
+                items: [
+                    {
+                        description: '1-5 Page Website',
+                    },
+                    {
+                        description: 'Brand Integration',
+                    },
+                    {
+                        description: 'WordPress Theme'
+                    },
+                    {
+                        description: '3 Revisions',
+                    },
+                ],
+                callToAction: {
+                    target: '_blank',
+                    text: 'Get started',
+                    href: '/contact',
+                },
+            },
+            {
+                title: 'Business',
+                subtitle: 'Optimal choice for small teams',
+                price: 2499,
+                period: 'starting at',
+                items: [
+                    {
+                        description: '5-10 Page Website',
+                    },
+                    {
+                        description: '10 Stock Photos',
+                    },
+                    {
+                        description: 'Agency Supplied Content',
+                    },
+                    {
+                        description: 'WordPress Theme',
+                    },
+                    {
+                        description: '10 Revisions',
+                    },
+                    {
+                        description: 'Domain Purchasing',
+                    },
+                ],
+                callToAction: {
+                    target: '_blank',
+                    text: 'Get started',
+                    href: '/contact',
+                },
+                hasRibbon: true,
+                ribbonTitle: 'popular',
+            },
+            {
+                title: 'premium',
+                subtitle: 'Optimal choice for large teams',
+                price: 10000,
+                period: 'one-time',
+                items: [
+                {
+                    description: 'everything in business',
+                },
+                {
+                    description: 'Custom Features',
+                },
+                {
+                    description: 'Ecommerce Integration',
+                },
+                {
+                    description: 'Advanced SEO Package',
+                },
+                {
+                    description: '1 Year Hosting Included',
+                },
+                {
+                    description: 'Custom Email Setup',
+                },
+                {
+                    description: 'Social Media Integration',
+                },
+                ],
+                callToAction: {
+                target: '_blank',
+                text: 'Get started',
+                href: '/contact',
+                },
+            },
+        ]},
+    />
+
+    <!-- Tesimonials -->
+    <Testimonials
+        title="What our users say?"
+        testimonials={[
+            {
+            testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
+            name: 'Cary Kennedy',
+            job: 'Film director',
+            image: {
+                src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                alt: 'Cary Kennedy Image',
+            },
+            },
+            {
+            testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
+            name: 'Josh Wilkinson',
+            job: 'Product Manager',
+            image: {
+                src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                alt: 'Josh Wilkinson Image',
+            },
+            },
+            {
+            testimonial:
+                'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+            name: 'Sidney Hansen',
+            job: 'Decorator',
+            image: {
+                src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                alt: 'Sidney Hansen Image',
+            },
+            },
+        ]}
+    />
+
+    <!-- Call to Action -->
+    <CallToAction
+        actions={[
+            {
+            variant: 'primary',
+            text: 'Contact Us',
+            href: 'https://www.rvbcorp.com/contact-us/',
+            target: '_blank',
+            icon: 'tabler:external-link',
+            },
+        ]},
+        >
+        <Fragment slot="title">
+            Tailored Data Solutions
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            Ensure your businesses visibility in the digital landscape. Contact us for your website development needs.
+        </Fragment>
+    </CallToAction>
+</Layout>

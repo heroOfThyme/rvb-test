@@ -68,7 +68,7 @@ const {
           }}
         />
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2 content-center md:content-start">
+      <div aria-hidden="true" class="mt-auto md:mt-0 md:basis-1/2 content-center md:content-start">
         {
           image && (
             <div class="relative m-auto max-w-5xl">
@@ -77,11 +77,11 @@ const {
               ) : (
                 <Image
                   class="mx-auto w-full rounded-lg"
-                  width={500}
-                  height={500}
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
-                  layout="contained"
+                  layout="responsive"
+                  width={768}
+                  height={432}
                   {...(image as any)}
                 />
               )}

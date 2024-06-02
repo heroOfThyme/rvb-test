@@ -2,6 +2,8 @@
 import Image from '~/components/common/Image.astro';
 import type { CallToAction } from '~/types';
 import Button from '~/components/ui/Button.astro';
+import Particles from "astro-particles";
+import type { ISourceOptions } from "tsparticles-engine";
 
 export interface Props {
   title?: string;
@@ -20,7 +22,11 @@ const {
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
 } = Astro.props;
+
+
+
 ---
+
 
 <section class="relative not-prose">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>

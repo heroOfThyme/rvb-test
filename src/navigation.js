@@ -18,6 +18,10 @@ export const headerData = {
           href: getPermalink('/web-hosting'),
         },
         {
+          text: 'Search Engine Optimization',
+          href: getPermalink('/search-engine-optimization'),
+        },
+        {
           text: 'Business Process Automation',
           href: getPermalink('/business-process-automation'),
         },
