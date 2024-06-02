@@ -17,6 +17,10 @@ module.exports = {
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: theme => ({
+        'border-gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
+        'border-gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
+      })
     },
   },
   plugins: [typographyPlugin],
