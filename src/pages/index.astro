@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -28,15 +28,15 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Lets Get to Work',
-        href: 'https://www.rvbcorp.com/contact',
-        target: '_blank',
+        href: '/contact',
+        target: '_self',
         class: 'text-white bg-primary hover:bg-secondary',
       },
       {
         variant: 'secondary',
         text: 'See Our Work',
-        href: 'https://www.rvbcorp.com/portfolio/',
-        target: '_blank',
+        href: '/portfolio',
+        target: '_self',
       }
     ]}
     image={{ src: '~/assets/images/rvb-main-hero.svg', alt: 'RVB Corp Hero Image' }}
@@ -60,7 +60,7 @@ const metadata = {
 
   <!-- Features Widget *************** -->
 
-  <Features
+  <Features2
     id="Services"
     tagline="Services"
     title="Our Agency Helps You in Multiple Ways."
@@ -72,12 +72,13 @@ const metadata = {
           'Our team of experienced developers design and build bespoke websites tailored to your business needs. We focus on creating engaging, user-friendly experiences that effectively communicate your brand and drive growth.',
         icon: 'tabler:code-dots',
         callToAction: {
-          text: 'See Full Service',
-          href: 'https://www.rvbcorp.com/web-development',
-          type: 'button',
-          class: 'text-default flex flex-row items-center hover:bg-secondary text-white py-2 px-4 rounded ',
-          variant: 'primary',
-          target: '_blank',
+          text: 'Expore Our Services',
+          href: '/web-development',
+          target: '_self',
+        },
+
+        classes: {
+          panel: 'service-card'
         },
       },
       {
@@ -86,11 +87,13 @@ const metadata = {
           'Our SEO services are designed to increase your website’s visibility in search engine results. We use proven strategies and techniques to improve your ranking, drive traffic, and boost your online presence.',
         icon: 'tabler:checklist',
         callToAction: {
-          text: 'See Full Service',
-          href: 'https://www.rvbcorp.com/search-engine-optimization',
-          class: 'text-default flex flex-row items-center hover:bg-secondary text-white py-2 px-4 rounded',
-          variant: 'primary',
-          type: 'button',
+          text: 'Expore Our Services',
+          href: '/search-engine-optimization',
+          target: '_self',
+        },
+
+        classes: {
+          panel: 'service-card'
         },
       },
       {
@@ -99,11 +102,13 @@ const metadata = {
           'Our business process automation services streamline your operations, reduce manual tasks, and increase efficiency. We help businesses automate their processes so they can focus on what they do best - serving their customers.',
         icon: 'tabler:arrows-left-right',
         callToAction: {
-          text: 'See Full Service',
-          href: 'https://www.rvbcorp.com/business-process-automation',
-          class: 'text-default flex flex-row items-center hover:bg-secondary text-white py-2 px-4 rounded',
-          variant: 'primary',
-          type: 'button',
+          text: 'Expore Our Services',
+          href: '/business-process-automation',
+          target: '_self',
+        },
+
+        classes: {
+          panel: 'service-card'
         },
       },
       {
@@ -111,13 +116,14 @@ const metadata = {
         description:
           "We help businesses leverage Google’s tools and services to their advantage. From setting up your Google My Business profile to managing your online reviews, we ensure your business gets noticed on Google.",
         icon: 'tabler:brand-google-filled',
-        // Add Button to Call to Action
         callToAction: {
-          text: 'See Full Service',
-          href: 'https://www.rvbcorp.com/google-business-management',
-          class: 'text-default flex flex-row items-center hover:bg-secondary text-white py-2 px-4 rounded',
-          variant: 'primary',
-          type: 'button',
+          text: 'Expore Our Services',
+          href: '/google-business-management',
+          target: '_self',
+        },
+
+        classes: {
+          panel: 'service-card'
         },
       },
       {
@@ -126,11 +132,13 @@ const metadata = {
           'We provide reliable, secure web hosting solutions that ensure your website is always accessible and performing optimally. Our hosting services include regular backups, 99.9% uptime, and 24/7 support.',
         icon: 'tabler:server',
         callToAction: {
-          text: 'See Full Service',
-          href: 'https://www.rvbcorp.com/web-hosting',
-          class: 'text-default flex flex-row items-center hover:bg-secondary text-white py-2 px-4 rounded',
-          variant: 'primary',
-          type: 'button',
+          text: 'Expore Our Services',
+          href: '/web-hosting',
+          target: '_self',
+        },
+
+        classes: {
+          panel: 'service-card'
         },
       },
     ]}
@@ -297,9 +305,8 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Contact Us',
-        href: 'https://www.rvbcorp.com/contact-us/',
-        target: '_blank',
-        icon: 'tabler:external-link',
+        href: '/contact',
+        target: '_self',
       },
     ]}
   >
