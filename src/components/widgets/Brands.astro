@@ -21,7 +21,7 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  <div class="flex flex-wrap justify-center gap-x-6 lg:gap-x-12">
+  <div class="flex flex-wrap justify-center gap-x-4 lg:gap-x-12">
     {icons && icons.map((icon) => <Icon name={icon} class="py-3 lg:py-5 w-12 h-auto mx-auto sm:mx-0 text-gray-500" />)}
     {
       images &&
@@ -29,7 +29,7 @@ const {
           (image) =>
             image.src && (
               <div class="flex justify-evenly my-2 lg:my-4 px-3">
-                <Image src={image.src} alt={image.alt || ''} class="max-h-fit md:max-h-14" layout="responsive" />
+                <Image src={image.src} alt={image.alt || ''} class="sm:min-h-fit md:max-h-16" layout="responsive" />
               </div>
             )
         )
