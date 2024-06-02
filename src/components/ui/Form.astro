@@ -16,7 +16,7 @@ const topics = [
 
 ---
 
-<form action="/api/sendEmail" method="POST">
+<form method="POST">
   {
     inputs &&
       inputs.map(
@@ -35,7 +35,7 @@ const topics = [
                 autocomplete={autocomplete}
                 placeholder={placeholder}
                 required={required}
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-primary bg-white dark:bg-transparent caret-primary"
               />
               <div class="validation-message" style="color: red;"> </div>
             </div>
@@ -53,7 +53,7 @@ const topics = [
         id="topics"
         name="topics"
         required
-        class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+        class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-primary bg-white dark:bg-transparent"
       >
         <option value="" disabled selected>Select a topic</option>
         {topics.map(({ value, label }) => (
@@ -67,7 +67,7 @@ const topics = [
   {
     textarea && (
       <div>
-        <label for="textarea" class="block text-sm font-medium">
+        <label for="textarea" class="block text-sm font-medium caret-primary">
           {textarea.label}{textarea.required ? ' *' : ''}
         </label>
         <textarea
@@ -76,7 +76,7 @@ const topics = [
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
           required={textarea.required}
-          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-primary bg-white dark:bg-transparent"
         />
       </div>
     )
@@ -90,7 +90,7 @@ const topics = [
             id="disclaimer"
             name="disclaimer"
             type="checkbox"
-            class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-primary bg-white dark:bg-transparent"
           />
         </div>
         <div class="ml-3">
