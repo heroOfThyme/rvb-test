@@ -167,3 +167,13 @@
 .special-section {
   min-height: calc(100vh - 90px - 388px);
 }
+
+.service-card-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; /* This allows the absolute positioned children to be positioned relative to this element */
+  background: 
+  radial-gradient(circle at 0% 100%, rgba(119,118,255,.20) 0%, rgba(255,255,255,0) 70%), 
+  radial-gradient(circle at 100% 0%, rgba(119,118,255,.20) 0%, rgba(255,255,255,0) 70%);
+}
