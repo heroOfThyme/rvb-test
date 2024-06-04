@@ -27,6 +27,7 @@
     "@fontsource/poppins": "^5.0.14",
     "@fontsource/source-sans-pro": "^5.0.8",
     "@fontsource/ubuntu": "^5.0.13",
+    "@jop-software/astro-cookieconsent": "^3.0.0",
     "@tsparticles/preset-fire": "^3.0.2",
     "astro": "^4.6.1",
     "astro-embed": "^0.7.1",
