@@ -258,6 +258,19 @@ export interface Features extends Omit<Headline,"classes">, Widget {
   isAfterContent?: boolean;
 }
 
+export interface PortfolioItem extends Omit<Headline,"classes">, Widget {
+  image?: string | unknown;
+  video?: Video;
+  items?: Array<Item>;
+  columns?: number;
+  defaultIcon?: string;
+  callToAction1?: CallToAction;
+  callToAction2?: CallToAction;
+  isReversed?: boolean;
+  isBeforeContent?: boolean;
+  isAfterContent?: boolean;
+}
+
 export interface Faqs extends Omit<Headline,"classes">, Widget {
   iconUp?: string;
   iconDown?: string;
