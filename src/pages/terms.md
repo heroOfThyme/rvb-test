@@ -9,6 +9,18 @@ By using this Site, you indicate that you have read and understand these Terms a
 
 THESE TERMS AND CONDITIONS CONTAIN A DISPUTE RESOLUTION CLAUSE THAT IMPACTS YOUR RIGHTS ABOUT HOW TO RESOLVE DISPUTES. PLEASE READ IT CAREFULLY.
 
+## Contents
+- [Intellectual Property](#intellectual-property)
+- [Age Restrictions](#age-restrictions)
+- [Acceptable Use](#acceptable-use)
+- [Limitation of Liability](#limitation-of-liability)
+- [Indemnity](#indemnity)
+- [Applicable Law](#applicable-law)
+- [Dispute Resolution](#dispute-resolution)
+- [Severability](#severability)
+- [Changes](#changes)
+- [Contacting us](#contacting-us)
+
 ## Intellectual Property
 
 All content published and made available on our Site is the property of RVB Data Sciences Corp. and the Site's creators. This includes, but is not limited to images, text, logos, documents, downloadable files and anything that contributes to the composition of our Site.
