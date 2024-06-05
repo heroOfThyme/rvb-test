@@ -1,18 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import { getPermalink } from '~/utils/permalinks';
-import Image from 'astro/components/Image.astro';
-import { positionAt } from 'node_modules/astro/dist/core/errors';
-import Pagination from '~/components/blog/Pagination.astro';
+import PortfolioItem from '~/components/widgets/PortfolioItem.astro';
 
 
 const metadata = {
@@ -32,120 +22,55 @@ const metadata = {
         </Fragment>
     </Hero>
 
-    <Content
-        id="porfolio"
-        isReversed
-        items={[
-        {
-            title: 'Description:',
-            description:
-            'Legacy Exterior Inc. is a Windsor-based construction company specializing in excavation and landscaping services. The company needed a brand identity that reflected its commitment to quality and innovation.',
-            icon: 'tabler:clipboard-text',
-        },
-        {
-            title: 'Action:',
-            description:
-            'We developed a modern and professional website for Legacy Exteriors Inc. that showcased the company\'s services and projects. The site features a clean and user-friendly design, high-quality images, and clear calls-to-action to drive conversions.',
-            icon: 'tabler:code',            
-        },
-        ]}
-        image={{
-            src: '~/assets/images/legacy-exteriors-portfolio-bg.webp',
-            alt: 'Legacy Exteriors Inc',
-            }}
-        callToAction={{
-            target: '_blank',
-            text: 'Visit the Website',
-            icon: 'tabler:chevron-right',
-            href: 'https://www.legacyexteriorsinc.com/',
-        }}
-        >
-    <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-            Legacy Exteriors Inc <br /><span class="text-2xl">Windsors Best Excavating Contractor</span>
-        </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-</Content>
-
-  <!-- Content Widget **************** -->
-
-    <Content
-        isReversed
-        isAfterContent={true}
-        items={[
-        {
-            title: 'Description:',
-            description:
-            'S&V Memorials is a family-owned business specializing in custom headstones and memorials. The company needed a website that showcased its products and services while providing a seamless user experience.',
-            icon: 'tabler:clipboard-text',
-        },
-        {
-            title: 'Action:',
-            description: 'We designed and developed a visually appealing and user-friendly website for S&V Memorials. The site features high-quality images of the company\'s products, clear calls-to-action, and an easy-to-navigate layout to drive conversions.',
-            icon: 'tabler:code',
-        },
-        ]},
-        image={{
-            src: '~/assets/images/sv-memorials-portfolio-bg.webp',
-            alt: 'S&V Memorials Website',
-        }}
-    callToAction={{
-        target: '_blank',
-        text: 'Visit the Website',
-        icon: 'tabler:chevron-right',
-        href: 'https://www.svmemorials.com/',
-    }}
-    >
-        <Fragment slot="content">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-                S&V Memorials <br /><span class="text-2xl">Windsors Best Memorial Installer</span>
-            </h3>
-        </Fragment>
-
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
-
-  <!-- Content Widget **************** -->
-
-    <Content
-    isReversed
-    isAfterContent={true}
+    <PortfolioItem
+    columns={3}
     items={[
         {
-        title: 'Description:',
-        description: `Seniors Helper is a dedicated service committed to providing compassionate and personalized home cleaning for the elderly. As a one-woman operation, the business prides itself on its ability to bring warmth, care, and cleanliness into the homes of seniors.`,
+            title: 'Legacy Exteriors Inc',
+            description: 'Windsors Excavation Expert',
+            callToAction: {
+                href: "https://legacyexteriorsinc.com", 
+                target: "_blank", 
+                text: "Visit the Website", 
+                icon: 'tabler:chevron-right', 
+                variant: 'link', 
+            },
+            classes: {
+                container2: 'bg-[url("~/assets/images/legacy-exteriors-portfolio-bg-fixed.webp")]',
+                description: 'text-muted',
+            }
         },
         {
-        title: 'Role:',
-        description: `We designed and developed a vibrant, visually engaging, and easy-to-navigate one-page website for Seniors Helper. The site is a reflection of the owner’s favourite colours, creating a warm and inviting digital space. It effectively highlights the compassionate services offered, with clear calls-to-action and contact forms for easy communication. The design is not only user-friendly but also visually independent, making it a true representation of the unique and personalized care that Seniors Helper provides.`,
+            title: 'S&V Memorials',
+            description: 'Windsors Top Memorial Service',
+            callToAction: {
+                href: "https://svmemorials.com", 
+                target: "_blank", 
+                text: "Visit the Website", 
+                icon: 'tabler:chevron-right', 
+                variant: 'link', 
+            },
+            classes: {container2: 'bg-[url("~/assets/images/sv-memorials-portfolio-bg.webp")]'}
         },
-    ]}
-    image={{
-        src: '~/assets/images/seniorshelper-main-portfolio.webp',
-        alt: 'Seniors Helper Website',
-        
-    }}
-    callToAction={{
-        target: '_blank',
-        text: 'Visit the Website',
-        icon: 'tabler:chevron-right',
-        href: 'https://seniorshelper.ca/',
-    }}
-    >
-        <Fragment slot="content">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-                Seniors Helper<br /><span class="text-2xl">Compassionate Care for Your Loved Ones’ Homes</span>
-            </h3>
-        </Fragment>
+        {
+            title: 'Seniors Helper',
+            description: 'Windsors Excavation Expert',
+            callToAction: {
+                href: "https://seniorshelper.ca", 
+                target: "_blank", 
+                text: "Visit the Website", 
+                icon: 'tabler:chevron-right', 
+                variant: 'link',
+            },
+            classes: {
+                container2: 'bg-[url("~/assets/images/seniors-helper-portfolio-bg.webp")]',
+                panel: 'place-content-end',
+                title: 'text-white',
+                description: 'text-muted'
+            },
+        },
+    ]},
 
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
+    />
+
 </Layout>

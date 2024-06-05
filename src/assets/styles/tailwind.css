@@ -36,6 +36,7 @@
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
+
 }
 
 #header.scroll > div:first-child {
@@ -177,3 +178,4 @@
   radial-gradient(circle at 0% 100%, rgba(119,118,255,.20) 0%, rgba(255,255,255,0) 70%), 
   radial-gradient(circle at 100% 0%, rgba(83, 155, 250, 0.2) 0%, rgba(255,255,255,0) 70%);
 }
+
