@@ -3,7 +3,7 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'About Us',
+      text: 'About',
       href: getPermalink('/about'),
     },
     {
@@ -40,7 +40,7 @@ export const headerData = {
       href: getBlogPermalink('/blog'),
     },
     {
-      text: 'Contact Us',
+      text: 'Contact',
       href: getPermalink('/contact'),
     },
   ],
@@ -49,27 +49,21 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Web Development Solutions',
+      title: 'Our Solutions',
       links: [
-        { text: 'Web Development', href: '#' },
-        { text: 'Web Hosting', href: '#' },
-        { text: 'Google Business Management', href: '#' },
-      ],
-    },
-    {
-      title: 'Integrated Business Solutions',
-      links: [
-        { text: 'Business Process Automation', href: '#' },
-        { text: 'Application Integration', href: '#' },
-        { text: 'Data Science Solutions', href: '#' },
-        { text: 'Infrastructure Solutions', href: '#' },
+        { text: 'Web Development', href: '/web-decelopment' },
+        { text: 'Web Hosting', href: '/web-hosting' },
+        { text: 'Search Engine Optimization', href: '/search-engine-optimization' },
+        { text: 'Business Process Automation', href: '/business-process-automation' },
+        { text: 'Google Business Management', href: '/google-business-management' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
+        { text: 'About', href: '/about' },
+        { text: 'Portfolio', href: '/portfolio' },
+        { text: 'Blog', href: '/blog' },
       ],
     },
     {
