@@ -12,16 +12,16 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
+import PortfolioItem from '~/components/widgets/PortfolioItem.astro';
 
 const metadata = {
   title: 'RVB Corp - Burlingtons Number One Web Design Company',
   ignoreTitleTemplate: true,
 };
-
-
 ---
 
 <Layout metadata={metadata}>
+
   <!-- Hero Widget ******************* -->
   <Hero2
     actions={[
@@ -43,7 +43,7 @@ const metadata = {
     
   >
     <Fragment slot="title">
-      Tailored Data Solutions for businesses of all sizes.
+      Tailored Tech Solutions for businesses of all sizes.
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -145,27 +145,85 @@ const metadata = {
     ]}
   />
 
+  <!-- Content Section -->
+  <PortfolioItem
+    tagline='Our Work'
+    title="Recent Projects"
+    subtitle="We have worked with a variety of clients across different industries. Here are some of our recent projects."
+    callToAction1={{
+      text: 'View All Projects',
+      href: '/portfolio',
+      target: '_self',
+    }}
+    items={[
+      {
+          title: 'Legacy Exteriors Inc',
+          description: 'Windsors Excavation Expert',
+          callToAction: {
+              href: "https://legacyexteriorsinc.com", 
+              target: "_blank", 
+              text: "Visit the Website", 
+              icon: 'tabler:chevron-right', 
+              variant: 'link', 
+          },
+          classes: {
+              container2: 'bg-[url("~/assets/images/legacy-exteriors-portfolio-bg-fixed.webp")]',
+              description: 'text-muted',
+          }
+      },
+      {
+          title: 'S&V Memorials',
+          description: 'Windsors Top Memorial Service',
+          callToAction: {
+              href: "https://svmemorials.com", 
+              target: "_blank", 
+              text: "Visit the Website", 
+              icon: 'tabler:chevron-right', 
+              variant: 'link', 
+          },
+          classes: {container2: 'bg-[url("~/assets/images/sv-memorials-portfolio-bg.webp")]'}
+      },
+      {
+          title: 'Seniors Helper',
+          description: 'Windsors Excavation Expert',
+          callToAction: {
+              href: "https://seniorshelper.ca", 
+              target: "_blank", 
+              text: "Visit the Website", 
+              icon: 'tabler:chevron-right', 
+              variant: 'link',
+          },
+          classes: {
+              container2: 'bg-[url("~/assets/images/seniors-helper-portfolio-bg.webp")]',
+              panel: 'place-content-end',
+              title: 'text-white',
+              description: 'text-muted'
+          },
+      },
+  ]},
+
+  />
+
   <!-- Brand Section -->
   <Brands
     title="Our Partnerships"
     subtitle="We work with the best to deliver the best."
-    icons={[
-    ]}
     images={[
       {
         src: '~/assets/images/Shopify_Primary_Inverted.svg',
         alt: 'Shopify Partnership Logo',
       },
       {
-        src: '~/assets/images/google-cloud-partnership-badge.png',
-        alt: 'Google Cloud Partnership Logo',
-      },
-      {
         src: '~/assets/images/DO_Logo_Horizontal_Blue.png',
         alt: 'Digital Ocean Partnership Logo',
       },
+      {
+        src: '~/assets/images/google-cloud-partnership-badge.png',
+        alt: 'Google Cloud Partnership Logo',
+      },
     ]},
-  />
+  >
+  </Brands>
 
   <!-- Steps Widget ****************** -->
 
@@ -210,8 +268,6 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
-
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
@@ -231,14 +287,9 @@ const metadata = {
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'What services do you offer for small businesses?',
-        description:
-          "Our main services is web development solutions, but we also offer a wide range of services including web hosting, web design, process automation, custom api development, Google Ads Management, Google Business Management, and much more.",
-      },
-      {
         title: 'How long does it take to design and develop a website?',
         description:
-          "Typically, a website project takes between 1 to 8 weeks to complete. However, this duration can fluctuate based on your unique requirements. During our initial consultation, we’ll gain a better understanding of your needs and will be able to provide a more precise timeline tailored to your specific project.",
+          "Typically, a website takes between 1 to 3 weeks to complete. However, this duration can fluctuate based on your unique requirements. During our initial consultation, we’ll gain a better understanding of your needs and will be able to provide a more precise timeline.",
       },
       {
         title: 'How much input will I have during the design process?',
@@ -249,11 +300,6 @@ const metadata = {
         title: "Can you provide ongoing maintenance and updates after the website is launched?",
         description:
           "Yes, we offer ongoing maintenance and update services post-launch to ensure your website remains current and functional. The specifics of these services can be discussed during our consultation.",
-      },
-      {
-        title: 'How do you ensure the security of the websites you develop?',
-        description:
-          "We prioritize security in all our projects. We implement best practices to safeguard your website from potential threats, including SSL certificates, secure hosting, and regular security updates.",
       },
       {
         title: 'Do you provide training or support for website management after launch?',
@@ -272,29 +318,17 @@ const metadata = {
         testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
         name: 'Cary Kennedy',
         job: 'Film director',
-        image: {
-          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
-        },
       },
       {
         testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
         name: 'Josh Wilkinson',
         job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
-        },
       },
       {
         testimonial:
           'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
         name: 'Sidney Hansen',
         job: 'Decorator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
-        },
       },
     ]}
   />
@@ -304,19 +338,19 @@ const metadata = {
   <CallToAction
     actions={[
       {
-        variant: 'primary',
         text: 'Contact Us',
-        href: '/contact',
+        href: '/contact#form',
         target: '_self',
       },
     ]}
   >
     <Fragment slot="title">
-      Tailored Data Solutions
+      Tailored Solutions
     </Fragment>
 
     <Fragment slot="subtitle">
       Ensure your businesses visibility in the digital landscape. Contact us for your website development needs.
     </Fragment>
+
   </CallToAction>
 </Layout>

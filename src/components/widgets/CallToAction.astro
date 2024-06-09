@@ -27,32 +27,34 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <div
-    class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-primary"
+    class="max-w-3xl mx-auto text-center p-px rounded-3xl shadow-xl dark:shadow-none bg-gradient-to-tr from-[#ed137b] to-[#7776ff]"
   >
-    <Headline
-      title={title}
-      subtitle={subtitle}
-      tagline={tagline}
-      classes={{
-        container: 'mb-0 md:mb-0',
-        title: 'text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading',
-        subtitle: 'text-xl text-muted dark:text-slate-400',
-      }}
-    />
-    {
-      actions && (
-        <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
-          {Array.isArray(actions) ? (
-            actions.map((action) => (
-              <div class="flex w-full sm:w-auto">
-                <Button {...(action || {})} class="w-full sm:mb-0" />
-              </div>
-            ))
-          ) : (
-            <Fragment set:html={actions} />
-          )}
-        </div>
-      )
-    }
+  <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white dark:bg-[#121212] ">
+      <Headline
+        title={title}
+        subtitle={subtitle}
+        tagline={tagline}
+        classes={{
+          container: 'mb-0 md:mb-0',
+          title: 'text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white',
+          subtitle: 'text-xl text-muted dark:text-muted ',
+        }}
+      />
+      {
+        actions && (
+          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
+            {Array.isArray(actions) ? (
+              actions.map((action) => (
+                <div class="flex w-full sm:w-auto">
+                  <Button {...(action || {})} class="w-full sm:mb-0 bg-gradient-to-tr from-fuchsia-600 to-purple-600 border-0" />
+                </div>
+              ))
+            ) : (
+              <Fragment set:html={actions} />
+            )}
+          </div>
+        )
+      }
+    </div>
   </div>
 </WidgetWrapper>

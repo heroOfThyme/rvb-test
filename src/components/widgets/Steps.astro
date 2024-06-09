@@ -11,7 +11,7 @@ const {
   tagline = await Astro.slots.render('tagline'),
   items = [],
   image = await Astro.slots.render('image'),
-  isReversed = false,
+  isReversed = true,
 
   id,
   isDark = false,
@@ -37,7 +37,7 @@ const {
     </div>
     {
       image && (
-        <div class="relative md:basis-1/2">
+        <div class="relative md:basis-1/2 hidden md:flex">
           {(typeof image === 'string' ? (
           <Fragment set:html={image} />
           ) : (

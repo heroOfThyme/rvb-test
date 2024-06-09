@@ -29,7 +29,7 @@ metadata:
     site: '@onwidget'
     cardType: summary_large_image
   instagram:
-    username: '@onwidget'
+    handle: '@onwidget'
 
 i18n:
   language: en

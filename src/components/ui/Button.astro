@@ -38,3 +38,24 @@ const variants = {
     </a>
   )
 }
+<style>
+  .cta-button {
+    position: relative;
+    background: #ffffff; /* Replace with your button's background color */
+    border: 2px solid transparent;
+    background-clip: padding-box; /* This clips the background to the padding box */
+    box-decoration-break: clone; /* This makes the border wrap around each box when inline elements break */
+  }
+  
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top right, #ed137b 0%, #7776ff 100%);
+    border: inherit;
+    z-index: -1;
+  }
+  </style>
