@@ -1,4 +1,6 @@
 ---
+export const prerender = false
+
 import Layout from '~/layouts/PageLayout.astro';
 
 import Note from '~/components/widgets/Note.astro';
@@ -18,6 +20,7 @@ const metadata = {
   title: 'RVB Corp - Burlingtons Number One Web Design Company',
   ignoreTitleTemplate: true,
 };
+
 ---
 
 <Layout metadata={metadata}>
@@ -271,10 +274,8 @@ const metadata = {
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
+    title="Latest Scoop from Our Desk"
+    information={`Check out our Blog page where we talk about projects, handy tips, and all things web. Dive in for more.
                 `}
   />
 
@@ -337,20 +338,20 @@ const metadata = {
 
   <CallToAction
     actions={[
-      {
-        text: 'Contact Us',
-        href: '/contact#form',
-        target: '_self',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Tailored Solutions
-    </Fragment>
+        {
+            text: 'Contact Us',
+            href: '/contact#form',
+            target: '_self',
+        },
+        ]}
+    >
+        <Fragment slot="title">
+        Ready to Get Started?
+        </Fragment>
 
-    <Fragment slot="subtitle">
-      Ensure your businesses visibility in the digital landscape. Contact us for your website development needs.
-    </Fragment>
+        <Fragment slot="subtitle">
+            We’re here to help you take your business to the next level. Contact us today to learn more about our services and how we can help you achieve your goals.
+        </Fragment>
 
-  </CallToAction>
+    </CallToAction>
 </Layout>

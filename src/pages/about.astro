@@ -107,18 +107,22 @@ const { bg = '' } = Astro.props;
   />
 
   <CallToAction
-    title="Ready to get started?"
-    subtitle="Contact us today to learn more about how we can help you achieve your business goals."
     actions={[
-      {
-      variant: 'primary',
-      text: 'Lets Get to Work',
-      href: 'https://www.rvbcorp.com/contact',
-      target: '_blank',
-      class: 'text-white bg-primary hover:bg-secondary',
-    },
-    ]}
-    
-  />
+        {
+            text: 'Contact Us',
+            href: '/contact#form',
+            target: '_self',
+        },
+        ]}
+    >
+        <Fragment slot="title">
+        Ready to Get Started?
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            We’re here to help you take your business to the next level. Contact us today to learn more about our services and how we can help you achieve your goals.
+        </Fragment>
+
+    </CallToAction>
 
 </Layout>

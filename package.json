@@ -17,7 +17,7 @@
     "lint:eslint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/node": "^8.2.5",
+    "@astrojs/node": "^8.2.6",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.2",
     "@astrolib/analytics": "^0.5.0",
@@ -37,7 +37,8 @@
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "tsparticles": "^3.4.0",
-    "unpic": "^3.18.0"
+    "unpic": "^3.18.0",
+    "vanilla-cookieconsent": "^3.0.1"
   },
   "devDependencies": {
     "@astrojs/mdx": "^2.3.0",

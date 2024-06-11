@@ -108,10 +108,22 @@ const metadata = {
 
     <!-- Call to Action Section -->
     <CallToAction
-        title="Ready to Automate Your Business Processes?"
-        subtitle="Contact us today to learn more about our services and how we can help you achieve your business goals."
-        actions={[{ variant:"primary", target: '_blank', text: 'Get in touch', href: '/' }]}
-    />
+    actions={[
+        {
+            text: 'Contact Us',
+            href: '/contact#form',
+            target: '_self',
+        },
+        ]}
+    >
+        <Fragment slot="title">
+        Ready to Get Started?
+        </Fragment>
 
+        <Fragment slot="subtitle">
+            We’re here to help you take your business to the next level. Contact us today to learn more about our services and how we can help you achieve your goals.
+        </Fragment>
+
+    </CallToAction>
 
 </Layout>
