@@ -24,7 +24,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-semibold text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-white dark:hover:border-slate-800 cursor-pointer;
+    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-semibold text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-white dark:hover:border-transparent cursor-pointer;
   }
 
   .btn-primary {
@@ -153,27 +153,19 @@
 }
 
 .service-card > * {
-  margin-bottom: 20px; /* This adds space between each element */
+  margin-bottom: 1rem; /* This adds space between each element */
 }
 
 .service-card > :nth-last-child(2) {
-  margin-bottom: 40px; /* This adds more space below the second last child */
+  margin-bottom: 2rem; /* This adds more space below the second last child */
 }
 
 .service-card > :last-child {
   align-self: center; /* This aligns the last child to the center */
 }
 
-.special-section {
-  min-height: calc(100vh - 90px - 388px);
-}
-
-.service-card-features {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative; /* This allows the absolute positioned children to be positioned relative to this element */
-  background: 
-  radial-gradient(circle at 0% 100%, rgba(119,118,255,.20) 0%, rgba(255,255,255,0) 70%), 
-  radial-gradient(circle at 100% 0%, rgba(83, 155, 250, 0.2) 0%, rgba(255,255,255,0) 70%);
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

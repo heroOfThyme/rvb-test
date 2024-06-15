@@ -48,16 +48,7 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    {
-      title: 'Our Solutions',
-      links: [
-        { text: 'Web Development', href: '/web-decelopment' },
-        { text: 'Web Hosting', href: '/web-hosting' },
-        { text: 'Search Engine Optimization', href: '/search-engine-optimization' },
-        { text: 'Business Process Automation', href: '/business-process-automation' },
-        { text: 'Google Business Management', href: '/google-business-management' },
-      ],
-    },
+    {},
     {
       title: 'Company',
       links: [
@@ -69,11 +60,19 @@ export const footerData = {
     {
       title: 'Support',
       links: [
-        // { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Get in Touch', href: '/contact' },
+        { text: 'FAQ', href: '/contact#faq' },
+        { text: 'Documentation', href: '#' },
+      ],
+    },
+    {
+      title: 'Our Solutions',
+      links: [
+        { text: 'Web Development', href: '/web-decelopment' },
+        { text: 'Web Hosting', href: '/web-hosting' },
+        { text: 'Search Engine Optimization', href: '/search-engine-optimization' },
+        { text: 'Business Process Automation', href: '/business-process-automation' },
+        { text: 'Google Business Management', href: '/google-business-management' },
       ],
     },
   ],

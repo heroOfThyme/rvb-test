@@ -13,6 +13,20 @@ const topics = [
   {value: 'other', label: 'Other'},
 ];
 
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("username");
+    const email = data.get("email");
+    const password = data.get("password");
+    // Do something with the data
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+
 
 ---
 
@@ -120,3 +134,36 @@ const topics = [
     )
   }
 </form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const form = document.querySelector('form') as HTMLFormElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      // Optionally convert formData to a JSON object
+      const plainFormData = Object.fromEntries(formData.entries());
+      const formDataJsonString = JSON.stringify(plainFormData);
+
+      try {
+        const response = await fetch('/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: formDataJsonString,
+        });
+
+        if (response.ok) {
+          console.log('Email sent successfully');
+          // Handle success response
+        } else {
+          console.error('Failed to send email');
+          // Handle error response
+        }
+      } catch (error) {
+        console.error('Error sending email', error);
+      }
+    });
+  });
+</script>
