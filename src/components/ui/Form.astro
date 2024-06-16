@@ -30,7 +30,7 @@ if (Astro.request.method === "POST") {
 
 ---
 
-<form method="POST">
+<form method="POST" id="form">
   {
     inputs &&
       inputs.map(
@@ -134,36 +134,3 @@ if (Astro.request.method === "POST") {
     )
   }
 </form>
-
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const form = document.querySelector('form') as HTMLFormElement;
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      // Optionally convert formData to a JSON object
-      const plainFormData = Object.fromEntries(formData.entries());
-      const formDataJsonString = JSON.stringify(plainFormData);
-
-      try {
-        const response = await fetch('/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: formDataJsonString,
-        });
-
-        if (response.ok) {
-          console.log('Email sent successfully');
-          // Handle success response
-        } else {
-          console.error('Failed to send email');
-          // Handle error response
-        }
-      } catch (error) {
-        console.error('Error sending email', error);
-      }
-    });
-  });
-</script>

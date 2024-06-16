@@ -20,7 +20,7 @@ const { bg = '' } = Astro.props;
   <Hero
     tagline="About us"
     image={{
-      src: '~/assets/images/rvb-about-us.png',
+      src: '~/assets/images/about-us-main.png',
       alt: 'RVB Coding Away',
     }}
   >
@@ -104,6 +104,60 @@ const { bg = '' } = Astro.props;
         icon: 'tabler:message-plus',
       },
     ]}
+  />
+
+  <!-- Features2 Widget ******************* -->
+  <Features2
+    tagline='Technology Stack'
+    title="What We Use"
+    subtitle="A glimpse into the technologies we use to build your solutions"
+    items={[
+      {
+        title: 'JavaScript',
+        icon: 'tabler:brand-javascript',
+        classes: { icon: 'text-yellow-500'},
+      },
+      {
+        title: 'TypeScript',
+        icon: 'tabler:brand-typescript',
+        classes: { icon: 'text-blue-500'},
+      },
+      {
+        title: 'PHP',
+        icon: 'tabler:brand-php',
+        classes: { icon: 'text-purple-500'},
+      },
+      {
+        title: 'Laraval',
+        icon: 'tabler:brand-laravel',
+        classes: { icon: 'text-red-500'},
+      },
+      {
+        title: 'WordPress',
+        icon: 'tabler:brand-wordpress',
+        classes: { icon: 'text-blue-500'},
+      },
+      {
+        title: 'Astro',
+        icon: 'tabler:brand-astro',
+        classes: { icon: 'text-[#eb3ed8]'},
+      },
+      {
+        title: 'Tailwind CSS',
+        icon: 'tabler:brand-tailwind',
+        classes: { icon: 'text-blue-500'},
+      },
+      {
+        title: 'CPanel',
+        icon: 'tabler:brand-react',
+        classes: { icon: 'text-blue-500'},
+      },
+      {
+        title: 'Linux',
+        icon: 'tabler:brand-ubuntu',
+        classes: { icon: 'text-red-500'},
+      }
+    ]} 
   />
 
   <CallToAction
