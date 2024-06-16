@@ -48,7 +48,23 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    {},
+    {
+      title: 'Our Solutions',
+      links: [
+        { text: 'Web Development', href: '/web-development' },
+        { text: 'Web Hosting', href: '/web-hosting' },
+        { text: 'Search Engine Optimization', href: '/search-engine-optimization' },
+        { text: 'Business Process Automation', href: '/business-process-automation' },
+        { text: 'Google Business Management', href: '/google-business-management' },
+      ],
+    },
+    {
+      title: 'Get Started',
+      links: [
+        { text: 'General Inquires', href: 'mailto:info@rvbcorp.com' },
+        { text: 'Sales', href: 'mailto:sales@rvbcorp.com' },
+      ],
+    },
     {
       title: 'Company',
       links: [
@@ -63,16 +79,6 @@ export const footerData = {
         { text: 'Get in Touch', href: '/contact' },
         { text: 'FAQ', href: '/contact#faq' },
         { text: 'Documentation', href: '#' },
-      ],
-    },
-    {
-      title: 'Our Solutions',
-      links: [
-        { text: 'Web Development', href: '/web-decelopment' },
-        { text: 'Web Hosting', href: '/web-hosting' },
-        { text: 'Search Engine Optimization', href: '/search-engine-optimization' },
-        { text: 'Business Process Automation', href: '/business-process-automation' },
-        { text: 'Google Business Management', href: '/google-business-management' },
       ],
     },
   ],
