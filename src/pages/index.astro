@@ -51,38 +51,38 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-      We specialize in creating custom web solutions including, web hosting, web design, process automation,
-      custom api development, analytics, and much more.
+        We specialize in custom web solutions, 
+        including web development, automation, and Google services. 
+        As your local web developer, we’re attuned to the unique needs of Burlington businesses.
       </span>
+      <br>
         Explore our many services and see how we can accelerate your business operations.
     </Fragment>
   </Hero2>
 
   <!-- Note Widget ******************* -->
-
   <Note />
 
   <!-- Features Widget *************** -->
-
   <Features2
     id="Services"
     tagline="Services"
-    title="Our Agency Helps You in Multiple Ways."
-    subtitle="We have a wide range of services. Visit our service page to view them all."
+    title="Our Agency Helps You in Multiple Ways"
+    subtitle="We offer a range of services to help your business succeed online. From web development to Google services, hosting and more, we have you covered."
     items={[
       {
         title: 'Web Development',
         description:
-          'Our team of experienced developers design and build bespoke websites tailored to your business needs. We focus on creating engaging, user-friendly experiences that effectively communicate your brand and drive growth.',
+          'Our team of developers design and build bespoke websites tailored to your business needs. We focus on creating engaging, user-friendly experiences that effectively communicate your brand and drive growth.',
         icon: 'tabler:code-dots',
         callToAction: {
-          text: 'Expore Our Services',
+          text: 'Explore This Service',
           href: '/web-development',
           target: '_self',
         },
-
         classes: {
-          panel: 'service-card'
+          panel: 'service-card',
+          description: 'text-lg'
         },
       },
       {
@@ -91,28 +91,28 @@ const metadata = {
           'Our SEO services are designed to increase your website’s visibility in search engine results. We use proven strategies and techniques to improve your ranking, drive traffic, and boost your online presence.',
         icon: 'tabler:checklist',
         callToAction: {
-          text: 'Expore Our Services',
+          text: 'Explore This Service',
           href: '/search-engine-optimization',
           target: '_self',
         },
-
         classes: {
-          panel: 'service-card'
+          panel: 'service-card',
+          description: 'text-lg'
         },
       },
       {
         title: 'Business Process Automation',
         description:
-          'Our business process automation services streamline your operations, reduce manual tasks, and increase efficiency. We help businesses automate their processes so they can focus on what they do best - serving their customers.',
+          'Our business process automation services streamline your operations, reduce manual tasks, and increase efficiency. We help businesses automate their processes so they can focus on what they do best - managing their business.',
         icon: 'tabler:arrows-left-right',
         callToAction: {
-          text: 'Expore Our Services',
+          text: 'Explore This Service',
           href: '/business-process-automation',
           target: '_self',
         },
-
         classes: {
-          panel: 'service-card'
+          panel: 'service-card',
+          description: 'text-lg'
         },
       },
       {
@@ -121,13 +121,13 @@ const metadata = {
           "We help businesses leverage Google’s tools and services to their advantage. From setting up your Google My Business profile to managing your online reviews, we ensure your business gets noticed on Google.",
         icon: 'tabler:brand-google-filled',
         callToAction: {
-          text: 'Expore Our Services',
+          text: 'Explore This Service',
           href: '/google-business-management',
           target: '_self',
         },
-
         classes: {
-          panel: 'service-card'
+          panel: 'service-card',
+          description: 'text-lg'
         },
       },
       {
@@ -136,13 +136,13 @@ const metadata = {
           'We provide reliable, secure web hosting solutions that ensure your website is always accessible and performing optimally. Our hosting services include regular backups, 99.9% uptime, and 24/7 support.',
         icon: 'tabler:server',
         callToAction: {
-          text: 'Expore Our Services',
+          text: 'Explore This Service',
           href: '/web-hosting',
           target: '_self',
         },
-
         classes: {
-          panel: 'service-card'
+          panel: 'service-card',
+          description: 'text-lg'
         },
       },
     ]}
@@ -169,10 +169,9 @@ const metadata = {
               icon: 'tabler:chevron-right', 
               variant: 'link', 
           },
-          classes: { 
-
-              container2: 'bg-[url("~/assets/images/legacy-exteriors-portfolio-bg-fixed.webp")]',
+          classes: {
               description: 'text-muted',
+              container2: 'bg-[url("~/assets/images/legacy-exteriors-portfolio-bg-fixed.webp")]'
           }
       },
       {
@@ -210,6 +209,7 @@ const metadata = {
 
   <!-- Brand Section -->
   <Brands
+    tagline='Working with Giants'
     title="Our Partnerships"
     subtitle="We work with the best to deliver the best."
     images={[
@@ -230,8 +230,8 @@ const metadata = {
   </Brands>
 
   <!-- Steps Widget ****************** -->
-
   <Steps
+    tagline='Our Process'
     id='Why Choose Us?'
     title='Working with us is easy. So you can focus on what you do best.',
     items={[
