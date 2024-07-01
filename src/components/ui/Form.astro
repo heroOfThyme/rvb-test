@@ -91,28 +91,6 @@ const topics = [
     )
   }
 
-  {
-    disclaimer && (
-      <div class="mt-5 flex items-start">
-        <div class="flex mt-0.5">
-          <input
-            id="disclaimer"
-            name="disclaimer"
-            type="checkbox"
-            required
-            class="cursor-pointer mt-1 py-3 px-4 block text-md rounded-lg"
-          />
-        </div>
-        <div class="ml-3">
-          <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
-            {disclaimer.label}
-          </label>
-        </div>
-      </div>
-      
-    )
-  }
-
   <div class="h-captcha mt-6"
   data-captcha="true"
   data-theme="dark"
