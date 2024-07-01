@@ -85,180 +85,47 @@ const metadata = {
     <!-- Our Process -->
 
     <Steps
-        id='Why Choose Us?'
-        title='Our Process is Easy. So you can focus on your business.',
+        tagline='Simple and Effective.'
+        id='seo-steps'
+        title='Our SEO Process',
         items={[
             {
             title: 'Step 1: <span class="font-medium">Consultation & Agreement</span>',
             description:
-                "We start by understanding your unique needs and goals. Our team will then craft a detailed proposal outlining the scope of work, timelines, and cost.",
+                "The initial consultation is designed to understand your business, target audience, and SEO goals. During this phase, we discuss your current SEO efforts and results, identify key business objectives, and target keywords. This step is crucial for setting realistic expectations and goals for our SEO campaign.",
             icon: 'tabler:presentation',  
             },
 
             {
-            title: 'Step 2: <span class="font-medium">Planning & Design</em>',
+            title: 'Step 2: <span class="font-medium">Website Audit</em>',
             description:
-                "Our team will gather all necessary information and create a project plan. We then move on to the design phase where we create the designs for your website.",
+                "Our website audit evaluates the current status of your website's SEO. We identify technical issues, analyze on-page SEO elements such as title tags, meta descriptions, and headers, and assess site speed, mobile-friendliness, and user experience. This audit provides a clear picture of where your site stands and what needs improvement.",
             icon: 'tabler:file-time',
             },
             {
-            title: 'Step 3: <span class="font-medium">Development & Testing</span>',
+            title: 'Step 3: <span class="font-medium">Keyword Research</span>',
             description:
-                'This is where our developers bring the designs to life. We adhere to best coding practices and build a website that is not only visually appealing but also functional and user-friendly.',
+                'In the keyword research phase, we find the most relevant and valuable keywords for your business. We conduct thorough research to identify high-traffic, low-competition keywords and analyze competitors keyword strategies. The goal is to finalize a list of target keywords that will drive the most traffic and conversions for your site.',
             icon: 'tabler:source-code',
             },
             {
-            title: 'Step 4: <span class="font-medium">Deployment</span>',
+            title: 'Step 4: <span class="font-medium">Optimization and Content Development</span>',
             description:
-                'Once everything is tested and approved by you, we deploy the website and make it live for the world to see.',
-            icon: 'tabler:shareplay',
+                'This phase combines on-page optimization, content creation, technical SEO, link building, and local SEO (if applicable). We optimize your sites content and structure, create high-quality keyword-rich content, and improve internal linking. We also address technical aspects like site speed, mobile-friendliness, and schema markup.',
+            icon: 'tabler:search',
             },
             {
-            title: 'Step 5: <span class="font-medium">Post Launch Support</span>',
-            description:
-                'Our relationship doesn’t end at deployment. We offer post-launch support to fix any issues and ensure smooth operation.',
-            icon: 'tabler:heart-filled',
-            },
-        ]}
-        image={{ src: '~/assets/images/steps-module-main.png',
-        alt: 'Main Services Image',
-
-        }},
-        isReversed={true};
-    />
-
-    <!-- Pricing Section -->
-    <Prices
-        title="Our SEO Packages"
-        subtitle="Choose the package that best fits your needs and budget. We offer a range of seo packages to help you get started with your online presence."
-        prices={[
-            {
-                title: 'basic',
-                subtitle: 'Optimal choice for personal use',
-                price: 350,
-                period: 'One-time',
-                items: [
-                    {
-                        description: '1-5 Page Website',
-                    },
-                    {
-                        description: 'Brand Integration',
-                    },
-                    {
-                        description: 'WordPress Theme'
-                    },
-                    {
-                        description: '3 Revisions',
-                    },
-                ],
-                callToAction: {
-                    target: '_blank',
-                    text: 'Get started',
-                    href: '/contact',
-                },
+                title: 'Step 5: <span class="font-medium">Analytics & Reporting</span>',
+                description:
+                    'Tracking progress and measuring the success of our SEO efforts is key to achieving your goals. We set up and configure Google Analytics and Search Console, monitor key performance indicators (KPIs) and SEO metrics, and provide regular reports. These insights allow us to adjust strategies as needed to ensure continuous improvement.',
+                icon: 'tabler:chart-bar',
             },
             {
-                title: 'Business',
-                subtitle: 'Optimal choice for small teams',
-                price: 2499,
-                period: 'starting at',
-                items: [
-                    {
-                        description: '5-10 Page Website',
-                    },
-                    {
-                        description: '10 Stock Photos',
-                    },
-                    {
-                        description: 'Agency Supplied Content',
-                    },
-                    {
-                        description: 'WordPress Theme',
-                    },
-                    {
-                        description: '10 Revisions',
-                    },
-                    {
-                        description: 'Domain Purchasing',
-                    },
-                ],
-                callToAction: {
-                    target: '_blank',
-                    text: 'Get started',
-                    href: '/contact',
-                },
-                hasRibbon: true,
-                ribbonTitle: 'popular',
-            },
-            {
-                title: 'premium',
-                subtitle: 'Optimal choice for large teams',
-                price: 10000,
-                period: 'one-time',
-                items: [
-                {
-                    description: 'everything in business',
-                },
-                {
-                    description: 'Custom Features',
-                },
-                {
-                    description: 'Ecommerce Integration',
-                },
-                {
-                    description: 'Advanced SEO Package',
-                },
-                {
-                    description: '1 Year Hosting Included',
-                },
-                {
-                    description: 'Custom Email Setup',
-                },
-                {
-                    description: 'Social Media Integration',
-                },
-                ],
-                callToAction: {
-                target: '_blank',
-                text: 'Get started',
-                href: '/contact',
-                },
-            },
-        ]},
-    />
-
-    <!-- Tesimonials -->
-    <Testimonials
-        title="What our users say?"
-        testimonials={[
-            {
-            testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
-            name: 'Cary Kennedy',
-            job: 'Film director',
-            image: {
-                src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-                alt: 'Cary Kennedy Image',
-            },
-            },
-            {
-            testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
-            name: 'Josh Wilkinson',
-            job: 'Product Manager',
-            image: {
-                src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-                alt: 'Josh Wilkinson Image',
-            },
-            },
-            {
-            testimonial:
-                'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
-            name: 'Sidney Hansen',
-            job: 'Decorator',
-            image: {
-                src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-                alt: 'Sidney Hansen Image',
-            },
-            },
+                title: 'Step 6: <span class="font-medium">Continuous Improvement</span>',
+                description:
+                    'SEO is an ongoing process. We conduct regular audits and performance reviews, update content and strategies based on the latest SEO trends and algorithm changes, and engage in ongoing optimization. This continuous improvement ensures sustained success and keeps your site competitive in search rankings.',
+                icon: 'tabler:refresh',
+            }
         ]}
     />
 

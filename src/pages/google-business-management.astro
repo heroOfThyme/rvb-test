@@ -62,184 +62,39 @@ const metadata = {
     />
 
     <!-- Content Section -->
-
     <Content
+        tagline='Managed Service'
         id='Why Choose Us?'
-        title='Why Choose Us?'
-        subtitle='We are a team of experienced web developers who are passionate about helping businesses succeed online. We offer a range of web development services to help you create a strong online presence and grow your business. Here are a few reasons why you should choose us:'
+        title='Why Have Your Google Profile Managed?'
+        subtitle='There are many benefits to having your Google Business Profile managed by professionals. We offer a range of services to help you get the most out of your online presence.'
         items={[
             {
-                title: 'Experienced Team',
-                description: 'Our team of experienced web developers has worked with businesses of all sizes and industries. We have the skills and expertise to create a website that is tailored to your unique needs and goals.',
+                title: 'Increased Visibility',
+                description: 'We help you optimize your Google Business Profile to ensure that your business is visible to your customers when they search for your products or services.',
+                icon: 'tabler:eye',
+            },
+            {
+                title: 'Improved Profile',
+                description: 'We help you create a professional and engaging Google Business Profile that showcases your business in the best possible light, helping you attract more customers.',
+                icon: 'tabler:star',
+            },
+            {
+                title: 'Better Customer Engagement',
+                description: 'We help you engage with your customers by responding to messages and questions, ensuring that your customers have a positive experience when interacting with your business.',
                 icon: 'tabler:circle',
             },
             {
-                title: 'Custom Solutions',
-                description: 'We understand that every business is unique, which is why we offer custom web development solutions to meet your specific requirements. We work closely with you to create a website that is not only visually appealing but also functional and user-friendly.',
-                icon: 'tabler:layout-grid',
+                title: 'Detailed Reporting',
+                description: 'We provide you with detailed reports on your online performance, including website traffic, customer engagement, and online visibility, helping you make informed decisions about your online presence.',
+                icon: 'tabler:files',
             },
-            {
-                title: 'Affordable Pricing',
-                description: 'We offer competitive pricing on all our web development services, making it easy for you to get started with your online presence. We offer a range of packages to suit your needs and budget.',
-                icon: 'tabler:currency-dollar',
-            },
-            {
-                title: 'Post-Launch Support',
-                description: 'Our relationship doesn’t end at deployment. We offer post-launch support to fix any issues and ensure smooth operation. We are here to help you succeed online.',
-                icon: 'tabler:heart-filled',
-            },
-
         ]}
-        image={{ src: '~/assets/images/content-module-main.webp',
+        image={{ src: '~/assets/images/web-hosting-service-main.png',
         alt: 'Main Services Image',
-
         }}
     />
 
-        <!-- Our Process -->
-
-        <Steps
-        id='Why Choose Us?'
-        title='Our Process is Easy. So you can focus on your business.',
-        items={[
-            {
-            title: 'Step 1: <span class="font-medium">Consultation & Agreement</span>',
-            description:
-                "We start by understanding your unique needs and goals. Our team will then craft a detailed proposal outlining the scope of work, timelines, and cost.",
-            icon: 'tabler:presentation',  
-            },
-
-            {
-            title: 'Step 2: <span class="font-medium">Planning & Design</em>',
-            description:
-                "Our team will gather all necessary information and create a project plan. We then move on to the design phase where we create the designs for your website.",
-            icon: 'tabler:file-time',
-            },
-            {
-            title: 'Step 3: <span class="font-medium">Development & Testing</span>',
-            description:
-                'This is where our developers bring the designs to life. We adhere to best coding practices and build a website that is not only visually appealing but also functional and user-friendly.',
-            icon: 'tabler:source-code',
-            },
-            {
-            title: 'Step 4: <span class="font-medium">Deployment</span>',
-            description:
-                'Once everything is tested and approved by you, we deploy the website and make it live for the world to see.',
-            icon: 'tabler:shareplay',
-            },
-            {
-            title: 'Step 5: <span class="font-medium">Post Launch Support</span>',
-            description:
-                'Our relationship doesn’t end at deployment. We offer post-launch support to fix any issues and ensure smooth operation.',
-            icon: 'tabler:heart-filled',
-            },
-        ]}
-        image={{ src: '~/assets/images/steps-module-main.png',
-        alt: 'Main Services Image',
-
-        }}
-    />
-
-    <!-- Pricing Section -->
-    <Pricing
-        title="Our Web Development Packages"
-        subtitle="Choose the package that best fits your needs and budget. We offer a range of web development packages to help you get started with your online presence."
-        prices={[
-            {
-                title: 'basic',
-                subtitle: 'Optimal choice for personal use',
-                price: 750,
-                period: 'Starting At',
-                items: [
-                    {
-                        description: '1-5 Page Website',
-                    },
-                    {
-                        description: 'Brand Integration',
-                    },
-                    {
-                        description: 'WordPress Theme'
-                    },
-                    {
-                        description: '3 Revisions',
-                    },
-                ],
-                callToAction: {
-                    target: '_blank',
-                    text: 'Get started',
-                    href: '/contact',
-                },
-            },
-            {
-                title: 'Business',
-                subtitle: 'Optimal choice for small teams',
-                price: 2499,
-                period: 'starting at',
-                items: [
-                    {
-                        description: '5-10 Page Website',
-                    },
-                    {
-                        description: '10 Stock Photos',
-                    },
-                    {
-                        description: 'Agency Supplied Content',
-                    },
-                    {
-                        description: 'WordPress Theme',
-                    },
-                    {
-                        description: '10 Revisions',
-                    },
-                    {
-                        description: 'Domain Purchasing',
-                    },
-                ],
-                callToAction: {
-                    target: '_blank',
-                    text: 'Get started',
-                    href: '/contact',
-                },
-                hasRibbon: true,
-                ribbonTitle: 'popular',
-            },
-            {
-                title: 'premium',
-                subtitle: 'Optimal choice for large teams',
-                price: 10000,
-                period: 'one-time',
-                items: [
-                {
-                    description: 'everything in business',
-                },
-                {
-                    description: 'Custom Features',
-                },
-                {
-                    description: 'Ecommerce Integration',
-                },
-                {
-                    description: 'Advanced SEO Package',
-                },
-                {
-                    description: '1 Year Hosting Included',
-                },
-                {
-                    description: 'Custom Email Setup',
-                },
-                {
-                    description: 'Social Media Integration',
-                },
-                ],
-                callToAction: {
-                target: '_blank',
-                text: 'Get started',
-                href: '/contact',
-                },
-            },
-        ]},
-    />
-
+    <!-- Call to Action Section -->
     <CallToAction
     actions={[
         {

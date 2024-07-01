@@ -180,6 +180,7 @@ export interface Textarea {
 
 export interface Disclaimer {
   label?: string;
+  required?: boolean;
 }
 
 // COMPONENTS
