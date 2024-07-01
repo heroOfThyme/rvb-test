@@ -17,8 +17,9 @@ const metadata = {
   <!-- Hero Widget ******************* -->
   <Hero
     id="hero"
+    tagline='What Can We Help You With?'
     title="Contact Us"
-    subtitle=""
+    subtitle="We're here to help you with any questions or concerns you may have. Reach out to us, and we'll get back to you as soon as possible."
     image={{
       src: '~/assets/images/contact-us-hero-background.png',
       alt: 'Contact us hero background',
@@ -36,22 +37,21 @@ const metadata = {
         name: 'name',
         label: 'Name',
         required: true,
+        placeholder: 'John Doe',
       },
       {
         type: 'email',
         name: 'email',
         label: 'Email',
         required: true,
+        placeholder: 'johndoe@gmail.com',
       },
     ]}
     textarea={{
       label: 'Message',
       name: 'message',
       required: true,
-    }}
-    disclaimer={{
-      label: 'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-      required: true,
+      placeholder: 'Type your message here...',
     }}
     description="Our support team typically responds within 24 business hours."
   />
@@ -61,6 +61,7 @@ const metadata = {
   <Features2
     tagline='We are Here to Help'
     title="Reach Out to Us for Any Questions or Concerns"
+    subtitle="We're here to help you with any questions or concerns you may have. We are reached best via email and typically respond within 24 business hours."
     items={[
       {
         icon: 'tabler:message-2-share',

@@ -24,12 +24,6 @@ metadata:
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
-  instagram:
-    handle: '@onwidget'
 
 i18n:
   language: en
