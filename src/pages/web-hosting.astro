@@ -15,7 +15,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
     <Hero
-        tagline="Services"
+        tagline="Service"
         actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#Features' }]}
         image={{
             src: '~/assets/images/web-hosting-service-main.webp',
@@ -39,7 +39,8 @@ const metadata = {
 
         <Features2
         id="Features"
-        title="Our Features"
+        tagline='We do things better'
+        title="Our Features and Services"
         subtitle="We offer a range of features to keep your website online and running fast."
         items={[
             {
@@ -79,8 +80,9 @@ const metadata = {
 <!-- Pricing Section -->
     <Prices
     id='Prices'
-    title="Our prices"
-    subtitle="Only pay for what you need"
+    tagline='Theres a plan for everyone'
+    title="Flexible Pricing Plans"
+    subtitle="We offer a range of flexible pricing plans to suit your needs. Whether you're a small business or a large enterprise, we have a hosting plan that's right for you."
     prices={[
         {
             title: 'basic',
