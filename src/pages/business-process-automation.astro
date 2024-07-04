@@ -4,7 +4,8 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Layout from '~/layouts/PageLayout.astro';
-
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
     title: 'Business Process Automation',
@@ -77,35 +78,79 @@ const metadata = {
         ]},
     />
 
-    <!-- Content Section -->
-    <Content
-        tagline='Our Approach'
-        title="Why Choose Us?"
-        subtitle="We are committed to helping you achieve your business goals through automation."
-        image={{
-            src: '~/assets/images/web-development-main.webp',
-            alt: 'RVB Web Development Solutions Image',
-        }}
-        isReversed={true}
+    <!-- How It Works Section -->
+    <Steps
+        tagline='Making Things Efficient'
+        id='automation-steps'
+        title='How Our Process Works',
+        subtitle='Our process automation services are designed to help you streamline your operations and achieve your business goals. Here is how our process works:'
+        items={[
+            {
+            title: 'Step 1: <span class="font-medium">Consultation & Agreement</span>',
+            description:
+                "We start by understanding your business needs and goals. Our team conducts a thorough consultation to identify areas for automation and develop a tailored plan. We agree on the scope of work, timeline, and deliverables to ensure alignment and transparency throughout the process.",
+            icon: 'tabler:presentation',  
+            },
+
+            {
+            title: 'Step 2: <span class="font-medium">Strategy Development</em>',
+            description:
+                "In this phase, we develop a comprehensive strategy for automating your business processes. We identify key areas for automation, define workflows, and select the right tools and technologies. Our goal is to create a roadmap that aligns with your business objectives and drives efficiency and growth.",
+            icon: 'tabler:file-time',
+            },
+            {
+            title: 'Step 3: <span class="font-medium">Implementation</span>',
+            description:
+                'Once the strategy is finalized, we move on to the implementation phase. Our team of experts will configure and deploy the automation tools, integrate them with your existing systems, and conduct thorough testing to ensure everything is working as expected. We also provide training and support to help your team adapt to the new processes.',
+            icon: 'tabler:source-code',
+            },
+            {
+                title: 'Step 4: <span class="font-medium">Training & Support</span>',
+                description:
+                    'We provide training and support to help your team adapt to the new processes and tools. Our team is available to answer any questions, provide guidance, and address any issues that may arise. We are committed to ensuring a smooth transition and helping you get the most out of our services.',
+                icon: 'tabler:chart-bar',
+            },
+        ]}
+    />
+
+  <!-- Features3 Widget ************** -->
+    <Features3
+        tagline="Why We Stand Out"
+        title="Our Differentiators",
+        subtitle="We are committed to delivering exceptional service and value to our customers. Our unique approach and dedication to excellence set us apart from the competition. Here are some of the reasons why we stand out:"
+        isBeforeContent={true}
+        columns={2}
 
         items={[
             {
-                title: 'Customized Solutions',
-                description: 'We understand that every business is unique. Our team will work with you to develop customized solutions that meet your specific needs and requirements.',
-                icon: 'tabler:check',
+                title: 'Customer-Centric Approach',
+                description: 'We put our customers first, ensuring that their needs and goals are met through our services. Our customer-centric approach is designed to foster lasting relationships and drive success.',
+                icon: 'tabler:heart',
+                classes:{ panel: 'service-card-features' },
             },
             {
-                title: 'Process Analysis',
-                description: 'We conduct a thorough analysis of your existing processes to identify areas for automation and improvement. This ensures that our solutions are tailored to your business.',
-                icon: 'tabler:check',
+                title: 'Adaptable Solutions',
+                description: 'We offer adaptable solutions that can be customized to meet the unique needs of each business. Our flexible approach ensures that our services can evolve with your business.',
+                icon: 'tabler:repeat',
+                classes:{ panel: 'service-card-features' },
             },
             {
-                title: 'Measurable Results',
-                description: 'We focus on delivering measurable results that drive business growth and efficiency. Our solutions are designed to help you achieve your goals and objectives.',
-                icon: 'tabler:check',
+                title: 'Scalable Services',
+                description: 'Our services are designed to scale with your business, ensuring that you can meet increased demand and achieve consistent performance. We help you grow without limitations.',
+                icon: 'tabler:trending-up',
+                classes:{ panel: 'service-card-features' },
             },
-        ]}
-
+            {
+                title: 'Innovative Technology',
+                description: 'We leverage the latest technology to deliver innovative solutions that drive efficiency and growth. Our team is committed to staying ahead of the curve and delivering cutting-edge services.',
+                icon: 'tabler:device-laptop',
+                classes:{ panel: 'service-card-features' },
+            },
+        ]},
+        image={{
+            src: '~/assets/images/test2.webp',
+            alt: 'Business Process Automation Service Features',
+        }}
     />
 
     <!-- Call to Action Section -->

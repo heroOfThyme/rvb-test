@@ -1,12 +1,9 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 
 
 const metadata = {
@@ -61,36 +58,43 @@ const metadata = {
         ]},
     />
 
-    <!-- Content Section -->
-    <Content
-        tagline='Managed Service'
-        id='Why Choose Us?'
-        title='Why Have Your Google Profile Managed?'
-        subtitle='There are many benefits to having your Google Business Profile managed by professionals. We offer a range of services to help you get the most out of your online presence.'
+    <!-- Features3 Widget ************** -->
+    <Features3
+        tagline="Why We Stand Out"
+        title="Our Differentiators",
+        subtitle="We are committed to delivering exceptional service and value to our customers. Our unique approach and dedication to excellence set us apart from the competition. Here are some of the reasons why we stand out:"
+        isBeforeContent={true}
+        columns={2}
+
         items={[
             {
-                title: 'Increased Visibility',
-                description: 'We help you optimize your Google Business Profile to ensure that your business is visible to your customers when they search for your products or services.',
-                icon: 'tabler:eye',
+                title: 'Customer-Centric Approach',
+                description: 'We put our customers first, ensuring that their needs and goals are met through our services. Our customer-centric approach is designed to foster lasting relationships and drive success.',
+                icon: 'tabler:heart',
+                classes:{ panel: 'service-card-features' },
             },
             {
-                title: 'Improved Profile',
-                description: 'We help you create a professional and engaging Google Business Profile that showcases your business in the best possible light, helping you attract more customers.',
-                icon: 'tabler:star',
+                title: 'Adaptable Solutions',
+                description: 'We offer adaptable solutions that can be customized to meet the unique needs of each business. Our flexible approach ensures that our services can evolve with your business.',
+                icon: 'tabler:repeat',
+                classes:{ panel: 'service-card-features' },
             },
             {
-                title: 'Better Customer Engagement',
-                description: 'We help you engage with your customers by responding to messages and questions, ensuring that your customers have a positive experience when interacting with your business.',
-                icon: 'tabler:circle',
+                title: 'Scalable Services',
+                description: 'Our services are designed to scale with your business, ensuring that you can meet increased demand and achieve consistent performance. We help you grow without limitations.',
+                icon: 'tabler:trending-up',
+                classes:{ panel: 'service-card-features' },
             },
             {
-                title: 'Detailed Reporting',
-                description: 'We provide you with detailed reports on your online performance, including website traffic, customer engagement, and online visibility, helping you make informed decisions about your online presence.',
-                icon: 'tabler:files',
+                title: 'Innovative Technology',
+                description: 'We leverage the latest technology to deliver innovative solutions that drive efficiency and growth. Our team is committed to staying ahead of the curve and delivering cutting-edge services.',
+                icon: 'tabler:device-laptop',
+                classes:{ panel: 'service-card-features' },
             },
-        ]}
-        image={{ src: '~/assets/images/web-hosting-service-main.png',
-        alt: 'Main Services Image',
+        ]},
+        image={{
+            src: '~/assets/images/test2.webp',
+            alt: 'Business Process Automation Service Features',
         }}
     />
 

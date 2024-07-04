@@ -1,14 +1,10 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Prices from '~/components/widgets/Pricing.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import type ItemGrid2 from '~/components/ui/ItemGrid2.astro';
-
+import Steps2 from '~/components/widgets/Steps2.astro';
 
 const metadata = {
     title: 'Search Engine Optimization',
@@ -127,6 +123,30 @@ const metadata = {
                 icon: 'tabler:refresh',
             }
         ]}
+    />
+
+      <!-- Steps2 Widget ****************** -->
+
+    <Steps2
+    title="Why Choose Us?"
+    subtitle="We are committed to delivering high-quality SEO services that drive results and help you achieve your business goals. Here are a few reasons why you should choose us for your SEO needs."
+    items={[
+        {
+        title: 'Experience',
+        description:
+            'With years of experience in the industry, we have the knowledge and expertise to develop effective SEO strategies that drive results and help you achieve your business goals.',
+        },
+        {
+        title: 'Customization',
+        description:
+            'We understand that every business is unique, which is why we offer customized SEO solutions tailored to your specific needs and goals. We work with you to develop a strategy that meets your objectives and delivers results.',
+        },
+        {
+        title: 'Transparency',
+        description:
+            'We believe in transparency and open communication. We keep you informed every step of the way, providing regular updates and reports on the progress of your SEO campaign.',
+        },
+    ]}
     />
 
     <!-- Call to Action -->
