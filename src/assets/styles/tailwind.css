@@ -46,6 +46,10 @@
   .btn-landing-secondary {
     @apply btn border dark:border-[#ee0979] hover:bg-[#9f0751];
   }
+
+  .btn-special-price-primary {
+    @apply btn font-semibold bg-white text-white dark:hover:text-[#ee0979] bg-transparent dark:border-white border; 
+  }
 }
 
 #header.scroll > div:first-child {
