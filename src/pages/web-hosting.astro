@@ -1,12 +1,10 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Prices from '~/components/widgets/Pricing.astro';
-
+import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
     title: 'Web Hosting Solutions',
@@ -77,7 +75,7 @@ const metadata = {
         ]},
     />
 
-<!-- Pricing Section -->
+    <!-- Pricing Section -->
     <Prices
     id='Prices'
     tagline='Theres a plan for everyone'
@@ -108,7 +106,7 @@ const metadata = {
                 }
             ],
             callToAction: {
-                target: '_blank',
+                target: '_self',
                 text: 'Get started',
                 href: '#',
             },
@@ -139,13 +137,11 @@ const metadata = {
                 }
             ],
             callToAction: {
-                target: '_blank',
+                target: '_self',
                 text: 'Get started',
                 href: '#',
                 variant: 'special-price-primary',
             },
-            hasRibbon: true,
-            ribbonTitle: 'popular',
         },
         {
             title: 'premium',
@@ -170,38 +166,52 @@ const metadata = {
                 },
             ],
             callToAction: {
-                target: '_blank',
+                target: '_self',
                 text: 'Get started',
                 href: '#',
             },
         },
     ]},
+    >
+    <div class=" text-center py-4">
+        <p class="text-gray-600 dark:text-white text-lg">Hello </p>
+    </div>
+</Prices>
+
+    <!-- FAQs Section -->
+    <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Some commonly asked questions about web hosting. If you have any other questions, visit our contact page."
+    tagline="Got Questions? We've Got Answers."
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+        {
+            title: 'What is web hosting?',
+            description: 'Web hosting is a service that allows individuals and organizations to post a website or web page onto the Internet. A web host, or web hosting service provider, is a business that provides the technologies and services needed for the website or webpage to be viewed on the Internet. Websites are hosted, or stored, on special computers called servers.',
+        },
+        {
+            title: 'What are the different types of web hosting?',
+            description: 'There are several different types of web hosting, including shared hosting, VPS hosting, dedicated hosting, and cloud hosting. Each type of hosting has its own advantages and disadvantages, and the best type of hosting for you will depend on your specific needs and budget.',
+        },
+        {
+            title: 'How do I choose the right web hosting plan?',
+            description: 'When choosing a web hosting plan, it’s important to consider factors such as the amount of storage and bandwidth you need, the number of email accounts you require, and the level of technical support you need. You should also consider your budget and the specific requirements of your website.',
+        },
+        {
+            title: 'What is an SSL certificate?',
+            description: 'An SSL certificate is a digital certificate that authenticates the identity of a website and encrypts information sent to the server using SSL technology. SSL certificates protect sensitive information such as credit card numbers, usernames, passwords, and other personal data from being intercepted by hackers.',
+        },
+        {
+            title: 'What is cPanel?',
+            description: 'cPanel is a web hosting control panel that allows website owners to manage their websites and server settings through a user-friendly interface. With cPanel, you can easily create email accounts, install software, manage databases, and perform other tasks without needing to know how to code or use the command line.',
+        },
+        {
+            title: 'What is WPtoolkit?',
+            description: 'WPtoolkit is a set of tools and utilities that make it easier to manage WordPress websites. With WPtoolkit, you can easily install, update, and manage WordPress plugins and themes, perform backups and restores, and optimize your website for performance and security.',
+        }
+        ]}
     />
 
-    <!-- Web Design Section -->
-    <Content
-        tagline="Keeping Your Website Secure"
-        title='Secure Web Hosting Solutions'
-        subtitle='Our secure web hosting solutions are designed to keep your website safe from cyber threats and data breaches. We offer a range of security features from SSL certificates to automatic backups. Our team of experts will work with you to ensure that your website data is safe and protected.',
-        items={[
-            {
-                title: 'SSL Certificates',
-                description: 'We include an SSL certificate with all of our hosting plans, encrypting data transmitted between your website and your visitors to ensure that sensitive information is secure and protected.',
-            },
-            {
-                title: 'DDoS Protection',
-                description: 'We provide DDoS protection to help protect your website from distributed denial-of-service (DDoS) attacks, ensuring that your website remains online and accessible to your customers.',
-            },
-            {
-                title: 'Firewalls',
-                description: 'We install firewalls on our servers to help protect your website from cyber threats and data breaches, ensuring that your website data is safe and secure.',
-            },
-            {
-                title: 'Malware Scanning and Removal',
-                description: 'We regularly scan your website for malware and remove any malicious code that we find, ensuring that your website is free from malware and other security threats.',
-            },
-        ]},
-    />
 
     <!-- Call to Action -->
     <CallToAction
