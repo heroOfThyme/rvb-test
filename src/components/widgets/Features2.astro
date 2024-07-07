@@ -8,7 +8,6 @@ const {
   title = await Astro.slots.render("title"),
   subtitle = await Astro.slots.render("subtitle"),
   tagline = await Astro.slots.render("tagline"),
-  image = await Astro.slots.render("image"),
   items = [],
   columns = 3,
   defaultIcon,
@@ -37,7 +36,7 @@ const {
     columns={columns}
     defaultIcon={defaultIcon}
     classes={{
-      container: "gap-6 md:gap-6 justify-center flex flex-wrap sm:gap-3 grid grid-cols-1 sm:grid-cols-2 ",
+      container: "gap-6 md:gap-6",
       //panel:
        //     'rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6',
       panel:
