@@ -1,6 +1,6 @@
 site:
   name: RVB Data Sciences
-  site: 'https://astrowind.vercel.app'
+  site: 'https://v5ssr.rvb.network/'
   base: '/'
   trailingSlash: false
 

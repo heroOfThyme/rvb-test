@@ -3,13 +3,11 @@ import Layout from '~/layouts/PageLayout.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import { Image } from 'astro:assets';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
   title: 'Contact',
 };
-
 ---
 
 <Layout metadata={metadata}>
@@ -17,20 +15,22 @@ const metadata = {
   <!-- Hero Widget ******************* -->
   <Hero
     id="hero"
-    tagline='What Can We Help You With?'
+    tagline="Let's Create Something Amazing Together"
     title="Contact Us"
-    subtitle="We're here to help you with any questions or concerns you may have. Reach out to us, and we'll get back to you as soon as possible."
+    subtitle="We are but an email away. Let's create something together, let's talk about your project, or let's just say hello! We're here to help you with any questions or concerns you may have. We typically respond within 24 business hours."
     image={{
       src: '~/assets/images/contact-us-hero-background.png',
       alt: 'Contact us hero background',
       width: 2040,
     }}
     />
-    
+  
+  <!-- Form Widget ************** -->
   <ContactUs
     id="form"
-    title="Send us a Message"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    tagline='The First Step to Success Starts Here'
+    title="Send Us a Message"
+    subtitle="Fill out the form below to get in touch with us. We are super excited to see how we can help you make something beautiful."
     inputs={[
       {
         type: 'text',
@@ -61,7 +61,7 @@ const metadata = {
   <Features2
     tagline='We are Here to Help'
     title="Reach Out to Us for Any Questions or Concerns"
-    subtitle="We're here to help you with any questions or concerns you may have. We are reached best via email and typically respond within 24 business hours."
+    subtitle="We're here to help you with any questions or concerns you may have. Feel free to checkout our Knowledge Base for step-by-step direction on resolving common issues. If you have something more specific in mind, feel free to reach out to us directly."
     items={[
       {
         icon: 'tabler:message-2-share',
@@ -94,7 +94,7 @@ const metadata = {
           text: 'Visit Support Center',
           variant: 'link',
           class: 'text-primary text-lg hover:text-primary',
-          href: '#',
+          href: 'https://www.support.rvbcorp.com',
         },
       },
     ]}

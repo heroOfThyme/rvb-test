@@ -10,15 +10,13 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'About us',
 };
-
-const { bg = '' } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <Hero
     tagline="About us"
-    actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#Features' }]}
+    actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#mission-statement' }]}
     image={{
       src: '~/assets/images/about-us-main.webp',
       alt: 'RVB Coding Away',
@@ -37,6 +35,7 @@ const { bg = '' } = Astro.props;
 
   <!-- Features3 Widget ************** -->
   <Features3
+    id="mission-statement"
     tagline="Why We Stand Out"
     title="Mission Statement"
     subtitle="Fostering Lasting Relationships, Delivering Adatpable, Scalable Solutions"
@@ -139,9 +138,9 @@ const { bg = '' } = Astro.props;
         classes: { icon: 'text-blue-500'},
       },
       {
-        title: 'CPanel',
-        icon: 'tabler:brand-react',
-        classes: { icon: 'text-blue-500'},
+        title: 'cPanel',
+        icon: 'tabler:device-imac',
+        classes: { icon: 'text-orange-500'},
       },
       {
         title: 'Linux',
