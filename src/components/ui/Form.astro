@@ -2,7 +2,7 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = Astro.props;
 
 const topics = [
   {value: 'web-dev', label: 'Web Development'},
@@ -100,7 +100,7 @@ const topics = [
   {
     button && (
       <div class="mt-10 grid">
-        <Button variant="primary" type="submit">
+        <Button variant="secondary" type="submit" icon='tabler:mail-heart'>
           {button}
         </Button>
       </div>
