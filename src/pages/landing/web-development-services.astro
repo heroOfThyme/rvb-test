@@ -6,6 +6,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+
 const metadata = {
   title: 'Web Development Services',
 };
@@ -13,18 +14,13 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero2 Widget ******************* -->
-
   <Hero
     id='web-landing-hero'
     subtitle="We offer a range of web development services to help businesses create a strong online presence. Our team of experts will work with you to create a website that is both visually appealing and functional."
     actions={[
-      { variant: 'primary', text: 'Get Started', href: '#', icon: 'tabler:square-rounded-arrow-right' },
-      { variant: 'secondary', text: 'Learn More', href: '#', icon: 'tabler:arrow-right-circle' },
+      { variant: 'primary', text: 'Get Started', href: '/contact', icon: 'tabler:square-rounded-arrow-right' },
+      { variant: 'secondary', text: 'Learn More', href: '#web-landing-features', icon: 'tabler:arrow-down-circle' },
     ]}
-    image={{
-      src: '~/assets/images/business-process-automation-service-main.webp',
-      alt: 'Magnet attracting screws. Lead generation landing page demo',
-    }}
   >
   <Fragment slot="title">
     <span class="landing-title">
@@ -32,33 +28,15 @@ const metadata = {
     </span>
   </Fragment>
 
+  <Fragment slot="bg">
+    <video autoplay loop>
+      <source src="/assets/hero-test-movie.mp4" type="video/mp4">
+    </video>
   </Hero>
-
-  <!-- Steps2 Widget -->
-  <Steps2
-    title="Our values"
-    subtitle="Our core values are the foundation of our company, guiding everything we do. We believe in integrity, excellence, and collaboration, and strive to embody these values in all our interactions with clients. We are committed to delivering high-quality solutions that exceed your expectations, ensuring that you are satisfied with the final product. We strive for excellence in everything we do."
-    items={[
-      {
-        title: 'Integrity',
-        description:
-          'We believe in maintaining transparency and honesty in all our dealings, fostering strong relationships with our clients. We go through all contracts and agreements with you to ensure you understand everything.',
-      },
-      {
-        title: 'Excellence',
-        description:
-          'We are committed to delivering high-quality solutions that exceed your expectations, ensuring that you are satisfied with the final product.',
-      },
-      {
-        title: 'Collaboration',
-        description:
-          'We believe in working closely with our clients to understand their unique needs and challenges, fostering a collaborative environment that drives results. We value your input and feedback throughout the process and work with you to ensure your satisfaction.',
-      },
-    ]}
-  />
 
   <!-- Features3 Widget -->
   <Features2
+    id='web-landing-features'
     tagline='We Do Everything'
     title="Our Services"
     subtitle="We offer a range of web development services to help businesses create a strong online presence. Our team of experts will work with you to create a website that is both visually appealing and functional."
@@ -79,26 +57,49 @@ const metadata = {
       {
         title: 'E-commerce Solutions',
         description:
-          'We offer e-commerce solutions to help you sell your products and services online. Our team of experts will work with you to create an online store that is easy to use and optimized for conversions.',
+          'We offer e-commerce solutions to help you sell your products and services online. Everything from payment gateways to product pages, we have you covered. ',
         icon: 'tabler:shopping-cart',
       },
       {
-        title: 'Content Management Systems',
+        title: 'API Development',
         description:
-          'We offer content management systems to help you manage your website content easily. Our team of experts will work with you to create a CMS that is easy to use and optimized for search engines.',
+          'We offer API development services to help you connect your website to other platforms and services. Our team of experts will work with you to create custom APIs that meet your unique needs.',
         icon: 'tabler:file-text',
       },
       {
-        title: 'Mobile Optimization',
+        title: 'Web Hosting',
         description:
-          'We offer mobile optimization services to help you reach your audience on the go. Our team of experts will work with you to create a mobile-friendly website that is optimized for all devices.',
-        icon: 'tabler:device-mobile',
+          'We offer web hosting services to ensure your website is fast, secure, and reliable. Our team of experts will work with you to find the right hosting solution for your needs, whether you are a small business or a large enterprise.',
+        icon: 'tabler:server',
       },
       {
         title: 'SEO Services',
         description:
           'We offer SEO services to help you rank higher in search engine results. Our team of experts will work with you to create an SEO strategy that drives organic traffic to your website.',
-        icon: 'tabler:circle',
+        icon: 'tabler:brand-google',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget -->
+  <Steps2
+    title="Our values"
+    subtitle="Our core values are the foundation of our company, guiding everything we do. We believe in integrity, excellence, and collaboration, and strive to embody these values in all our interactions with clients. We are committed to delivering high-quality solutions that exceed your expectations, ensuring that you are satisfied with the final product. We strive for excellence in everything we do."
+    items={[
+      {
+        title: 'Integrity',
+        description:
+          'We believe in maintaining transparency and honesty in all our dealings, fostering strong relationships with our clients. We go through all contracts and agreements with you to ensure you understand everything.',
+      },
+      {
+        title: 'Excellence',
+        description:
+          'We are committed to delivering high-quality solutions that exceed your expectations, ensuring that you are satisfied with the final product.',
+      },
+      {
+        title: 'Collaboration',
+        description:
+          'We believe in working closely with our clients to understand their unique needs and challenges, fostering a collaborative environment that drives results. We value your input and feedback throughout the process and work with you to ensure your satisfaction.',
       },
     ]}
   />

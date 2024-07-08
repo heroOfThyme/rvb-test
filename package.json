@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@astrojs/node": "^8.2.6",
+    "@astrojs/react": "^3.6.0",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.2",
     "@astrolib/analytics": "^0.5.0",
@@ -29,6 +30,8 @@
     "@fontsource/ubuntu": "^5.0.13",
     "@jop-software/astro-cookieconsent": "^3.0.0",
     "@tsparticles/preset-fire": "^3.0.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "astro": "^4.6.1",
     "astro-embed": "^0.7.1",
     "astro-icon": "^1.1.0",
@@ -36,6 +39,9 @@
     "express": "^4.19.2",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "lottie-react": "^2.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "unpic": "^3.18.0",
     "vanilla-cookieconsent": "^3.0.1"
   },

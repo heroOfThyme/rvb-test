@@ -11,6 +11,7 @@ import astrowind from './vendor/integration';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter.mjs';
 import node from "@astrojs/node";
 import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
+import react from "@astrojs/react";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const hasExternalScripts = false;
 const whenExternalScripts = (items = []) => hasExternalScripts ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
@@ -43,7 +44,7 @@ export default defineConfig({
     Logger: 1
   }), astrowind({
     config: "./src/config.yaml"
-  }), jopSoftwarecookieconsent()],
+  }), jopSoftwarecookieconsent(), react()],
   image: {
     service: squooshImageService(),
     domains: ["cdn.pixabay.com"]
