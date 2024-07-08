@@ -2,7 +2,7 @@
 import Layout from '~/layouts/LandingLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -18,21 +18,19 @@ const metadata = {
     id='web-landing-hero'
     subtitle="We offer a range of web development services to help businesses create a strong online presence. Our team of experts will work with you to create a website that is both visually appealing and functional."
     actions={[
-      { variant: 'primary', text: 'Get Started', href: '/contact', icon: 'tabler:square-rounded-arrow-right' },
+      { variant: 'primary', text: 'Contact Us', href: '/contact', icon: 'tabler:square-rounded-arrow-right' },
       { variant: 'secondary', text: 'Learn More', href: '#web-landing-features', icon: 'tabler:arrow-down-circle' },
     ]}
+    image={{
+      src: '~/assets/images/business-process-automation-why-choose-us.webp',
+      alt: 'RVBs Infrastructure Manages Everything'
+    }}
   >
   <Fragment slot="title">
     <span class="landing-title">
       Get the Website Your Business Deserves
     </span>
   </Fragment>
-
-    <Fragment slot="bg">
-      <video autoplay loop playsinline>
-        <source src="/assets/hero-test-movie.mp4" type="video/mp4">
-      </video>
-    </Fragment>
   </Hero>
 
   <!-- Features3 Widget -->
@@ -83,24 +81,30 @@ const metadata = {
   />
 
   <!-- Steps2 Widget -->
-  <Steps2
-    title="Our values"
-    subtitle="Our core values are the foundation of our company, guiding everything we do. We believe in integrity, excellence, and collaboration, and strive to embody these values in all our interactions with clients. We are committed to delivering high-quality solutions that exceed your expectations, ensuring that you are satisfied with the final product. We strive for excellence in everything we do."
+  <Features3
+    tagline='Our Process'
+    title="What It's Like Working with Us"
+    subtitle="Working with us is a collaborative process. We work closely with you to understand your unique needs and challenges, ensuring that we deliver a solution that meets your goals and exceeds your expectations. When you work with us, you work with a team, not just a vendor."
+    columns={3}
+    image={{
+      src: '~/assets/images/about-us-main.webp',
+      alt: 'RVBs Infrastructure Manages Everything'
+    
+    }}
     items={[
       {
-        title: 'Integrity',
-        description:
-          'We believe in maintaining transparency and honesty in all our dealings, fostering strong relationships with our clients. We go through all contracts and agreements with you to ensure you understand everything.',
+        title: 'Transparency',
+        description: 'Transparency is at the core of everything we do. We believe in open and honest communication, ensuring that you are informed every step of the way. We value your input and feedback throughout the process and work with you to ensure your satisfaction.',
       },
       {
-        title: 'Excellence',
+        title: 'Quality',
         description:
-          'We are committed to delivering high-quality solutions that exceed your expectations, ensuring that you are satisfied with the final product.',
+          'We go above and beyond where most companies stop. We believe in delivering high-quality work that meets your needs and exceeds your expectations. We are not satisfied until you are satisfied.',
       },
       {
         title: 'Collaboration',
         description:
-          'We believe in working closely with our clients to understand their unique needs and challenges, fostering a collaborative environment that drives results. We value your input and feedback throughout the process and work with you to ensure your satisfaction.',
+          'We believe in working closely with our clients to understand their unique needs and challenges, fostering a collaborative environment that drives results. We are better, together.',
       },
     ]}
   />
@@ -153,7 +157,7 @@ const metadata = {
 
 <style>
 .landing-title {
-  background: -webkit-linear-gradient(45deg, #301ce8, #bb77ed, #f34a62); /* Example gradient */
+  background: -webkit-linear-gradient(45deg, #fc4778, #3952f5); /* Example gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block; /* Required for gradients on text */
@@ -161,6 +165,5 @@ const metadata = {
 
 #web-landing-hero {
   background: linear-gradient(45deg, #ee0979, #ff6a00); /* Example gradient */
-
 }
 </style>
