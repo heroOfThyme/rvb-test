@@ -2,8 +2,6 @@
 import Layout from '~/layouts/LandingLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 
@@ -18,8 +16,8 @@ const metadata = {
     id='web-landing-hero'
     subtitle="We offer a range of web development services to help businesses create a strong online presence. Our team of experts will work with you to create a website that is both visually appealing and functional."
     actions={[
-      { variant: 'primary', text: 'Contact Us', href: '/contact', icon: 'tabler:square-rounded-arrow-right' },
-      { variant: 'secondary', text: 'Learn More', href: '#web-landing-features', icon: 'tabler:arrow-down-circle' },
+      { variant: 'primary', text: 'Explore', href: '#web-landing-features', icon: 'tabler:square-rounded-arrow-down' },
+      { variant: 'secondary', text: 'Visit Our Website', href: '/', icon: 'tabler:square-rounded-arrow-right' },
     ]}
     image={{
       src: '~/assets/images/business-process-automation-why-choose-us.webp',
@@ -28,7 +26,7 @@ const metadata = {
   >
   <Fragment slot="title">
     <span class="landing-title">
-      Get the Website Your Business Deserves
+      Professional Web Development Solutions Tailored to Your Needs
     </span>
   </Fragment>
   </Hero>
@@ -80,60 +78,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps2 Widget -->
-  <Features3
-    tagline='Our Process'
-    title="What It's Like Working with Us"
-    subtitle="Working with us is a collaborative process. We work closely with you to understand your unique needs and challenges, ensuring that we deliver a solution that meets your goals and exceeds your expectations. When you work with us, you work with a team, not just a vendor."
-    columns={3}
-    image={{
-      src: '~/assets/images/about-us-main.webp',
-      alt: 'RVBs Infrastructure Manages Everything'
-    
-    }}
-    items={[
-      {
-        title: 'Transparency',
-        description: 'Transparency is at the core of everything we do. We believe in open and honest communication, ensuring that you are informed every step of the way. We value your input and feedback throughout the process and work with you to ensure your satisfaction.',
-      },
-      {
-        title: 'Quality',
-        description:
-          'We go above and beyond where most companies stop. We believe in delivering high-quality work that meets your needs and exceeds your expectations. We are not satisfied until you are satisfied.',
-      },
-      {
-        title: 'Collaboration',
-        description:
-          'We believe in working closely with our clients to understand their unique needs and challenges, fostering a collaborative environment that drives results. We are better, together.',
-      },
-    ]}
-  />
-
-  <!-- Testimonials Section -->
-  <Testimonials
-    tagline='Testimonials'
-    title="Words from Our Amazing Clients"
-    subtitle="Our favourite part of this job is helping out members of our local communities. We thank everybody for their kind words."
-    testimonials={[
-      {
-        testimonial: `Petar worked so hard for me. Im almost 60 and retired. I needed one page simple website for my new business. He listened and created perfectly what I needed. Hes very patient as I am Not tech savy! Thank you!!`,
-        name: 'Donna Irving',
-        job: 'Seniors Helper - Owner',
-      },
-      {
-        testimonial: `Great service. Working on improving SEO constantly. Easy to get a hold of and replies usually within hours. Changes are made the same day. We both continue to adjust the website if we notice where improvements can be made.`,
-        name: 'Alex Orton',
-        job: 'Legacy Exteriors Inc - Owner',
-      },
-      {
-        testimonial:
-          'The entire team at RVB is incredibly professional and they are experts in their field. I’m really happy that I found a reliable company where I could complete everything I needed done for my website. I look forward to embarking on our marketing campaign together!',
-        name: 'Angelique Roussos',
-        job: 'Monkeys At Work - Owner',
-      },
-    ]}
-  />
-
   <!-- Call to Action Widget -->
   <CallToAction
     actions={[
@@ -157,7 +101,7 @@ const metadata = {
 
 <style>
 .landing-title {
-  background: -webkit-linear-gradient(45deg, #fc4778, #3952f5); /* Example gradient */
+  background: -webkit-linear-gradient(45deg,#ff0f7b, #f89b29); /* Example gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block; /* Required for gradients on text */

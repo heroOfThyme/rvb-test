@@ -78,7 +78,7 @@ export const footerData = {
       links: [
         { text: 'Get in Touch', href: '/contact' },
         { text: 'FAQ', href: '/contact#faq' },
-        { text: 'Documentation', href: '#' },
+        { text: 'Documentation', href: 'https://support.rvb.com' },
       ],
     },
   ],

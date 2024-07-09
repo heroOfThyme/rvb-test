@@ -13,6 +13,8 @@ metadata:
   canonical: https://rvbcorp.com/wordpress-vs-astro-how-should-you-build-your-site
 ---
 
+import CallToAction from '../../components/widgets/CallToAction.astro';
+
 ## Introduction
 
 We’d say an easy-to-use, open-source content management system (CMS), like WordPress has made waves since its launch in 2003, **but that’s an understatement**. In an ocean like the internet, WordPress powers roughly 43% of all websites.
@@ -80,10 +82,29 @@ The downside to Astro is that you’ll need to know **how to code a website** �
 
 ---
 
-Once a website is finished and loaded, it’ll need to be maintained – content will need to be updated regularly, the technical framework behind each site will need to be kept in good shape, and any drops or interruptions in service will require effort to bring back online. It’s unavoidable, <u>whether</u> you’re looking for a simple WordPress site or a custom-built ecommerce site.
+Once a website is finished and loaded, it’ll need to be maintained – content will need to be updated regularly, the **technical framework** behind each site will need to be kept in good shape, and any drops or interruptions in service will require effort to bring back online. It’s unavoidable, <u>whether</u> you’re looking for a simple WordPress site or a custom-built ecommerce site.
 
-If that’s all giving you a headache, turn to the team at RVB. We’re here to help businesses rank and perform with web development solutions tailored to our clients’ needs. Every one of our websites is mobile-responsive, meaning it’ll look just as good on the smartphone market.
+If that’s all giving you a headache, **turn to the team at RVB**. We’re here to help businesses rank and perform with web development solutions **tailored** to our clients’ needs. Every one of our websites is mobile-responsive, meaning it’ll look just as good on the smartphone market.
 
 Brand integration, UX/UI design, performance optimization, e-commerce configuration, and search engine optimization solutions are just some of the services we provide. No matter how you’d like to expand your business online, RVB is here to help you with it.
 
 Send us a message via our [Contact](/contact#form) page or drop us an email at [info@rvbcorp.com](mailto:info@rvbcorp.com). We’re excited to bring you a quality website that delivers.
+
+<CallToAction
+    actions={[
+        {
+            text: 'Contact Us',
+            href: '/contact#form',
+            target: '_self',
+        },
+        ]}
+    >
+        <Fragment slot="title">
+        Ready to Get Started?
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            We’re here to help you take your business to the next level. Contact us today to learn more about our services and how we can help you achieve your goals.
+        </Fragment>
+
+</CallToAction>
