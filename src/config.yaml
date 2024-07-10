@@ -1,10 +1,10 @@
 site:
   name: RVB Data Sciences
-  site: 'https://v5ssr.rvb.network/'
+  site: 'https://rvbcorp.com'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: SWINTeLMmBksNKVE3LoUttMuoiQOQ4uQ3_tGF4r6tW0
 
 # Default SEO metadata
 metadata:
@@ -64,7 +64,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: 'null' # or "G-XXXXXXXXXX"
+      id: 'G-NRKP9WCSL2' # or "G-XXXXXXXXXX"
 
 ui:
   theme: 'dark:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
