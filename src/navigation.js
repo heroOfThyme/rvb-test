@@ -73,12 +73,12 @@ export const footerData = {
         { text: 'Blog', href: '/blog' },
       ],
     },
-    {
+    { 
       title: 'Support',
       links: [
         { text: 'Get in Touch', href: '/contact' },
-        { text: 'FAQ', href: '/contact#faq' },
-        { text: 'Documentation', href: 'https://support.rvb.com' },
+        { text: 'FAQ', href: '/contact#faqs' },
+        { text: 'Documentation', href: 'https://support.rvbcorp.com' },
       ],
     },
   ],
