@@ -159,3 +159,14 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+option {
+  color: var(--aw-color-text-muted);
+  border: 1px solid var(--aw-color-primary);
+  background-color: var(--aw-color-bg-page);
+}
+
+option:hover {
+  color: var(--aw-color-text-bg-page);
+  background-color: var(--aw-color-primary);
+}
