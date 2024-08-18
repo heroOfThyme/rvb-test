@@ -3,7 +3,7 @@ title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-These terms and conditions (the "Terms and Conditions") govern the use of www.rvbcorp.com (the "Site"). This Site is owned and operated by RVB Data Sciences Corp.. This Site is an ecommerce website.
+These terms and conditions (the "Terms and Conditions") govern the use of www.rvbcorp.com (the "Site"). This Site is owned and operated by RVB Data Sciences Corp.. This Site is an e-commerce website.
 
 By using this Site, you indicate that you have read and understand these Terms and Conditions and agree to abide by them at all times.
 
