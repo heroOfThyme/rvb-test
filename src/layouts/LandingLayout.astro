@@ -18,11 +18,7 @@ const { metadata } = Astro.props;
     <slot name="announcement" />
   </Fragment>
   <Fragment slot="header">
-    <slot name="header">
-      <Header
-        links={headerData?.links[1] ? [headerData.links[2]] : undefined}
-      />
-    </slot>
+    
   </Fragment>
   <slot />
 </Layout>

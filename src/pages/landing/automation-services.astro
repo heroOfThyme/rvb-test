@@ -1,0 +1,187 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import HeroLanding from '~/components/widgets/HeroLanding.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+
+
+const metadata = {
+  title: 'Process Automation Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+  <HeroLanding
+    id='web-landing-hero'
+    subtitle="Streamline operations, reduce costs, and enhance productivity with our tailored automation solutions. We offer a wide range of services to help you achieve your business goals."
+    actions={[
+      { variant: 'primary', text: 'Explore', href: '#automation-landing-features', icon: 'tabler:square-rounded-arrow-down' },
+      { variant: 'secondary', text: 'Visit Our Website', href: '/', icon: 'tabler:square-rounded-arrow-right' },
+    ]}
+    image={{
+      src: '~/assets/images/business-process-automation-service-main.webp',
+      alt: 'RVBs Infrastructure Manages Everything'
+    }}
+  >
+  <Fragment slot="title">
+    <span class="landing-title">
+      Transform Your Business with Automation Solutions
+    </span>
+  </Fragment>
+  </HeroLanding>
+
+  <!-- Features2 Widget -->
+  <Features2
+    id='automation-landing-features'
+    tagline='Versatile Solutions for Every Business'
+    title="Our Automation Services"
+    subtitle="We offer a wide range of automation services to help you streamline your operations, reduce costs, and enhance productivity."
+    columns={3}
+    items={[
+      {
+        title: 'Automated Task Management',
+        description:
+          'We offer automated task management solutions to help you streamline your operations and reduce costs.',
+        icon: 'tabler:folder-root',
+      },
+      {
+        title: 'Real-Time Analytics & Reporting',
+        description:
+          'We offer real-time analytics and reporting solutions to help you make data-driven decisions. Our team of experts will work with you to create custom dashboards that provide insights into your business performance.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Integration Capabilities with Existing Systems',
+        description:
+          'We offer integration capabilities with existing systems to help you connect your automation solutions to other platforms and services. Our team of experts will work with you to create custom integrations that meet your unique needs.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'API Development Services',
+        description:
+          'We offer API development services to help you create custom APIs that connect your automation solutions to other platforms and services. Our team of experts will work with you to create APIs that meet your unique needs.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Hosting Services',
+        description: 'We offer hosting services to help you deploy your automation solutions in the cloud. Our team of experts will work with you to create a hosting solution that meets your unique needs.',
+        icon: 'tabler:server',
+      },
+      {
+        title: '',
+        description: '',
+        icon: 'tabler:brand-google',
+      },
+    ]}
+  />
+
+  <!-- Content Widget -->
+  <Content
+    tagline='Open Source Solutions'
+    title="ERP Implementation Services"
+    subtitle="We are certified partners with leading ERP providers and offer implementation services to help you streamline your operations and reduce costs."
+    items={[
+      {
+        title: 'Custom Solutions',
+        description:
+          'We offer custom automation solutions that are tailored to meet your unique needs. Our team of experts will work with you to create a solution that fits your business requirements.',
+      },
+      {
+        title: 'Experienced Team',
+        description:
+          'We have a team of experienced professionals who are dedicated to helping you succeed. Our team has years of experience in the automation industry and will work with you to create a solution that meets your needs.',
+      },
+      {
+        title: 'Proven Track Record',
+        description:
+          'We have a proven track record of helping businesses succeed. Our automation solutions have helped businesses streamline their operations, reduce costs, and enhance productivity.',
+      },
+      {
+        title: 'Customer Support',
+        description:
+          'We offer 24/7 customer support to ensure you get the help you need when you need it. Our team of experts is always available to answer your questions and provide assistance.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/nexterp-main.png',
+      alt: 'ERP Implementation Services'
+    }}
+  />
+
+    <!-- Content Widget -->
+    <Content
+    tagline='Open Source Solutions'
+    title="ERP Implementation Services"
+    subtitle="We are certified partners with leading ERP providers and offer implementation services to help you streamline your operations and reduce costs.",
+    isReversed={true}
+    items={[
+      {
+        title: 'Custom Solutions',
+        description:
+          'We offer custom automation solutions that are tailored to meet your unique needs. Our team of experts will work with you to create a solution that fits your business requirements.',
+      },
+      {
+        title: 'Experienced Team',
+        description:
+          'We have a team of experienced professionals who are dedicated to helping you succeed. Our team has years of experience in the automation industry and will work with you to create a solution that meets your needs.',
+      },
+      {
+        title: 'Proven Track Record',
+        description:
+          'We have a proven track record of helping businesses succeed. Our automation solutions have helped businesses streamline their operations, reduce costs, and enhance productivity.',
+      },
+      {
+        title: 'Customer Support',
+        description:
+          'We offer 24/7 customer support to ensure you get the help you need when you need it. Our team of experts is always available to answer your questions and provide assistance.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/nexterp-main.png',
+      alt: 'ERP Implementation Services'
+    }}
+    image={{
+      src: '~/assets/images/nexterp-main.png',
+      alt: 'ERP Implementation Services'
+    }}
+    image={{
+      src: '~/assets/images/nexterp-main.png',
+      alt: 'ERP Implementation Services'
+    }}
+  />
+
+  <!-- Call to Action Widget -->
+  <CallToAction
+    actions={[
+        {
+            text: 'Contact Us',
+            href: '/contact#form',
+            target: '_self',
+        },
+        ]}
+    >
+        <Fragment slot="title">
+        Ready to Get Started?
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            We’re here to help you take your business to the next level. Contact us today to learn more about our services and how we can help you achieve your goals.
+        </Fragment>
+
+    </CallToAction>
+</Layout>
+
+<style>
+.landing-title {
+  background: -webkit-linear-gradient(45deg, #439cfb, #f187fb); /* Example gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Required for gradients on text */
+}
+
+#web-landing-hero {
+  background: linear-gradient(45deg, #ee0979, #ff6a00); /* Example gradient */
+}
+</style>

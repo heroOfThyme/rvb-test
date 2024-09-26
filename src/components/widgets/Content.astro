@@ -44,7 +44,7 @@ const {
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-8 md:items-stretch`}>
       <div class="md:basis-1/2 self-center">
-        <div class="relative bg-[#1a1a1a] rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-20 py-6 px-6 border border-primary">
+        <div class="relative rounded-lg py-6 px-6">
           {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
 
           {
@@ -64,13 +64,13 @@ const {
               panel: 'max-w-none',
               title: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
               description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
-              icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-primary text-gray-50 p-1',
+              icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-primary text-[#1a1a1a] p-1',
               action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
             }}
           />
       </div>
       </div>
-      <div aria-hidden="true" class="mt-auto md:mt-0 md:basis-1/2 content-center md:content-start">
+      <div aria-hidden="true" class="mt-auto md:mt-0 md:basis-1/2 content-center">
         {
           image && (
             <div class="relative m-auto max-w-5xl">
