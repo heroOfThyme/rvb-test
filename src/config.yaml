@@ -64,7 +64,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: 'GT-M6PJKS7'
+      id: 'G-NRKP9WCSL2'
 
 ui:
   theme: 'dark:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
