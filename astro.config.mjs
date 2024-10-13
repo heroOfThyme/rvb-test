@@ -44,7 +44,7 @@ export default defineConfig({
     Logger: 1
   }), astrowind({
     config: "./src/config.yaml"
-  }), jopSoftwarecookieconsent(), react()],
+  }), jopSoftwarecookieconsent(), react(), partytown()],
   image: {
     service: sharpImageService(),
   },
