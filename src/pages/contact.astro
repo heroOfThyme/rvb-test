@@ -7,6 +7,26 @@ import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
   title: 'Contact',
+  description: 'Contact RVB Data Sciences Corp for any questions or concerns you may have. We are here to help you with any inquiries you may have.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Contact',
+    description: 'Contact RVB Data Sciences Corp for any questions or concerns you may have. We are here to help you with any inquiries you may have.',
+    images: [
+      {
+        url: '/assets/images/contact-us-hero-background.webp',
+        width: 800,
+        height: 600,
+        alt: 'Contact us hero background',
+      },
+    ],
+  },
+  twitter: {
+    cardType: 'summary_large_image',
+  },
 };
 ---
 

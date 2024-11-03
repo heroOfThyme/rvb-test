@@ -8,6 +8,26 @@ import Features3 from '~/components/widgets/Features3.astro';
 
 const metadata = {
     title: 'Google Business Management',
+    description: 'We help you manage your Google Business account to ensure that your business is visible to your customers.',
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: 'Google Business Management',
+        description: 'We help you manage your Google Business account to ensure that your business is visible to your customers.',
+        images: [
+            {
+                url: '~/assets/images/google-business-management-why-choose-us.webp',
+                width: 800,
+                height: 600,
+                alt: 'Google Business Management Service',
+            },
+        ],
+    },
+    twitter: {
+        cardType: 'summary_large_image',
+    },
 };
 ---
 
