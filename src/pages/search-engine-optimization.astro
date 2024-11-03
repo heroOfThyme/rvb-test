@@ -7,7 +7,27 @@ import Steps from '~/components/widgets/Steps.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 
 const metadata = {
-    title: 'Search Engine Optimization',
+    title: 'Search Engine Optimization - Make Your Website Visible and Attract More Traffic',
+    description: "Improve your website’s visibility and drive more organic traffic with our search engine optimization services. Our team of experts will help you optimize your website for search engines, ensuring that your website ranks higher in search results and attracts more visitors.",
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: 'Search Engine Optimization - Make Your Website Visible and Attract More Traffic',
+        description: "Improve your website’s visibility and drive more organic traffic with our search engine optimization services. Our team of experts will help you optimize your website for search engines, ensuring that your website ranks higher in search results and attracts more visitors.",
+        images: [
+            {
+                url: '~/assets/images/seo-service-main.webp',
+                width: 800,
+                height: 600,
+                alt: 'Search Engine Optimization Service Search Bar',
+            },
+        ],
+    },
+    twitter: {
+        cardType: 'summary_large_image',
+    },
 };
 ---
 

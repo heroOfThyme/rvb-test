@@ -7,7 +7,27 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
-    title: 'Web Development',
+    title: 'Web Development - We Build Websites That Work',
+    description: 'Our web development services are designed to help businesses create a strong online presence. We offer a range of services from website design to ecommerce solutions. Our team will work with you to create a website that is both visually appealing and functional.',
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: 'Web Development - We Build Websites That Work',
+        description: 'Our web development services are designed to help businesses create a strong online presence. We offer a range of services from website design to ecommerce solutions. Our team will work with you to create a website that is both visually appealing and functional.',
+        images: [
+            {
+                url: '~/assets/images/web-development-service-main.webp',
+                width: 800,
+                height: 600,
+                alt: 'RVB Web Development Solutions Laptop with Code',
+            },
+        ],
+    },
+    twitter: {
+        cardType: 'summary_large_image',
+    },
 };
 ---
 

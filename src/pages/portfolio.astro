@@ -6,7 +6,27 @@ import PortfolioItem from '~/components/widgets/PortfolioItem.astro';
 
 
 const metadata = {
-    title: 'Our Portfolio',
+    title: 'Our Portfolio - Check Out Our Showcase of Websites and Projects',
+    description: 'Our portfolio showcases some of the websites we have built for our clients. We take pride in our work and strive to deliver the best possible product to our clients.',
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: 'Our Portfolio - Check Out Our Showcase of Websites and Projects',
+        description: 'Our portfolio showcases some of the websites we have built for our clients. We take pride in our work and strive to deliver the best possible product to our clients.',
+        images: [
+            {
+                url: '~/assets/images/about-us-main.webp',
+                width: 800,
+                height: 600,
+                alt: 'Our Portfolio - Check Out Our Showcase of Websites and Projects',
+            },
+        ],
+    },
+    twitter: {
+        cardType: 'summary_large_image',
+    },
 };
 
 ---

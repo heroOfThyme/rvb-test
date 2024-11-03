@@ -1,12 +1,38 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/404PageLayout.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 
 const title = `Error 404`;
+
+const metadata = {
+  title : title,
+  description: `Sorry, we couldn't find this page.`,
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: title,
+    description: `Sorry, we couldn't find this page.`,
+    images: [
+      {
+        url: '~/assets/images/404-page-bg.webp',
+        width: 800,
+        height: 600,
+        alt: 'Error 404',
+      },
+    ],
+  },
+  twitter: {
+    cardType: 'summary_large_image',
+  },
+};
 ---
 
-<Layout metadata={{ title }}>
-  <section class="flex items-center py-28 special-section h-screen">
+<Layout metadata={metadata}>
+  <slot name="header">
+  </slot>
+  <section class="flex items-center py-28 special-section h-screen bg-[url(~/assets/images/404-page-bg.webp)]">
     <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8 ">
       <div class="max-w-md text-center">
         <h2 class="mb-8 font-bold text-9xl">
