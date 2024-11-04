@@ -7,6 +7,26 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Web Development Services',
+  description: 'We offer a range of web development services to help businesses create a strong online presence. Our team of experts will work with you to create a website that is both visually appealing and functional.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: 'Web Development Services',
+    description: 'We offer a range of web development services to help businesses create a strong online presence. Our team of experts will work with you to create a website that is both visually appealing and functional.',
+    images: [
+      {
+        url: '~/assets/images/business-process-automation-why-choose-us.webp',
+        width: 800,
+        height: 600,
+        alt: 'Web Development Services - Professional Web Development Solutions Tailored to Your Needs',
+      },
+    ],
+  },
+  twitter: {
+    cardType: 'summary_large_image',
+  },
 };
 ---
 
