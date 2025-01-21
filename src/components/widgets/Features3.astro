@@ -1,9 +1,9 @@
 ---
-import Headline from '~/components/ui/Headline.astro';
-import ItemGrid from '~/components/ui/ItemGrid.astro';
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import Image from '~/components/common/Image.astro';
-import type { Features as Props } from '~/types';
+import Headline from '../../components/ui/Headline.astro';
+import ItemGrid from '../../components/ui/ItemGrid.astro';
+import WidgetWrapper from '../../components/ui/WidgetWrapper.astro';
+import Image from '../../components/common/Image.astro';
+import type { Features as Props } from '../../types';
 
 const {
   title = await Astro.slots.render('title'),
@@ -36,12 +36,12 @@ const {
   <div aria-hidden="true" class="w-full ">
     {
       image && (
-        <div class="w-full object-cover rounded-xl">
+        <div class="w-full object-cover">
           {typeof image === 'string' ? (
             <Fragment set:html={image} />
           ) : (
             <Image
-              class="w-full object-cover rounded-xl"
+              class="w-full object-cover"
               width="auto"
               layout="contained"
               {...(image as any)}

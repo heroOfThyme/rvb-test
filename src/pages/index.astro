@@ -1,19 +1,21 @@
 ---
 export const prerender = false
 
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '../layouts/PageLayout.astro';
 
-import Note from '~/components/widgets/Note.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Hero2 from '~/components/widgets/Hero2.astro';
-import Brands from '~/components/widgets/Brands.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import PortfolioItem from '~/components/widgets/PortfolioItem.astro';
+import Note from '../components/widgets/Note.astro';
+import Features2 from '../components/widgets/Features2.astro';
+import Steps from '../components/widgets/Steps.astro';
+import BlogLatestPosts from '../components/widgets/BlogLatestPosts.astro';
+import FAQs from '../components/widgets/FAQs.astro';
+import CallToAction from '../components/widgets/CallToAction.astro';
+import Hero2 from '../components/widgets/Hero2.astro';
+import Brands from '../components/widgets/Brands.astro';
+import Testimonials from '../components/widgets/Testimonials.astro';
+import PortfolioItem from '../components/widgets/PortfolioItem.astro';
+import Background from '../components/ui/Background.astro';
 
+// Page metadata
 const metadata = {
   title: 'RVB Corp - Burlingtons Premium Web',
   ignoreTitleTemplate: true,
@@ -62,36 +64,35 @@ const metadata = {
     image={{ src: '~/assets/images/rvb-main-hero.svg', alt: 'Browser Window with a Script Running' }},
     
   >
-    <Fragment slot="title">
-      Tailored Tech Solutions for Businesses of All Sizes
+    <Fragment slot="title">Tailored
+      <span class="text-primary"> Web Solutions</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="inline">
-        We specialize in custom web solutions, 
-        including web development, automation, and Google services. 
-        As your local web agency, we’re attuned to the unique needs of Burlington businesses.
+        Burlington's  <span class="intro-text-bold">local</span> web agency, our <span class="intro-text-bold">specialty</span> is the web, 
+        including web development, automation, Google services, SEO, and more. 
+        Partner with us to <span class="intro-text-bold">transform</span> your digital strategy and stay ahead in the competitive market.
       </span>
-    </Fragment>
-    <Fragment slot="bg">
-      <img src="~/assets/images/rvb-main-hero-bg.webp" alt="RVB Corp Hero Background" class="object-cover w-full h-full" />
     </Fragment>
   </Hero2>
 
-  <!-- Note Widget ******************* -->
+  <!-- Mission Statement ******************* -->
   <Note />
 
-  <!-- Features Widget *************** -->
+  <!-- Services Section *************** -->
   <Features2
     id="Services"
     tagline="Services"
-    title="Our Agency Helps You in Multiple Ways"
+    title="Your Digital Landscape. Covered."
     subtitle="We offer a range of services to help your business succeed online. From web development to Google services, hosting and more, we have you covered."
     items={[
+
+      // Web Dev Service
       {
         title: 'Web Development',
         description:
-          'Our team of developers design and build bespoke websites tailored to your business needs. We focus on creating engaging, user-friendly experiences that effectively communicate your brand and drive growth.',
+          'We build websites tailored to your business needs. We focus on creating websites that effectively communicate your brand and drive growth.',
         icon: 'tabler:code-dots',
         callToAction: {
           text: 'Explore This Service',
@@ -103,10 +104,12 @@ const metadata = {
           description: 'text-lg'
         },
       },
+
+      // SEO Service
       {
         title: 'Search Engine Optimization (SEO)',
         description:
-          'Our SEO services are designed to increase your website’s visibility in search engine results. We use proven strategies and techniques to improve your ranking, drive traffic, and boost your online presence.',
+          "Our SEO services are designed to increase your website’s visibility in search engine results. We use proven strategies to boost your rank.",
         icon: 'tabler:checklist',
         callToAction: {
           text: 'Explore This Service',
@@ -118,10 +121,12 @@ const metadata = {
           description: 'text-lg'
         },
       },
+
+      // Business Process Automation Service
       {
         title: 'Business Process Automation',
         description:
-          'Our business process automation services streamline your operations, reduce manual tasks, and increase efficiency. We help businesses automate their processes so they can focus on what they do best - managing their business.',
+          'Our automation services streamline your operations, reduce manual tasks, and increase accuracy. Let technology work for you.',
         icon: 'tabler:arrows-left-right',
         callToAction: {
           text: 'Explore This Service',
@@ -133,10 +138,12 @@ const metadata = {
           description: 'text-lg'
         },
       },
+
+      // Google Business Management Service
       {
         title: 'Google Business Management',
         description:
-          "We help businesses leverage Google’s tools and services to their advantage. From setting up your Google My Business profile to managing your online reviews, we ensure your business gets noticed on Google.",
+          "Utilize the Google ecosystem to your advantage. From My Business to Ads, Analytics and more, we have services for every Google product.",
         icon: 'tabler:brand-google-filled',
         callToAction: {
           text: 'Explore This Service',
@@ -148,10 +155,12 @@ const metadata = {
           description: 'text-lg'
         },
       },
+
+      // Web Hosting Service
       {
         title: 'Web Hosting',
         description:
-          'We provide reliable, secure web hosting solutions that ensure your website is always accessible and performing optimally. Our hosting services include regular backups, 99.9% uptime, and 24/7 support.',
+          'We provide reliable, secure web hosting solutions that ensure your website is always accessible and performing optimally.',
         icon: 'tabler:server',
         callToAction: {
           text: 'Explore This Service',
@@ -345,9 +354,9 @@ const metadata = {
       },
       {
         testimonial:
-          'The entire team at RVB is incredibly professional and they are experts in their field. I’m really happy that I found a reliable company where I could complete everything I needed done for my website. I look forward to embarking on our marketing campaign together!',
-        name: 'Angelique Roussos',
-        job: 'Monkeys At Work - Owner',
+          "RVB did an outstanding job on our website. The team was professional, creative, and attentive to our vision. We felt supported every step of the way and couldn't be happier with our results. Highly recommend their web development services!",
+        name: 'Slavko Vidakovic',
+        job: 'S&V Memorials - Owner',
       },
     ]}
   />

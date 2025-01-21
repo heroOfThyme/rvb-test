@@ -1,10 +1,10 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import Prices from '~/components/widgets/Pricing.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '../components/widgets/CallToAction.astro';
+import Hero2 from '../components/widgets/Hero2.astro';
+import Layout from '../layouts/PageLayout.astro';
+import Prices from '../components/widgets/Pricing.astro';
+import Features2 from '../components/widgets/Features2.astro';
+import Steps from '../components/widgets/Steps.astro';
 
 const metadata = {
     title: 'Web Development - Services',
@@ -32,30 +32,28 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <Hero
-        tagline="Service"
-        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#web-development-features' }]}
+    <Hero2
+        actions={[{ variant:"primary", target: '', text: 'Start Exploring', href: '#features' }]}
         image={{
             src: '~/assets/images/web-development-service-main.webp',
             alt: 'RVB Web Development Solutions Laptop with Code ',
         }}
         >
         <Fragment slot="title">
-            Web Development Services
+            Web <span class="text-primary">Development</span> Solutions
         </Fragment>
 
         <Fragment slot="subtitle">
-            Our mission is to help businesses thrive in an increasingly 
-            digital world using web development solutions tailored to 
-            their business needs. Need a website? Storefront? SEO? 
-            We cover everything.
+            We are <span class="intro-text-bold">experts</span> in the web development landscape. We offer a <span class="intro-text-bold">plethora</span> of services 
+            that can be <span class="intro-text-bold">tailored</span> to meet the needs of your businesses and industry.
+            Enhance your digital strategy with a website that <span class="intro-text-bold">drives engagement</span> and <span class="intro-text-bold">delivers results</span>.
         </Fragment>
         
-    </Hero>
+    </Hero2>
 
     <!-- Web Development Features -->
     <Features2
-        id='web-development-features'
+        id='features'
         tagline='Building Online Presence'
         title='Web Development Services'
         subtitle='Our web development services are designed to help businesses create a strong online presence. We offer a range of services from website design to ecommerce solutions. Our team will work with you to create a website that is both visually appealing and functional.'

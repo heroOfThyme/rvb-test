@@ -1,11 +1,11 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '../components/widgets/CallToAction.astro';
+import Hero2 from '../components/widgets/Hero2.astro';
+import Content from '../components/widgets/Content.astro';
+import Features2 from '../components/widgets/Features2.astro';
+import Layout from '../layouts/PageLayout.astro';
+import Features3 from '../components/widgets/Features3.astro';
+import Steps from '../components/widgets/Steps.astro';
 
 const metadata = {
     title: 'Business Process Automation - Services',
@@ -33,28 +33,27 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <Hero
-        tagline="Service"
-        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#Features' }]}
+    <Hero2
+        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#features' }]}
         image={{
             src: '~/assets/images/business-process-automation-service-main.webp',
             alt: 'Business Process Automation Service Production Line in Sync',
         }}
         >
         <Fragment slot="title">
-            Business Process Automation
+            Business Process <span class="text-primary">Automation</span>
         </Fragment>
 
         <Fragment slot="subtitle">
-            Step into the new era of business with our process automation services. 
-            We are committed to helping businesses enhance efficiency, improve accuracy, and achieve scalability through automation. 
-            Transform your business operations and drive growth with our tailored automation solutions.
+            Step into the new era of business with our <span class="intro-text-bold">process automation</span> services. 
+            We help businesses <span class="intro-text-bold">enhance</span> their efficiency, improve accuracy, and achieve scalability through software automation. 
+            Transform your business operations and drive <span class="intro-text-bold">growth</span> with our tailored automation solutions.
         </Fragment>
-    </Hero>
+    </Hero2>
 
     <!-- Features Section -->
     <Features2
-        id='Features'
+        id='features'
         tagline='Streamline Operations'
         title="Our Automation Services",
         subtitle="Streamline Operations, Enhance Efficiency, and Drive Growth. Our automation services are designed to help businesses improve efficiency while reducing costs, using technology. We offer a range of services to help you streamline your operations and achieve your business goals."

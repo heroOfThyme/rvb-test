@@ -1,7 +1,7 @@
 ---
-import Image from '~/components/common/Image.astro';
-import type { CallToAction } from '~/types';
-import Button from '~/components/ui/Button.astro';
+import Image from '../../components/common/Image.astro';
+import type { CallToAction } from '../../types';
+import Button from '../../components/ui/Button.astro';
 
 export interface Props {
   title?: string;
@@ -24,7 +24,7 @@ const {
 
 ---
 
-<section class="relative not-prose" id="hero-bg">
+<section class="relative not-prose">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8 " >
@@ -32,7 +32,7 @@ const {
         {
           tagline && (
             <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
+              class="text-base text-secondary dark:text-muted font-bold tracking-wide uppercase"
               set:html={tagline}
             />
           )
@@ -40,13 +40,13 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-[#7776ff]"
+              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-muted"
               set:html={title}
             />
           )
         }
         <div class="max-w-3xl mx-auto lg:max-w-none">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+          {subtitle && <p class="text-xl text-muted mb-6" set:html={subtitle} />}
 
           {
             actions && (
@@ -69,17 +69,15 @@ const {
       <div class="basis-1/2">
         {
           image && (
-            <div class="relative m-auto max-w-5xl">
+            <div class="relative m-auto max-w-xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto rounded-md w-full"
+                  class="mx-auto rounded-md w-full h-full object-cover"
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
                   loading="eager"
-                  width={1024}
-                  height={768}
                   {...image}
                 />
               )}

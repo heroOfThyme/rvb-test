@@ -1,9 +1,9 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '../components/widgets/CallToAction.astro';
+import Features2 from '../components/widgets/Features2.astro';
+import Hero2 from '../components/widgets/Hero2.astro';
+import Layout from '../layouts/PageLayout.astro';
+import Features3 from '../components/widgets/Features3.astro';
 
 
 const metadata = {
@@ -32,46 +32,47 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <Hero
-        tagline="Service"
-        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '/google-business-management#google-business-services' }]}
+    <Hero2
+        actions={[{ variant:"primary", target: '', text: 'Start Exploring', href: '/google-business-management#google-business-services' }]}
         image={{
             src: '~/assets/images/google-business-management-why-choose-us.webp',
             alt: 'Google Business Management Service',
         }}
         >
         <Fragment slot="title">
-            Google Business Management
+            Google Business <span class="text-primary">Management</span>
         </Fragment>
 
         <Fragment slot="subtitle">
-            We help you manage your Google Business account to ensure that 
-            your business is visible to your customers.
+            Google is an ever-changing, <span class="intro-text-bold">vast</span> landscape that can sometimes be difficult to stay on top of. 
+            That's why we offer <span class="intro-text-bold">management</span> as a  service. 
+            We provide tailored solutions to <span class="intro-text-bold">enhance</span> your online presence, drive traffic, and <span class="intro-text-bold">gain</span> valuable insights.
+            Unlock the full potential of <span class="intro-text-bold">Google Business Services</span>.  
         </Fragment>
-    </Hero>
+    </Hero2>
 
         <!-- Google Business Services -->
         <Features2
         id='google-business-services'
         tagline='Your Business on Google'
         title='Google Services We Offer'
-        subtitle='Our web development services are designed to help businesses create a strong online presence. We offer a range of services from website design to ecommerce solutions. Our team of experts will work with you to create a website that is both visually appealing and functional.'
+        subtitle='Our services intertwine your business to the Google landscape. Google is the most used search engine to this day. With billions of searches daily, it is unjustifiable to not tap into this market.'
         items={[
             {
-                title: 'Google Business Profile Setup',
-                description: 'We help you set up your Google Business Profile, ensuring that your business is visible to your customers and that you are able to manage your online presence effectively.',
+                title: 'Google My Business',
+                description: 'We setup and manage your Google profile. Things like products, business hours, updates, responses to reviews, and many more things are handled by us. We keep up-to-date with Googles features, making sure you get the newest updates and your profile remains strong.',
                 icon: 'tabler:brand-google',
                 classes:{ panel: 'service-card-features' },
             },
             {
                 title: 'Google Ads Management',
-                description: 'We help you create and manage Google Ads campaigns to drive traffic to your website and increase your online visibility.',
+                description: 'We bring you your ideal customers with Google Ads. Enjoy long-term benefits like sustained growth, improved brand visibility, and higher ROI. Plus, with detailed performance insights, we can make informed decisions to continually optimize your strategy.',
                 icon: 'tabler:ad-2',
                 classes:{ panel: 'service-card-features' },
             },
             {
-                title: 'Google Analytics Integration',
-                description: 'We integrate Google Analytics into your website to help you track and analyze your website traffic, providing you with valuable insights into your online performance.',
+                title: 'Google Analytics',
+                description: 'Google Analytics is a great way to see your websites performance. Gain in-depth analysis and actionable insights to understand user behavior, track key metrics, and make data-driven decisions. We provide custom reports to improve your ROI and stay ahead of the competition.',
                 icon: 'tabler:brand-google-analytics',
                 classes:{ panel: 'service-card-features' },
             },

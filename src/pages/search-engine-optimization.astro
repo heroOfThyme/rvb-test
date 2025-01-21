@@ -1,10 +1,10 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '../components/widgets/CallToAction.astro';
+import Hero2 from '../components/widgets/Hero2.astro';
+import Layout from '../layouts/PageLayout.astro';
+import Features2 from '../components/widgets/Features2.astro';
+import Steps from '../components/widgets/Steps.astro';
+import Steps2 from '../components/widgets/Steps2.astro';
 
 const metadata = {
     title: 'Search Engine Optimization - Services',
@@ -32,52 +32,53 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <Hero
-        tagline="Services"
-        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#Features' }]}
+    <Hero2
+        actions={[{ variant:"primary", target: '', text: 'Start Exploring', href: '#features' }]}
         image={{
             src: '~/assets/images/seo-service-main.webp',
             alt: 'Search Engine Optimization Service Search Bar',
         }}
         >
         <Fragment slot="title">
-            Search Engine Optimization
+            Search Engine <span class="text-primary">Optimization</span>
         </Fragment>
 
         <Fragment slot="subtitle">
-            Improve your website’s visibility and drive more organic traffic with our search engine optimization services. Our team of experts will help you optimize your website for search engines, ensuring that your website ranks higher in search results and attracts more visitors.
+            Improve your websites visibility and drive more organic <span class="intro-text-bold">traffic</span> with our SEO services.
+            SEO is a rewarding <span class="intro-text-bold">investment</span> that can give your business a competitive edge in your local market.
+            Explore how we leverage key elements to deliver you <span class="intro-text-bold">successful</span> results.
         </Fragment>
         
-    </Hero>
+    </Hero2>
 
     <!-- SEO Features -->
     <Features2
-        id='Features'
+        id='features'
         tagline='Making Your Website Seen and Heard'
         title='Our SEO Services'
-        subtitle='We offer a range of search engine optimization services to help you improve your website’s visibility and drive more organic traffic. Our team of experts will work with you to develop a customized SEO strategy that meets your unique needs and goals.'
+        subtitle='We offer a range of SEO services to help you improve your websites visibility and drive more organic traffic. We use a combination of the listed to services to build you a custom SEO plan.'
         items={[
             {
                 title: 'Keyword Research',
-                description: 'We conduct in-depth keyword research to identify the most relevant keywords for your website, helping you attract more organic traffic and improve your search engine rankings.',
+                description: 'We conduct in-depth keyword research to identify the most relevant keywords for your website, helping you attract your target audience and clientele.',
                 icon: 'tabler:key',
                 classes:{ panel: 'service-card-features' },
             },
             {
                 title: 'On-Page Optimization',
-                description: 'We optimize your website’s on-page elements, including meta tags, headings, and content, to improve your search engine rankings and attract more organic traffic.',
+                description: 'Your websites on-page elements, including meta tags, headings, and content, are optimized to match your campaign. This keeps things consistent when your website is shared and crawled.',
                 icon: 'tabler:file-plus',
                 classes:{ panel: 'service-card-features' },
             },
             {
                 title:'Content Creation',
-                description: 'We create high-quality, SEO-friendly content for your website, including blog posts, articles, and landing pages, to attract more organic traffic and engage your audience.',
+                description: 'We create high-quality, SEO-friendly content for your website, including blog posts, articles, landing pages, and more. This increases the engagement on your website.',
                 icon: 'tabler:file-text',
                 classes:{ panel: 'service-card-features' },
             },
             {
                 title: 'Link Building',
-                description: 'We build high-quality backlinks to your website from authoritative websites, helping you improve your search engine rankings and attract more organic traffic.',
+                description: 'We build high-quality backlinks to your website from authoritative websites, helping you improve your search engine rankings by appearing in more areas on the web.',
                 icon: 'tabler:link',
                 classes:{ panel: 'service-card-features' },
 
@@ -90,7 +91,7 @@ const metadata = {
             },
             {
                 title: 'Technical SEO',
-                description: 'We optimize your website’s technical elements, including site speed, mobile-friendliness, and schema markup, to improve your search engine rankings and attract more organic traffic.',
+                description: 'We optimize your websites technical aspects, including site speed, responsiveness, and schema markup. This provides a good browsing experience for your visitors, and that makes Google happy.',
                 icon: 'tabler:terminal-2',
                 classes:{ panel: 'service-card-features' },
             },

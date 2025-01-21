@@ -1,8 +1,8 @@
 ---
 import WidgetWrapper from '../ui/WidgetWrapper.astro';
-import type { CallToAction, Widget } from '~/types';
-import Headline from '~/components/ui/Headline.astro';
-import Button from '~/components/ui/Button.astro';
+import type { CallToAction, Widget } from '../../types';
+import Headline from '../../components/ui/Headline.astro';
+import Button from '../../components/ui/Button.astro';
 
 interface Props extends Widget {
   title?: string;
@@ -29,7 +29,7 @@ const {
   <div
     class="max-w-3xl mx-auto text-center p-px rounded-xl shadow-xl dark:shadow-none bg-gradient-to-tr from-[#ed137b] to-[#7776ff]"
   >
-  <div class="rounded-[calc(0.75rem-1px)] p-10 bg-white dark:bg-[#121212] ">
+  <div class="rounded-[calc(0.75rem-1px)] p-10 dark:bg-page ">
       <Headline
         title={title}
         subtitle={subtitle}
@@ -46,7 +46,7 @@ const {
             {Array.isArray(actions) ? (
               actions.map((action) => (
                 <div class="flex w-full sm:w-auto">
-                  <Button {...(action || {})} class="w-full sm:mb-0 bg-gradient-to-tr from-fuchsia-600 to-purple-600 border-0" />
+                  <Button {...(action || {})} class="w-full sm:mb-0 btn-primary" />
                 </div>
               ))
             ) : (

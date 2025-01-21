@@ -1,10 +1,10 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import Prices from '~/components/widgets/Pricing.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '../components/widgets/CallToAction.astro';
+import Features2 from '../components/widgets/Features2.astro';
+import Hero2 from '../components/widgets/Hero2.astro';
+import Layout from '../layouts/PageLayout.astro';
+import Prices from '../components/widgets/Pricing.astro';
+import FAQs from '../components/widgets/FAQs.astro';
 
 const metadata = {
     title: 'Web Hosting Solutions - Services',
@@ -32,30 +32,28 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <Hero
-        tagline="Service"
-        actions={[{ variant:"primary", target: '', text: 'Start exploring', href: '#Features' }]}
+    <Hero2
+        actions={[{ variant:"primary", target: '', text: 'Start Exploring', href: '#features' }]}
         image={{
             src: '~/assets/images/web-hosting-service-main.webp',
             alt: 'RVB Web Hosting Solutions Laptop Connected to Cloud Servers',
         }}
         >
         <Fragment slot="title">
-            Web Hosting Solutions
+            Web Hosting <span class="text-primary">Solutions</span>
         </Fragment>
 
         <Fragment slot="subtitle">
-            Our web hosting solutions are designed to keep your 
-            website up and running smoothly. We offer a range of 
-            services from website migration to server maintenance. 
-            Our team of experts will work with you to ensure that your 
-            website is secure, fast, and reliable.
+            Our web hosting solutions are <span class="intro-text-bold">designed</span> to keep your 
+            website up and running smoothly. We offer fast, secure, and <span class="intro-text-bold">scalable</span> hosting solutions tailored to your needs. 
+            <span class="intro-text-bold">Benefit</span> from 99.9% uptime, 24/7 support, and easy-to-use control panels. 
+            Enhance your online presence with our <span class="intro-text-bold">reliable</span> hosting services.
         </Fragment>
-    </Hero>
+    </Hero2>
 
     <!-- Features Section -->
     <Features2
-        id="Features"
+        id="features"
         tagline='We do things better'
         title="Our Features and Services"
         subtitle="We offer a range of features to keep your website online and running fast."
