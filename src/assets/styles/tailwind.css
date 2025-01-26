@@ -48,7 +48,7 @@
   }
 
   .btn-special-price-primary {
-    @apply btn font-semibold bg-white text-white dark:hover:text-[#ee0979] bg-transparent dark:border-white border; 
+    @apply btn font-semibold text-white dark:hover:text-[#ee0979] bg-transparent dark:border-white border hover:bg-white; 
   }
 }
 
