@@ -1,10 +1,10 @@
 ---
-import type { Form as Props } from '~/types';
-import Button from '~/components/ui/Button.astro';
+import type { Form as Props } from '../../types';
+import Button from '../../components/ui/Button.astro';
 
 const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = Astro.props;
 
-const topics = [
+const services = [
   {value: 'web-dev', label: 'Web Development'},
   {value: 'web-host', label: 'Web Hosting'},
   {value: 'web-seo', label: 'Search Engine Optimization'},
@@ -51,23 +51,23 @@ const topics = [
   <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
   {
-    topics && (
+    services && (
       <div class="mb-6">
-        <label for="topics" class="block text-sm font-medium">
-          Topic *
+        <label for="Service" class="block text-sm font-medium">
+          Service *
         </label>
         <select
-          id="topics"
-          name="topics"
+          id="services"
+          name="services"
           required
           class="py-3 px-4 block w-full text-md rounded-lg border border-primary bg-transparent"
         >
-          <option value="" selected class="py-3 px-4 block w-full text-md rounded-lg border border-primary bg-transparent">Select a topic</option>
-          {topics.map(({ value, label }) => (
+          <option value="" selected class="py-3 px-4 block w-full text-md rounded-lg border border-primary bg-transparent">Select a service</option>
+          {services.map(({ value, label }) => (
             <option value={value}>{label}</option>
           ))}
         </select>
-        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-3">Please select a topic.</div>
+        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-3">Please select a service.</div>
       </div>
     )
   }
@@ -100,7 +100,7 @@ const topics = [
   {
     button && (
       <div class="mt-10 grid">
-        <Button variant="secondary" type="submit" icon='tabler:mail-heart'>
+        <Button variant="primary" type="submit" icon='tabler:mail-heart'>
           {button}
         </Button>
       </div>

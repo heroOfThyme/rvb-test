@@ -49,6 +49,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
+        icon: 'tabler:arrow-right',
         text: 'Lets Get Started',
         href: '/contact#form',
         target: '_self',
@@ -56,6 +57,7 @@ const metadata = {
       },
       {
         variant: 'secondary',
+        icon: 'tabler:briefcase',
         text: 'See Our Work',
         href: '/portfolio',
         target: '_self',
@@ -72,9 +74,19 @@ const metadata = {
       <span class="inline">
         Burlington's  <span class="intro-text-bold">local</span> web agency, our <span class="intro-text-bold">specialty</span> is the web, 
         including web development, automation, Google services, SEO, and more. 
-        Partner with us to <span class="intro-text-bold">transform</span> your digital strategy and stay ahead in the competitive market.
+        Partner with us to <span class="intro-text-bold">transform your digital landscape</span> and stay ahead in the competitive market.
       </span>
     </Fragment>
+    <!--  
+    <Fragment slot="bg">
+      <video 
+        src="/images/iStock-1046965704.mp4"
+        autoplay= true
+        class="video-background"
+        loop="true"
+      />
+    </Fragment>
+    -->
   </Hero2>
 
   <!-- Mission Statement ******************* -->
@@ -322,21 +334,33 @@ const metadata = {
         title: 'How long does it take to design and develop a website?',
         description:
           "Typically, a website takes between 1 to 3 weeks to complete. However, this duration can fluctuate based on your unique requirements. During our initial consultation, we’ll gain a better understanding of your needs and will be able to provide a more precise timeline.",
+        classes: {
+          title: 'hover:text-primary',
+        }
       },
       {
         title: 'How much input will I have during the design process?',
         description:
           "Your input guides our design process. We initiate projects with a discovery session to understand your brand and goals, then involve you at every step, presenting concepts for your approval to ensure the website accurately represents your business.",
+        classes: {
+          title: 'hover:text-primary',
+        }
       },
       {
         title: "Do you perform work outside of your listed services?",
         description:
           "Yes we do. We are problem solvers and love a challenge. If you have a project that doesn’t fit into our listed services, please reach out to us. We’d love to discuss how we can help you achieve your goals.",
+        classes: {
+          title: 'hover:text-primary',
+        }
       },
       {
         title: 'Do you provide training or support after launch?',
         description:
           "Yes, we offer training and support to help you manage your projects post-launch. We provide tutorials and documentation to guide you through the process and are available to answer any questions you may have.",
+        classes: {
+          title: 'hover:text-primary',
+        }
       },
     ]}
   />
@@ -373,6 +397,7 @@ const metadata = {
             text: 'Contact Us',
             href: '/contact#form',
             target: '_self',
+            variant: 'primary',
         },
         ]}
     >
