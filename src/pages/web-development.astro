@@ -41,13 +41,12 @@ const metadata = {
         }}
         >
         <Fragment slot="title">
-            Web <span class="text-primary">Development</span> Solutions
+            Transform Your Business with <span class="text-primary">Web Development</span> Solutions
         </Fragment>
 
         <Fragment slot="subtitle">
-            We are <span class="intro-text-bold">experts</span> in the web development landscape. We offer a <span class="intro-text-bold">plethora</span> of services 
-            that can be <span class="intro-text-bold">tailored</span> to meet the needs of your businesses and industry.
-            Enhance your digital strategy with a website that <span class="intro-text-bold">drives engagement</span> and <span class="intro-text-bold">delivers results</span>.
+            We are <span class="intro-text-bold">experts</span> in crafting custom web solutions that drive results. 
+            From stunning designs to seamless functionality, we build websites that <span class="intro-text-bold">engage users</span>, <span class="intro-text-bold">boost conversions</span>, and <span class="intro-text-bold">grow your business</span>.
         </Fragment>
         
     </Hero2>
@@ -106,15 +105,68 @@ const metadata = {
 
     <!--
     <Content
-    isReversed
-    image={{
-        src: ""
-    }}
-    >
-        <Fragment slot='title'>
-            Performance. Structure. Functionality.
+        tagline="Speed Matters"
+        title="Built for Performance, Designed for Results"
+        items={[
+            {
+            title: 'Lightning-Fast Load Times',
+            description:
+                'We optimize every aspect of your website to ensure it loads in under 3 seconds, keeping visitors engaged and reducing bounce rates.',
+            },
+            {
+            title: 'Clean, Efficient Code',
+            description:
+                'Our developers adhere to best coding practices, ensuring your website is lightweight, fast, and future-proof.',
+            },
+            {
+            title: 'Mobile Optimization',
+            description:
+                'With over 60% of web traffic coming from mobile devices, we ensure your website performs flawlessly on all screen sizes.',
+            },
+        ]}
+        image={{
+            src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            alt: 'Performance Image',
+        }}
+        >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight text-white sm:text-2xl mb-2">Why Performance <u>Matters</u></h3>
+            A fast website isn’t just a luxury—it’s a necessity. Studies show that 53% of visitors abandon a website if it takes longer than 3 seconds to load. Let’s build something fast and functional.
         </Fragment>
     </Content>
+
+    <Content
+        isReversed
+        tagline="Get Found Online"
+        title="SEO & Analytics: Data-Driven Growth"
+        items={[
+            {
+            title: 'Search Engine Optimization',
+            description:
+                'We optimize your website for search engines, helping you rank higher, attract more visitors, and grow your business organically.',
+            },
+            {
+            title: 'Web Analytics',
+            description:
+                'Track and analyze user behavior with powerful analytics tools, enabling data-driven decisions to improve your website’s performance.',
+            },
+            {
+            title: 'Content Strategy',
+            description:
+                'From compelling website copy to engaging blog posts, we create content that resonates with your audience and drives results.',
+            },
+        ]}
+        image={{
+            src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            alt: 'SEO & Analytics Image',
+        }}
+        >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Grow Your Online Presence</h3>
+            SEO and analytics are the backbone of a successful digital strategy. Let us help you get found online and make data-driven decisions.
+        </Fragment>
+    </Content>
+
     -->
 
     <!-- Our Process -->

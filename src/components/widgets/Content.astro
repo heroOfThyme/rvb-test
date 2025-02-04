@@ -1,9 +1,9 @@
 ---
-import type { Content as Props } from '~/types';
+import type { Content as Props } from '../../types';
 import Headline from '../ui/Headline.astro';
 import WidgetWrapper from '../ui/WidgetWrapper.astro';
-import Image from '~/components/common/Image.astro';
-import Button from '~/components/ui/Button.astro';
+import Image from '../../components/common/Image.astro';
+import Button from '../../components/ui/Button.astro';
 import ItemGrid from '../ui/ItemGrid.astro';
 
 const {
@@ -37,7 +37,7 @@ const {
     tagline={tagline}
     classes={{
       container: 'max-w-xl sm:mx-auto lg:max-w-2xl',
-      title: 'text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading',
+      title: 'text-3xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading',
       subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
     }}
   />
@@ -62,9 +62,9 @@ const {
             classes={{
               container: `gap-y-4 md:gap-y-8`,
               panel: 'max-w-none',
-              title: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+              title: 'text-lg font-medium leading-6 text-white ml-2 rtl:ml-0 rtl:mr-2',
               description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
-              icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-primary text-[#1a1a1a] p-1',
+              icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-transparent border border-primary border-2 text-white p-1',
               action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
             }}
           />
@@ -73,18 +73,18 @@ const {
       <div aria-hidden="true" class="mt-auto md:mt-0 md:basis-1/2 content-center">
         {
           image && (
-            <div class="relative m-auto max-w-5xl">
+            <div class="relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto w-full rounded-xl"
+                  class="mx-auto w-full rounded-lg hover:trans"
+                  width={500}
+                  height={500}
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
-                  layout="cover"
-                  width={768}
-                  height={432}
-                  {...(image as any)}
+                  layout="responsive"
+                  {...image}
                 />
               )}
             </div>
