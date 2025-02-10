@@ -1,7 +1,7 @@
 import type { PaginateFunction } from 'astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import type { Post, Taxonomy } from '~/types';
+import type { Post, Taxonomy } from '../types';
 import { APP_BLOG } from 'astrowind:config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
 
@@ -276,3 +276,16 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
 
   return selectedPosts;
 }
+
+export const findPostsByCategory = async (categorySlug: string): Promise<Array<Post>> => {
+  const posts = await fetchPosts();
+
+  // Filter posts by category
+  const filteredPosts = posts.filter((post) => post.category?.slug === categorySlug);
+
+  // Sort posts by publish date (newest first)
+  const sortedPosts = filteredPosts.sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf());
+
+  // Return the newest 3 posts
+  return sortedPosts.slice(0, 3);
+};

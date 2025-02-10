@@ -1,0 +1,51 @@
+---
+import { APP_BLOG } from "astrowind:config";
+
+import Grid from "../../components/blog/Grid.astro";
+
+import { getBlogPermalink } from "../../utils/permalinks";
+import { findPostsByCategory } from "../../utils/blog"; // Use the updated function
+import WidgetWrapper from "../../components/ui/WidgetWrapper.astro";
+import type { Widget } from "../../types";
+import Button from "../ui/Button.astro";
+import PortfolioGrid from "../blog/PortfolioGrid.astro";
+
+export interface Props extends Widget {
+  title?: string;
+  linkText?: string;
+  linkUrl?: string | URL;
+  information?: string;
+  count?: number;
+}
+
+const {
+  title = await Astro.slots.render("title"),
+  linkText = "View all posts",
+  linkUrl = getBlogPermalink(),
+  information = await Astro.slots.render("information"),
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render("bg"),
+} = Astro.props;
+
+// Hardcode the category slug to "case-study"
+const categorySlug = "case-study";
+
+// Fetch posts by category (only posts with the "case-study" category)
+const posts = APP_BLOG.isEnabled ? await findPostsByCategory(categorySlug) : [];
+---
+
+{
+  APP_BLOG.isEnabled && posts.length > 0 ? (
+    <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+
+      <PortfolioGrid posts={posts} />
+    </WidgetWrapper>
+  ) : (
+    <div class="text-center py-8">
+      <p class="text-gray-600 dark:text-gray-400">No case studies found.</p>
+    </div>
+  )
+}

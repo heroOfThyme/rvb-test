@@ -1,14 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-import Image from '~/components/common/Image.astro';
-import PostTags from '~/components/blog/Tags.astro';
-import SocialShare from '~/components/common/SocialShare.astro';
+import Image from '../../components/common/Image.astro';
+import PostTags from '../../components/blog/Tags.astro';
+import SocialShare from '../../components/common/SocialShare.astro';
 
-import { getPermalink } from '~/utils/permalinks';
-import { getFormattedDate } from '~/utils/utils';
+import { getPermalink } from '../../utils/permalinks';
+import { getFormattedDate } from '../../utils/utils';
 
-import type { Post } from '~/types';
+import type { Post } from '../../types';
+import { imageConfig } from 'astro:assets';
 
 export interface Props {
   post: Post;
@@ -69,17 +70,19 @@ const { Content } = post;
 
       {
         post.image ? (
+        <div class="max-w-3xl lg:max-w-[900px] mx-auto mb-6 px-6 sm:px-6">
           <Image
             src={post.image}
-            class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+            class="object-cover rounded-md mx-auto"
             widths={[400, 900]}
             sizes="(max-width: 900px) 400px, 900px"
             alt={post?.excerpt || ''}
-            width={900}
-            height={506}
+            width={post.image.width}
+            height={post.image.height}
             loading="eager"
             decoding="async"
           />
+          </div>
         ) : (
           <div class="max-w-3xl mx-auto px-4 sm:px-6">
             <div class="border-t dark:border-slate-700" />

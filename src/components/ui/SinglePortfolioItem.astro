@@ -1,0 +1,95 @@
+---
+import { APP_BLOG } from 'astrowind:config';
+import type { Post } from '../../types';
+
+import Image from '../../components/common/Image.astro';
+
+import { findImage } from '../../utils/images';
+import { getPermalink } from '../../utils/permalinks';
+import { getFormattedDate } from '../../utils/utils';
+import Button from '../ui/Button.astro';
+
+
+export interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="flex flex-col w-full h-full rounded-xl bg-[#151515] overflow-hidden transition-all duration-300 transform hover:scale-105">
+  <!-- Image Section -->
+  <div class="relative h-72 flex-shrink-0">
+    {post.image && (
+      <a href={getPermalink(post.permalink, 'post')}>
+        <Image
+          src={post.image}
+          class="w-full h-full object-cover"
+          widths={[400, 900]}
+          width={900}
+          sizes="(max-width: 900px) 400px, 900px"
+          alt={post.title}
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+    )}
+  </div>
+
+  <!-- Content Section -->
+  <div class="flex flex-col flex-grow p-6">
+    <!-- Title -->
+    <h3 class="mb-2 text-2xl font-bold leading-tight sm:text-xl font-heading text-white/70">
+      {!APP_BLOG?.post?.isEnabled ? (
+        post.title
+      ) : (
+        <a
+          href={getPermalink(post.permalink, 'post')}
+          class="transition ease-in duration-200 font-sans"
+        >
+          {post.title}
+        </a>
+      )}
+    </h3>
+
+    <!-- Date and Category -->
+    <p class="text-primary">
+      <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
+      {post.category && (
+        <>
+          {' '}
+          ·{' '}
+          <a class="hover:underline text-primary inline-block" href={getPermalink(post.category.slug, 'category')}>
+            {post.category.title}
+          </a>
+        </>
+      )}
+    </p>
+
+    <!-- Divider -->
+    <hr class="my-4 border-t dark:border-muted" />
+
+    <!-- Excerpt with Vertical Line -->
+    <div class="flex flex-grow">
+      <!-- Vertical Line -->
+      <div class="w-0.5 h-auto bg-primary mr-4"></div>
+      <!-- Excerpt -->
+      <p class="text-muted text-lg flex-1">{post.excerpt}</p>
+    </div>
+
+    <!-- Link -->
+    <div class="mt-auto pt-6">
+      <Button 
+        variant='link' 
+        href={post.permalink}
+        icon='tabler:chevron-right'
+        classes={{
+          button: "pt-10",
+          text: 'text-muted'
+        }}
+      >
+        Read More Here
+      </Button>
+    </div>
+  </div>
+</article>

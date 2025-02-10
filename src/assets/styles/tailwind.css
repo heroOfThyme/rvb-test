@@ -5,7 +5,6 @@
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
-    @apply bg-[linear-gradient(to_right,#0808082e_1px,transparent_1px),linear-gradient(to_bottom,#0808082e_1px,transparent_1px)] bg-[size:14px_24px];
   }
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
@@ -24,15 +23,15 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-md font-medium text-center text-base leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 dark:text-white dark:hover:border-transparent cursor-pointer hover:-translate-y-1 hover:scale-105;
+    @apply inline-flex items-center justify-center rounded-md font-medium text-center text-base leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 dark:text-white dark:hover:border-transparent cursor-pointer;
   }
 
   .btn-primary {
-    @apply btn bg-primary border text-white border-primary hover:text-white dark:text-white shadow-lg shadow-[#7776ff]/45 hover:shadow-[#7776ff]/65 ease-in-out hover:-translate-y-1 hover:scale-105;
+    @apply btn bg-primary border text-[#050505] border-primary hover:text-[#050505] dark:text-[#050505] ease-in-out hover:-translate-y-1 hover:scale-105;
   }
 
   .btn-secondary {
-    @apply btn border dark:hover:bg-secondary dark:border-primary;
+    @apply btn border dark:hover:bg-secondary dark:border-primary ease-in-out hover:-translate-y-1 hover:scale-105;
   }
 
   .btn-tertiary {

@@ -12,8 +12,7 @@ import CallToAction from '../components/widgets/CallToAction.astro';
 import Hero2 from '../components/widgets/Hero2.astro';
 import Brands from '../components/widgets/Brands.astro';
 import Testimonials from '../components/widgets/Testimonials.astro';
-import PortfolioItem from '../components/widgets/PortfolioItem.astro';
-import Background from '../components/ui/Background.astro';
+import RecentWork from '../components/widgets/RecentWork.astro';
 
 // Page metadata
 const metadata = {
@@ -29,7 +28,7 @@ const metadata = {
     description: 'RVB Corp is a premium web agency in Burlington, Ontario. We specialize in web development, automation, and Google services. Contact us today to learn more.',
     images: [
       {
-        url: '~/assets/images/automation-canadian-industries-blog-main-og.png',
+        url: '~/assets/images/rvb-main-hero.svg',
         width: 800,
         height: 600,
         alt: 'RVB Corp - Burlingtons Premium Web Agency & Digital Marketing Firm',
@@ -193,62 +192,10 @@ const metadata = {
   />
 
   <!-- Portfolio Section -->
-  <PortfolioItem
-    tagline='Our Work'
-    title="Recent Projects"
-    subtitle="We have worked with a variety of clients across different industries. Here are some of our recent projects."
-    callToAction1={{
-      text: 'View All Projects',
-      href: '/portfolio',
-      target: '_self',
-    }}
-    items={[
-      {
-          title: 'Legacy Exteriors Inc',
-          description: 'Windsors Excavation Expert',
-          callToAction: {
-              href: "https://legacyexteriorsinc.com", 
-              target: "_blank", 
-              text: "Visit the Website", 
-              icon: 'tabler:chevron-right', 
-              variant: 'link', 
-          },
-          classes: {
-              description: 'text-muted',
-              container2: 'bg-[url("~/assets/images/legacy-exteriors-portfolio-bg-fixed.webp")]'
-          }
-      },
-      {
-          title: 'S&V Memorials',
-          description: 'Windsors Top Memorial Service',
-          callToAction: {
-              href: "https://svmemorials.com", 
-              target: "_blank", 
-              text: "Visit the Website", 
-              icon: 'tabler:chevron-right', 
-              variant: 'link', 
-          },
-          classes: {container2: 'bg-[url("~/assets/images/sv-memorials-portfolio-bg.webp")]'}
-      },
-      {
-          title: 'Seniors Helper',
-          description: 'Burlingtons Senior Care Service Provider',
-          callToAction: {
-              href: "https://seniorshelper.ca", 
-              target: "_blank", 
-              text: "Visit the Website", 
-              icon: 'tabler:chevron-right', 
-              variant: 'link',
-          },
-          classes: {
-              container2: 'bg-[url("~/assets/images/seniors-helper-portfolio-bg.webp")]',
-              panel: 'place-content-end',
-              title: 'text-white',
-              description: 'text-muted'
-          },
-      },
-  ]},
-
+  <RecentWork
+      tagline="Creating Experiences"
+      title="Recent Work"
+      subtitle="Explore a selection of our latest projects. Each one reflects our commitment to quality, and client success."
   />
 
   <!-- Brand Section -->
@@ -402,11 +349,12 @@ const metadata = {
         ]}
     >
         <Fragment slot="title">
-        Ready to Get Started?
+          Ready to Transform Your Business?
         </Fragment>
 
         <Fragment slot="subtitle">
-            We’re here to help you take your business to the next level. Contact us today to learn more about our services and how we can help you achieve your goals.
+          Let’s build something <span class="text-primary">amazing</span> together. 
+          Contact us today to discuss your project and discover how we can help you <span class="text-primary">achieve</span> your goals.
         </Fragment>
 
   </CallToAction>

@@ -1,0 +1,25 @@
+---
+import Headline from '../../components/ui/Headline.astro';
+import WidgetWrapper from '../../components/ui/WidgetWrapper.astro';
+import BlogCategoryPosts from '../../components/widgets/BlogCategoryPosts.astro';
+
+const {
+  title = '',
+  subtitle = '',
+  tagline = '',
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+
+
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`w-full ${classes?.container ?? ''}`} bg={bg}>
+    <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+    <BlogCategoryPosts />
+
+  </WidgetWrapper>

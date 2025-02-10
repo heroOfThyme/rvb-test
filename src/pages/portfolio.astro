@@ -1,96 +1,49 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import PortfolioItem from '~/components/widgets/PortfolioItem.astro';
-
+import Layout from '../layouts/PageLayout.astro';
+import BlogCategoryPosts from '../components/widgets/BlogCategoryPosts.astro';
+import Hero from '../components/widgets/Hero.astro';
 
 const metadata = {
-    title: 'Our Portfolio - See Our Work',
-    description: 'Our portfolio showcases some of the websites we have built for our clients. We take pride in our work and strive to deliver the best possible product to our clients.',
+    title: 'Our Portfolio | RVB Data Sciences - Showcasing Our Best Work',
+    ignoreTitleTemplate: true,
+    description: "Explore our portfolio of stunning projects. From web design to branding, we showcase our best work to demonstrate our expertise and creativity. Let’s build something amazing together!",
     robots: {
         index: true,
         follow: true,
     },
     openGraph: {
-        title: 'Our Portfolio - See Our Work',
-        description: 'Our portfolio showcases some of the websites we have built for our clients. We take pride in our work and strive to deliver the best possible product to our clients.',
+        title: 'Our Portfolio | RVB Data Sciences - Showcasing Our Best Work',
+        description: "Explore our portfolio of stunning projects. From web design to branding, we showcase our best work to demonstrate our expertise and creativity. Let’s build something amazing together!",
         images: [
-            {
-                url: '~/assets/images/about-us-main.webp',
-                width: 800,
-                height: 600,
-                alt: 'Our Portfolio - Check Out Our Showcase of Websites and Projects',
-            },
+        {
+            url: '~/assets/images/rvb-main-hero.svg',
+            width: 800,
+            height: 600,
+            alt: 'RVB Corp - Burlingtons Premium Web Agency & Digital Marketing Firm',
+        },
         ],
     },
     twitter: {
         cardType: 'summary_large_image',
     },
-};
+}
 
 ---
 
 <Layout metadata={metadata}>
-    <Hero>
-        <Fragment slot="tagline">
-            Our Work Speaks for Itself
-        </Fragment>
+    <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto ">
+        <Hero
+        subtitle="Explore a showcase of our tailored work. See the challenges we tackled, the services we provided, and the metrics that demonstrate meaningful results."
+        tagline="Our Portfolio"
+        >
         <Fragment slot="title">
-            Our Portfolio
+            Crafted Solutions, <u>Proven</u> Results
         </Fragment>
-
-        <Fragment slot="subtitle">
-            Our portfolio showcases some of the websites we have built for our clients. We take pride in our work and strive to deliver the best possible product to our clients.
-        </Fragment>
-    </Hero>
-
-    <PortfolioItem
-    columns={3}
-    items={[
-        {
-            title: 'Legacy Exteriors Inc',
-            description: 'Windsors Excavation Expert',
-            callToAction: {
-                href: "https://legacyexteriorsinc.com", 
-                target: "_self", 
-                text: "Visit the Website", 
-                icon: 'tabler:chevron-right', 
-                variant: 'link', 
-            },
-            classes: {
-                container2: 'bg-[url("~/assets/images/legacy-exteriors-portfolio-bg-fixed.webp")]',
-                description: 'text-muted',
-            }
-        },
-        {
-            title: 'S&V Memorials',
-            description: 'Windsors Top Memorial Service',
-            callToAction: {
-                href: "https://svmemorials.com", 
-                target: "_self", 
-                text: "Visit the Website", 
-                icon: 'tabler:chevron-right', 
-                variant: 'link', 
-            },
-            classes: {container2: 'bg-[url("~/assets/images/sv-memorials-portfolio-bg.webp")]'}
-        },
-        {
-            title: 'Seniors Helper',
-            description: 'Burlingtons Senior Care Service Provider',
-            callToAction: {
-                href: "https://seniorshelper.ca", 
-                target: "_self", 
-                text: "Visit the Website", 
-                icon: 'tabler:chevron-right', 
-                variant: 'link',
-            },
-            classes: {
-                container2: 'bg-[url("~/assets/images/seniors-helper-portfolio-bg.webp")]',
-                panel: 'place-content-end',
-                title: 'text-white',
-                description: 'text-muted'
-            },
-        },
-    ]},
-    />
+        </Hero>
+        <BlogCategoryPosts />
+        <!--
+            <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
+            <PostTags tags={allTags}  title="Search by Tags:" />
+        -->
+        </section>
 </Layout>

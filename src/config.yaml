@@ -20,7 +20,7 @@ metadata:
   openGraph:
     site_name: RVB Data Sciences
     images:
-      - url: '~/assets/images/default.webp'
+      - url: '~/assets/images/rvb-main-hero.svg'
         width: 1200
         height: 628
     type: website
@@ -60,7 +60,7 @@ apps:
 
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
-
+    
 analytics:
   vendors:
     googleAnalytics:
