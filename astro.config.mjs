@@ -27,11 +27,7 @@ export default defineConfig({
       tabler: ['*'],
       'flat-color-icons': ['template', 'gallery', 'approval', 'document', 'advertising', 'currency-exchange', 'voice-presentation', 'business-contact', 'database']
     }
-  }), ...whenExternalScripts(() => partytown({
-    config: {
-      forward: ['dataLayer.push']
-    }
-  })), compress({
+  }), compress({
     CSS: true,
     HTML: {
       'html-minifier-terser': {
@@ -44,7 +40,7 @@ export default defineConfig({
     Logger: 1
   }), astrowind({
     config: "./src/config.yaml"
-  }), jopSoftwarecookieconsent(), react(), partytown()],
+  }), jopSoftwarecookieconsent(), react()],
   image: {
     service: sharpImageService(),
   },
