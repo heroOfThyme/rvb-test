@@ -29,7 +29,8 @@ export default defineConfig({
     }
   }), ...whenExternalScripts(() => partytown({
     config: {
-      forward: ['dataLayer.push']
+      forward: ['dataLayer.push'],
+      debug: false,
     }
   })), compress({
     CSS: true,
@@ -38,9 +39,9 @@ export default defineConfig({
         removeAttributeQuotes: false
       }
     },
-    Image: false,
+    Image: true,
     JavaScript: true,
-    SVG: false,
+    SVG: true,
     Logger: 1
   }), astrowind({
     config: "./src/config.yaml"
