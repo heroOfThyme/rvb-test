@@ -20,19 +20,27 @@ const whenExternalScripts = (items = []) => hasExternalScripts ? Array.isArray(i
 // https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
-  integrations: [tailwind({
+  integrations: [
+    tailwind({
     applyBaseStyles: false
-  }), sitemap(), mdx(), icon({
+  }), 
+  sitemap(), 
+  mdx(), 
+  icon({
     include: {
       tabler: ['*'],
       'flat-color-icons': ['template', 'gallery', 'approval', 'document', 'advertising', 'currency-exchange', 'voice-presentation', 'business-contact', 'database']
     }
-  }), ...whenExternalScripts(() => partytown({
-    config: {
-      forward: ['dataLayer.push'],
-      debug: false,
-    }
-  })), compress({
+  }),
+
+  ...whenExternalScripts(() => 
+    partytown({
+      config: {
+        forward: ['dataLayer.push'] },
+    })
+  ), 
+  
+  compress({
     CSS: true,
     HTML: {
       'html-minifier-terser': {
@@ -43,16 +51,30 @@ export default defineConfig({
     JavaScript: true,
     SVG: true,
     Logger: 1
-  }), astrowind({
+  }), 
+  
+  astrowind({
     config: "./src/config.yaml"
-  }), jopSoftwarecookieconsent(), react(), partytown()],
+  }), 
+  
+  jopSoftwarecookieconsent(), 
+  react(), 
+  partytown({
+    config: {
+      debug:false,
+    }
+  }
+  )],
+
   image: {
     service: sharpImageService(),
   },
+
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin]
   },
+
   vite: {
     resolve: {
       alias: {
@@ -60,6 +82,7 @@ export default defineConfig({
       }
     }
   },
+
   adapter: node({
     mode: "standalone"
   })
